@@ -46,9 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom Tools\CirclePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Custom Tools\CustomButton.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Tools\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDropDown.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
