@@ -88,7 +88,8 @@
             this.unameTxtbx.BorderFocusColor = System.Drawing.Color.HotPink;
             this.unameTxtbx.BorderRadius = 10;
             this.unameTxtbx.BorderSize = 2;
-            this.unameTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unameTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unameTxtbx.ForeColor = System.Drawing.Color.White;
             this.unameTxtbx.Location = new System.Drawing.Point(204, 156);
             this.unameTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.unameTxtbx.Multiline = true;
@@ -120,7 +121,8 @@
             this.pinTxtbx.BorderFocusColor = System.Drawing.Color.HotPink;
             this.pinTxtbx.BorderRadius = 10;
             this.pinTxtbx.BorderSize = 2;
-            this.pinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinTxtbx.ForeColor = System.Drawing.Color.White;
             this.pinTxtbx.Location = new System.Drawing.Point(204, 243);
             this.pinTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pinTxtbx.Multiline = true;
@@ -152,7 +154,8 @@
             this.cpinTxtbx.BorderFocusColor = System.Drawing.Color.HotPink;
             this.cpinTxtbx.BorderRadius = 10;
             this.cpinTxtbx.BorderSize = 2;
-            this.cpinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpinTxtbx.ForeColor = System.Drawing.Color.White;
             this.cpinTxtbx.Location = new System.Drawing.Point(204, 329);
             this.cpinTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cpinTxtbx.Multiline = true;
