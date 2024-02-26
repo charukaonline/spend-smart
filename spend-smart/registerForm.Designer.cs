@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerForm));
             this.label1 = new System.Windows.Forms.Label();
             this.circlePictureBox1 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.unameLbl = new System.Windows.Forms.Label();
@@ -62,7 +61,7 @@
             this.circlePictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.circlePictureBox1.BorderSize = 0;
             this.circlePictureBox1.GradientAngle = 50F;
-            this.circlePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circlePictureBox1.Image")));
+            this.circlePictureBox1.Image = global::spend_smart.Properties.Resources.logo;
             this.circlePictureBox1.Location = new System.Drawing.Point(12, 15);
             this.circlePictureBox1.Name = "circlePictureBox1";
             this.circlePictureBox1.Size = new System.Drawing.Size(70, 70);
