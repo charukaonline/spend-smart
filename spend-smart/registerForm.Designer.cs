@@ -91,10 +91,10 @@
             this.unameTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unameTxtbx.ForeColor = System.Drawing.Color.White;
             this.unameTxtbx.Location = new System.Drawing.Point(204, 156);
-            this.unameTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unameTxtbx.Margin = new System.Windows.Forms.Padding(4);
             this.unameTxtbx.Multiline = true;
             this.unameTxtbx.Name = "unameTxtbx";
-            this.unameTxtbx.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.unameTxtbx.Padding = new System.Windows.Forms.Padding(7);
             this.unameTxtbx.PasswordChar = false;
             this.unameTxtbx.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.unameTxtbx.PlaceholderText = "";
@@ -124,10 +124,10 @@
             this.pinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinTxtbx.ForeColor = System.Drawing.Color.White;
             this.pinTxtbx.Location = new System.Drawing.Point(204, 243);
-            this.pinTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pinTxtbx.Margin = new System.Windows.Forms.Padding(4);
             this.pinTxtbx.Multiline = true;
             this.pinTxtbx.Name = "pinTxtbx";
-            this.pinTxtbx.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.pinTxtbx.Padding = new System.Windows.Forms.Padding(7);
             this.pinTxtbx.PasswordChar = false;
             this.pinTxtbx.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.pinTxtbx.PlaceholderText = "";
@@ -157,10 +157,10 @@
             this.cpinTxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpinTxtbx.ForeColor = System.Drawing.Color.White;
             this.cpinTxtbx.Location = new System.Drawing.Point(204, 329);
-            this.cpinTxtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cpinTxtbx.Margin = new System.Windows.Forms.Padding(4);
             this.cpinTxtbx.Multiline = true;
             this.cpinTxtbx.Name = "cpinTxtbx";
-            this.cpinTxtbx.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cpinTxtbx.Padding = new System.Windows.Forms.Padding(7);
             this.cpinTxtbx.PasswordChar = false;
             this.cpinTxtbx.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.cpinTxtbx.PlaceholderText = "";
@@ -176,6 +176,7 @@
             this.registerBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.registerBtn.BorderRadius = 10;
             this.registerBtn.BorderSize = 0;
+            this.registerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerBtn.FlatAppearance.BorderSize = 0;
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +204,7 @@
             // loginHereLbl
             // 
             this.loginHereLbl.AutoSize = true;
+            this.loginHereLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginHereLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginHereLbl.ForeColor = System.Drawing.Color.DodgerBlue;
             this.loginHereLbl.Location = new System.Drawing.Point(405, 463);
@@ -229,7 +231,8 @@
             this.Controls.Add(this.circlePictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "registerForm";
-            this.Text = "registerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
