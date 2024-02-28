@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controlForm.Designer.cs">
+      <DependentUpon>controlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom Tools\CirclePictureBox.cs">
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -87,6 +93,9 @@
     <Compile Include="registerForm.Designer.cs">
       <DependentUpon>registerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="controlForm.resx">
+      <DependentUpon>controlForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom Tools\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
