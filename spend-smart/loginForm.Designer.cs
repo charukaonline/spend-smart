@@ -1,6 +1,6 @@
 ﻿namespace spend_smart
 {
-    partial class Form1
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(316, 76);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(165, 39);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "Login Page";
             // 
             // guna2Button1
             // 
@@ -38,29 +49,31 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(192, 120);
+            this.guna2Button1.Location = new System.Drawing.Point(243, 226);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(327, 73);
+            this.guna2Button1.TabIndex = 1;
+            this.guna2Button1.Text = "Click here to go ahead to dashboard";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // Form1
+            // loginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(533, 299);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.guna2Button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Name = "loginForm";
+            this.Text = "loginForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
-
