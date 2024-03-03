@@ -11,8 +11,11 @@ using System.Windows.Forms;
 
 namespace spend_smart
 {
+
     public partial class menuControls : Form
     {
+        public Point mouseLocation;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -35,6 +38,21 @@ namespace spend_smart
         private void menuControls_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void mouse_Down(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void mouse_Move(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
         }
     }
 }

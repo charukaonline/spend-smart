@@ -47,6 +47,8 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1440, 80);
             this.guna2Panel1.TabIndex = 3;
+            this.guna2Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
+            this.guna2Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             // 
             // guna2ControlBox3
             // 
@@ -96,6 +98,8 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
+            this.guna2CirclePictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             // 
             // customPanel1
             // 
@@ -109,6 +113,8 @@
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(80, 884);
             this.customPanel1.TabIndex = 2;
+            this.customPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
+            this.customPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             // 
             // menuControls
             // 
@@ -126,6 +132,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuControls";
             this.Load += new System.EventHandler(this.menuControls_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
