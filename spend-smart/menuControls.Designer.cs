@@ -33,8 +33,11 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.customPanel1 = new spend_smart.Custom_Tools.CustomPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new spend_smart.dashboard();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -116,12 +119,29 @@
             this.customPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
             this.customPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dashboard1);
+            this.panel1.Location = new System.Drawing.Point(168, 110);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1228, 878);
+            this.panel1.TabIndex = 4;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1228, 878);
+            this.dashboard1.TabIndex = 0;
+            // 
             // menuControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1440, 1000);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -136,6 +156,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -146,5 +167,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private System.Windows.Forms.Panel panel1;
+        private dashboard dashboard1;
     }
 }
