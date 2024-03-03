@@ -21,7 +21,7 @@ namespace spend_smart
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new controlForm());
+            Application.Run(new Form1());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
