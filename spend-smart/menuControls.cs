@@ -37,14 +37,16 @@ namespace spend_smart
 
         private void menuControls_Load(object sender, EventArgs e)
         {
-
+            dashboard1.Show();
         }
 
+        // Dragging part
         private void mouse_Down(object sender, MouseEventArgs e)
         {
             mouseLocation = new Point(-e.X, -e.Y);
         }
 
+        // Dragging part
         private void mouse_Move(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -53,6 +55,27 @@ namespace spend_smart
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        // Side menu button
+        private void dashboardBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Show();
+        }
+
+        private void addExpBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void analyticsBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void dashboard1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
