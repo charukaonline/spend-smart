@@ -133,6 +133,8 @@
     <Content Include="Guna.UI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="icons\Spend Smart.png" />
+    <None Include="Resources\loading_image.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
