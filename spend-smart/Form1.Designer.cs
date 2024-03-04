@@ -54,12 +54,12 @@
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(329, 309);
+            this.guna2Button2.Location = new System.Drawing.Point(343, 65);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "guna2Button2";
+            this.guna2Button2.Text = "Button";
             // 
             // Form1
             // 
