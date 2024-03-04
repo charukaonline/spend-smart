@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace spend_smart
 {
-    public partial class Form1 : Form
+    public partial class loginForm : Form
     {
-        public Form1()
+        public loginForm()
         {
             InitializeComponent();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            menuControls dashboard = new menuControls();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }
