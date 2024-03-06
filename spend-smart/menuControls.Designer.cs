@@ -33,11 +33,17 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dashboard1 = new spend_smart.dashboard();
             this.analyticsBtn = new System.Windows.Forms.PictureBox();
             this.addExpBtn = new System.Windows.Forms.PictureBox();
             this.dashboardBtn = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.helpBtn = new System.Windows.Forms.PictureBox();
+            this.setttingBtn = new System.Windows.Forms.PictureBox();
+            this.logoutBtn = new System.Windows.Forms.PictureBox();
+            this.noteBtn = new System.Windows.Forms.PictureBox();
+            this.transactionBtn = new System.Windows.Forms.PictureBox();
+            this.dashboard1 = new spend_smart.dashboard();
+            this.notificationBtn = new spend_smart.Custom_Tools.CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -45,10 +51,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.addExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardBtn)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setttingBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.notificationBtn);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox3);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
@@ -119,15 +132,6 @@
             this.panel1.Size = new System.Drawing.Size(1228, 878);
             this.panel1.TabIndex = 4;
             // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1228, 878);
-            this.dashboard1.TabIndex = 0;
-            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
-            // 
             // analyticsBtn
             // 
             this.analyticsBtn.BackColor = System.Drawing.Color.Transparent;
@@ -170,6 +174,11 @@
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderRadius = 12;
             this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.transactionBtn);
+            this.guna2GradientPanel1.Controls.Add(this.noteBtn);
+            this.guna2GradientPanel1.Controls.Add(this.helpBtn);
+            this.guna2GradientPanel1.Controls.Add(this.setttingBtn);
+            this.guna2GradientPanel1.Controls.Add(this.logoutBtn);
             this.guna2GradientPanel1.Controls.Add(this.analyticsBtn);
             this.guna2GradientPanel1.Controls.Add(this.dashboardBtn);
             this.guna2GradientPanel1.Controls.Add(this.addExpBtn);
@@ -180,6 +189,83 @@
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(80, 884);
             this.guna2GradientPanel1.TabIndex = 5;
+            // 
+            // helpBtn
+            // 
+            this.helpBtn.Image = global::spend_smart.Properties.Resources.question_icon;
+            this.helpBtn.Location = new System.Drawing.Point(28, 700);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(24, 24);
+            this.helpBtn.TabIndex = 1;
+            this.helpBtn.TabStop = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
+            // 
+            // setttingBtn
+            // 
+            this.setttingBtn.Image = global::spend_smart.Properties.Resources.settings_icon;
+            this.setttingBtn.Location = new System.Drawing.Point(28, 758);
+            this.setttingBtn.Name = "setttingBtn";
+            this.setttingBtn.Size = new System.Drawing.Size(24, 24);
+            this.setttingBtn.TabIndex = 1;
+            this.setttingBtn.TabStop = false;
+            this.setttingBtn.Click += new System.EventHandler(this.setttingBtn_Click);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Image = global::spend_smart.Properties.Resources.logout_icon;
+            this.logoutBtn.Location = new System.Drawing.Point(28, 816);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(24, 24);
+            this.logoutBtn.TabIndex = 1;
+            this.logoutBtn.TabStop = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // noteBtn
+            // 
+            this.noteBtn.Image = global::spend_smart.Properties.Resources.notes_icon;
+            this.noteBtn.Location = new System.Drawing.Point(28, 230);
+            this.noteBtn.Name = "noteBtn";
+            this.noteBtn.Size = new System.Drawing.Size(24, 24);
+            this.noteBtn.TabIndex = 3;
+            this.noteBtn.TabStop = false;
+            this.noteBtn.Click += new System.EventHandler(this.noteBtn_Click);
+            // 
+            // transactionBtn
+            // 
+            this.transactionBtn.Image = global::spend_smart.Properties.Resources.transaction_icon;
+            this.transactionBtn.Location = new System.Drawing.Point(28, 184);
+            this.transactionBtn.Name = "transactionBtn";
+            this.transactionBtn.Size = new System.Drawing.Size(24, 24);
+            this.transactionBtn.TabIndex = 3;
+            this.transactionBtn.TabStop = false;
+            this.transactionBtn.Click += new System.EventHandler(this.transactionBtn_Click);
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1228, 878);
+            this.dashboard1.TabIndex = 0;
+            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
+            // 
+            // notificationBtn
+            // 
+            this.notificationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.notificationBtn.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.notificationBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.notificationBtn.BorderColor2 = System.Drawing.Color.Transparent;
+            this.notificationBtn.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.notificationBtn.BorderSize = 2;
+            this.notificationBtn.GradientAngle = 50F;
+            this.notificationBtn.Image = global::spend_smart.Properties.Resources.bell_icon;
+            this.notificationBtn.Location = new System.Drawing.Point(1256, 20);
+            this.notificationBtn.Name = "notificationBtn";
+            this.notificationBtn.Size = new System.Drawing.Size(45, 45);
+            this.notificationBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.notificationBtn.TabIndex = 5;
+            this.notificationBtn.TabStop = false;
+            this.notificationBtn.Click += new System.EventHandler(this.notificationBtn_Click);
             // 
             // menuControls
             // 
@@ -207,6 +293,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.addExpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardBtn)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.helpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setttingBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +314,11 @@
         private System.Windows.Forms.PictureBox addExpBtn;
         private System.Windows.Forms.PictureBox analyticsBtn;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.PictureBox logoutBtn;
+        private System.Windows.Forms.PictureBox setttingBtn;
+        private System.Windows.Forms.PictureBox helpBtn;
+        private Custom_Tools.CirclePictureBox notificationBtn;
+        private System.Windows.Forms.PictureBox noteBtn;
+        private System.Windows.Forms.PictureBox transactionBtn;
     }
 }
