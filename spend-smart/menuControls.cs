@@ -35,6 +35,11 @@ namespace spend_smart
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
         }
 
+        private void dashboard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void menuControls_Load(object sender, EventArgs e)
         {
             dashboard1.Show();
@@ -73,9 +78,34 @@ namespace spend_smart
             dashboard1.Hide();
         }
 
-        private void dashboard1_Load(object sender, EventArgs e)
+        private void transactionBtn_Click(object sender, EventArgs e)
         {
+            dashboard1.Hide();
+        }
 
+        private void noteBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void setttingBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+        }
+
+        private void notificationBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
         }
     }
 }
