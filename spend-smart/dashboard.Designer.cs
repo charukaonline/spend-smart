@@ -58,21 +58,21 @@
             this.circlePictureBox1 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.allExpPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,14 +87,14 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel4.SuspendLayout();
-            this.allExpPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.allExpPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -313,9 +313,9 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(51, 8);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(168, 30);
+            this.label15.Size = new System.Drawing.Size(182, 30);
             this.label15.TabIndex = 1;
-            this.label15.Text = "Transaction 4";
+            this.label15.Text = "Transaction 04";
             // 
             // circlePictureBox3
             // 
@@ -362,9 +362,9 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(51, 8);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 30);
+            this.label12.Size = new System.Drawing.Size(182, 30);
             this.label12.TabIndex = 1;
-            this.label12.Text = "Transaction 3";
+            this.label12.Text = "Transaction 03";
             // 
             // circlePictureBox4
             // 
@@ -411,9 +411,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(51, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 30);
+            this.label10.Size = new System.Drawing.Size(182, 30);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Transaction 2";
+            this.label10.Text = "Transaction 02";
             // 
             // circlePictureBox2
             // 
@@ -460,9 +460,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(51, 8);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 30);
+            this.label8.Size = new System.Drawing.Size(182, 30);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Transaction 1";
+            this.label8.Text = "Transaction 01";
             // 
             // circlePictureBox1
             // 
@@ -509,6 +509,15 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(271, 175);
             this.guna2GradientPanel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::spend_smart.Properties.Resources.trending_up_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(217, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -525,6 +534,15 @@
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(271, 175);
             this.guna2GradientPanel2.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(223, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label13
             // 
@@ -567,6 +585,15 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(271, 175);
             this.guna2GradientPanel3.TabIndex = 3;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(223, 35);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -607,6 +634,15 @@
             this.guna2GradientPanel4.ShadowDecoration.Parent = this.guna2GradientPanel4;
             this.guna2GradientPanel4.Size = new System.Drawing.Size(271, 175);
             this.guna2GradientPanel4.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(223, 35);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
             // 
             // label5
             // 
@@ -657,42 +693,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "All Expenses";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::spend_smart.Properties.Resources.trending_up_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(217, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(223, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(223, 35);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::spend_smart.Properties.Resources.more_vertical_outline_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(223, 35);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -729,18 +729,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.allExpPanel.ResumeLayout(false);
             this.allExpPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
