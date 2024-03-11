@@ -16,33 +16,14 @@ namespace spend_smart
     {
         public Point mouseLocation;
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
-
         public menuControls()
         {
             InitializeComponent();
-
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
-        }
-
-        private void dashboard1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void menuControls_Load(object sender, EventArgs e)
         {
-            dashboard1.Show();
+            
         }
 
         // Dragging part
@@ -60,52 +41,6 @@ namespace spend_smart
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
-        }
-
-        // Side menu button
-        private void dashboardBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Show();
-        }
-
-        private void addExpBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void analyticsBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void transactionBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void noteBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void logoutBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void setttingBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void helpBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-        }
-
-        private void notificationBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
         }
     }
 }
