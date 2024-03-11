@@ -23,7 +23,7 @@ namespace spend_smart
 
         private void menuControls_Load(object sender, EventArgs e)
         {
-            
+            dashboard1.Show();
         }
 
         // Dragging part
@@ -41,6 +41,16 @@ namespace spend_smart
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+            dashboard1.Show();
+        }
+
+        private void addExpBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
         }
     }
 }
