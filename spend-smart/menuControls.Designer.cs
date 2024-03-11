@@ -37,12 +37,11 @@
             this.addExpBtn = new System.Windows.Forms.PictureBox();
             this.dashboardBtn = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.transactionBtn = new System.Windows.Forms.PictureBox();
-            this.noteBtn = new System.Windows.Forms.PictureBox();
             this.helpBtn = new System.Windows.Forms.PictureBox();
             this.setttingBtn = new System.Windows.Forms.PictureBox();
             this.logoutBtn = new System.Windows.Forms.PictureBox();
-            this.analytics1 = new spend_smart.analytics();
+            this.noteBtn = new System.Windows.Forms.PictureBox();
+            this.transactionBtn = new System.Windows.Forms.PictureBox();
             this.dashboard1 = new spend_smart.dashboard();
             this.notificationBtn = new spend_smart.Custom_Tools.CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
@@ -52,11 +51,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.addExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardBtn)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.setttingBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notificationBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +66,9 @@
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(960, 53);
+            this.guna2Panel1.Size = new System.Drawing.Size(1440, 80);
             this.guna2Panel1.TabIndex = 3;
             this.guna2Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
             this.guna2Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
@@ -86,12 +84,11 @@
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(884, 13);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1326, 20);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
-            this.guna2ControlBox3.Size = new System.Drawing.Size(32, 24);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(48, 36);
             this.guna2ControlBox3.TabIndex = 4;
             // 
             // guna2ControlBox1
@@ -106,23 +103,21 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(920, 13);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1380, 20);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(48, 36);
             this.guna2ControlBox1.TabIndex = 4;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(30, 4);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(45, 6);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(53, 53);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(80, 80);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -132,21 +127,18 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dashboard1);
-            this.panel1.Controls.Add(this.analytics1);
-            this.panel1.Location = new System.Drawing.Point(112, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(168, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 585);
+            this.panel1.Size = new System.Drawing.Size(1228, 878);
             this.panel1.TabIndex = 4;
             // 
             // analyticsBtn
             // 
             this.analyticsBtn.BackColor = System.Drawing.Color.Transparent;
             this.analyticsBtn.Image = global::spend_smart.Properties.Resources.analytics_icon;
-            this.analyticsBtn.Location = new System.Drawing.Point(19, 93);
-            this.analyticsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.analyticsBtn.Location = new System.Drawing.Point(28, 140);
             this.analyticsBtn.Name = "analyticsBtn";
-            this.analyticsBtn.Size = new System.Drawing.Size(16, 16);
+            this.analyticsBtn.Size = new System.Drawing.Size(24, 24);
             this.analyticsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.analyticsBtn.TabIndex = 0;
             this.analyticsBtn.TabStop = false;
@@ -156,10 +148,9 @@
             // 
             this.addExpBtn.BackColor = System.Drawing.Color.Transparent;
             this.addExpBtn.Image = global::spend_smart.Properties.Resources.wallet_icon;
-            this.addExpBtn.Location = new System.Drawing.Point(19, 61);
-            this.addExpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addExpBtn.Location = new System.Drawing.Point(28, 92);
             this.addExpBtn.Name = "addExpBtn";
-            this.addExpBtn.Size = new System.Drawing.Size(16, 16);
+            this.addExpBtn.Size = new System.Drawing.Size(24, 24);
             this.addExpBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addExpBtn.TabIndex = 0;
             this.addExpBtn.TabStop = false;
@@ -169,10 +160,9 @@
             // 
             this.dashboardBtn.BackColor = System.Drawing.Color.Transparent;
             this.dashboardBtn.Image = global::spend_smart.Properties.Resources.dashboard_icon;
-            this.dashboardBtn.Location = new System.Drawing.Point(19, 29);
-            this.dashboardBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dashboardBtn.Location = new System.Drawing.Point(28, 44);
             this.dashboardBtn.Name = "dashboardBtn";
-            this.dashboardBtn.Size = new System.Drawing.Size(16, 16);
+            this.dashboardBtn.Size = new System.Drawing.Size(24, 24);
             this.dashboardBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.dashboardBtn.TabIndex = 0;
             this.dashboardBtn.TabStop = false;
@@ -194,42 +184,18 @@
             this.guna2GradientPanel1.Controls.Add(this.addExpBtn);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(29, 72);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(44, 108);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(53, 589);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(80, 884);
             this.guna2GradientPanel1.TabIndex = 5;
-            // 
-            // transactionBtn
-            // 
-            this.transactionBtn.Image = global::spend_smart.Properties.Resources.transaction_icon;
-            this.transactionBtn.Location = new System.Drawing.Point(19, 123);
-            this.transactionBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.transactionBtn.Name = "transactionBtn";
-            this.transactionBtn.Size = new System.Drawing.Size(16, 16);
-            this.transactionBtn.TabIndex = 3;
-            this.transactionBtn.TabStop = false;
-            this.transactionBtn.Click += new System.EventHandler(this.transactionBtn_Click);
-            // 
-            // noteBtn
-            // 
-            this.noteBtn.Image = global::spend_smart.Properties.Resources.notes_icon;
-            this.noteBtn.Location = new System.Drawing.Point(19, 153);
-            this.noteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.noteBtn.Name = "noteBtn";
-            this.noteBtn.Size = new System.Drawing.Size(16, 16);
-            this.noteBtn.TabIndex = 3;
-            this.noteBtn.TabStop = false;
-            this.noteBtn.Click += new System.EventHandler(this.noteBtn_Click);
             // 
             // helpBtn
             // 
             this.helpBtn.Image = global::spend_smart.Properties.Resources.question_icon;
-            this.helpBtn.Location = new System.Drawing.Point(19, 467);
-            this.helpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.helpBtn.Location = new System.Drawing.Point(28, 700);
             this.helpBtn.Name = "helpBtn";
-            this.helpBtn.Size = new System.Drawing.Size(16, 16);
+            this.helpBtn.Size = new System.Drawing.Size(24, 24);
             this.helpBtn.TabIndex = 1;
             this.helpBtn.TabStop = false;
             this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
@@ -237,10 +203,9 @@
             // setttingBtn
             // 
             this.setttingBtn.Image = global::spend_smart.Properties.Resources.settings_icon;
-            this.setttingBtn.Location = new System.Drawing.Point(19, 505);
-            this.setttingBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.setttingBtn.Location = new System.Drawing.Point(28, 758);
             this.setttingBtn.Name = "setttingBtn";
-            this.setttingBtn.Size = new System.Drawing.Size(16, 16);
+            this.setttingBtn.Size = new System.Drawing.Size(24, 24);
             this.setttingBtn.TabIndex = 1;
             this.setttingBtn.TabStop = false;
             this.setttingBtn.Click += new System.EventHandler(this.setttingBtn_Click);
@@ -248,29 +213,39 @@
             // logoutBtn
             // 
             this.logoutBtn.Image = global::spend_smart.Properties.Resources.logout_icon;
-            this.logoutBtn.Location = new System.Drawing.Point(19, 544);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutBtn.Location = new System.Drawing.Point(28, 816);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(16, 16);
+            this.logoutBtn.Size = new System.Drawing.Size(24, 24);
             this.logoutBtn.TabIndex = 1;
             this.logoutBtn.TabStop = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // analytics1
+            // noteBtn
             // 
-            this.analytics1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.analytics1.Location = new System.Drawing.Point(0, 0);
-            this.analytics1.Name = "analytics1";
-            this.analytics1.Size = new System.Drawing.Size(819, 571);
-            this.analytics1.TabIndex = 1;
+            this.noteBtn.Image = global::spend_smart.Properties.Resources.notes_icon;
+            this.noteBtn.Location = new System.Drawing.Point(28, 230);
+            this.noteBtn.Name = "noteBtn";
+            this.noteBtn.Size = new System.Drawing.Size(24, 24);
+            this.noteBtn.TabIndex = 3;
+            this.noteBtn.TabStop = false;
+            this.noteBtn.Click += new System.EventHandler(this.noteBtn_Click);
+            // 
+            // transactionBtn
+            // 
+            this.transactionBtn.Image = global::spend_smart.Properties.Resources.transaction_icon;
+            this.transactionBtn.Location = new System.Drawing.Point(28, 184);
+            this.transactionBtn.Name = "transactionBtn";
+            this.transactionBtn.Size = new System.Drawing.Size(24, 24);
+            this.transactionBtn.TabIndex = 3;
+            this.transactionBtn.TabStop = false;
+            this.transactionBtn.Click += new System.EventHandler(this.transactionBtn_Click);
             // 
             // dashboard1
             // 
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(1);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(819, 585);
+            this.dashboard1.Size = new System.Drawing.Size(1228, 878);
             this.dashboard1.TabIndex = 0;
             this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
             // 
@@ -284,10 +259,9 @@
             this.notificationBtn.BorderSize = 2;
             this.notificationBtn.GradientAngle = 50F;
             this.notificationBtn.Image = global::spend_smart.Properties.Resources.bell_icon;
-            this.notificationBtn.Location = new System.Drawing.Point(837, 13);
-            this.notificationBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.notificationBtn.Location = new System.Drawing.Point(1256, 20);
             this.notificationBtn.Name = "notificationBtn";
-            this.notificationBtn.Size = new System.Drawing.Size(30, 30);
+            this.notificationBtn.Size = new System.Drawing.Size(45, 45);
             this.notificationBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.notificationBtn.TabIndex = 5;
             this.notificationBtn.TabStop = false;
@@ -295,18 +269,17 @@
             // 
             // menuControls
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(924, 525);
+            this.ClientSize = new System.Drawing.Size(1440, 1000);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(960, 667);
-            this.MinimumSize = new System.Drawing.Size(909, 479);
+            this.MaximumSize = new System.Drawing.Size(1440, 1000);
+            this.MinimumSize = new System.Drawing.Size(1440, 1000);
             this.Name = "menuControls";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuControls";
@@ -320,11 +293,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.addExpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardBtn)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.setttingBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notificationBtn)).EndInit();
             this.ResumeLayout(false);
 
@@ -347,6 +320,5 @@
         private Custom_Tools.CirclePictureBox notificationBtn;
         private System.Windows.Forms.PictureBox noteBtn;
         private System.Windows.Forms.PictureBox transactionBtn;
-        private analytics analytics1;
     }
 }
