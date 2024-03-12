@@ -74,7 +74,7 @@
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(13, 13);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(934, 52);
@@ -90,9 +90,9 @@
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel6.FillColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Location = new System.Drawing.Point(607, 0);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(139, 52);
             this.guna2Panel6.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = global::spend_smart.Properties.Resources.calendar_icon;
             this.guna2CircleButton1.Location = new System.Drawing.Point(12, 13);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
@@ -146,7 +146,7 @@
             "3Month"});
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Location = new System.Drawing.Point(39, 13);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(87, 36);
@@ -157,7 +157,7 @@
             this.guna2Panel5.Controls.Add(this.notificationBtn);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel5.Location = new System.Drawing.Point(746, 0);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Padding = new System.Windows.Forms.Padding(20, 13, 20, 13);
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
@@ -178,7 +178,7 @@
             this.notificationBtn.HoverState.Parent = this.notificationBtn;
             this.notificationBtn.Image = global::spend_smart.Properties.Resources.bell_icon;
             this.notificationBtn.Location = new System.Drawing.Point(10, 13);
-            this.notificationBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.notificationBtn.Margin = new System.Windows.Forms.Padding(2);
             this.notificationBtn.Name = "notificationBtn";
             this.notificationBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.notificationBtn.ShadowDecoration.Parent = this.notificationBtn;
@@ -247,9 +247,9 @@
             this.guna2Panel2.Controls.Add(this.closingBtn);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel2.Location = new System.Drawing.Point(881, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(53, 52);
             this.guna2Panel2.TabIndex = 1;
@@ -263,7 +263,7 @@
             this.closingBtn.HoverState.Parent = this.closingBtn;
             this.closingBtn.IconColor = System.Drawing.Color.White;
             this.closingBtn.Location = new System.Drawing.Point(13, 13);
-            this.closingBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.closingBtn.Name = "closingBtn";
             this.closingBtn.ShadowDecoration.Parent = this.closingBtn;
             this.closingBtn.Size = new System.Drawing.Size(27, 26);
@@ -275,7 +275,7 @@
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2PictureBox1.Image = global::spend_smart.Properties.Resources.logo;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(53, 52);
@@ -298,7 +298,7 @@
             this.menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.menu.Location = new System.Drawing.Point(13, 65);
-            this.menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menu.Margin = new System.Windows.Forms.Padding(2);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(0, 20, 0, 26);
             this.menu.ShadowDecoration.Parent = this.menu;
@@ -312,7 +312,7 @@
             this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoutBtn.Location = new System.Drawing.Point(0, 525);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.ShadowDecoration.Parent = this.logoutBtn;
             this.logoutBtn.Size = new System.Drawing.Size(53, 38);
@@ -325,7 +325,7 @@
             this.settingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.settingBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.settingBtn.Location = new System.Drawing.Point(0, 487);
-            this.settingBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.settingBtn.Name = "settingBtn";
             this.settingBtn.ShadowDecoration.Parent = this.settingBtn;
             this.settingBtn.Size = new System.Drawing.Size(53, 38);
@@ -338,7 +338,7 @@
             this.helpBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.helpBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.helpBtn.Location = new System.Drawing.Point(0, 449);
-            this.helpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.helpBtn.Margin = new System.Windows.Forms.Padding(2);
             this.helpBtn.Name = "helpBtn";
             this.helpBtn.ShadowDecoration.Parent = this.helpBtn;
             this.helpBtn.Size = new System.Drawing.Size(53, 38);
@@ -350,7 +350,7 @@
             this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2Panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel15.Location = new System.Drawing.Point(0, 210);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.ShadowDecoration.Parent = this.guna2Panel15;
             this.guna2Panel15.Size = new System.Drawing.Size(53, 239);
@@ -363,7 +363,7 @@
             this.noteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.noteBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.noteBtn.Location = new System.Drawing.Point(0, 172);
-            this.noteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.noteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.noteBtn.Name = "noteBtn";
             this.noteBtn.ShadowDecoration.Parent = this.noteBtn;
             this.noteBtn.Size = new System.Drawing.Size(53, 38);
@@ -376,7 +376,7 @@
             this.transactionBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.transactionBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.transactionBtn.Location = new System.Drawing.Point(0, 134);
-            this.transactionBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.transactionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.transactionBtn.Name = "transactionBtn";
             this.transactionBtn.ShadowDecoration.Parent = this.transactionBtn;
             this.transactionBtn.Size = new System.Drawing.Size(53, 38);
@@ -389,7 +389,7 @@
             this.analyticsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.analyticsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.analyticsBtn.Location = new System.Drawing.Point(0, 96);
-            this.analyticsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.analyticsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.analyticsBtn.Name = "analyticsBtn";
             this.analyticsBtn.ShadowDecoration.Parent = this.analyticsBtn;
             this.analyticsBtn.Size = new System.Drawing.Size(53, 38);
@@ -402,7 +402,7 @@
             this.addExpBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addExpBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.addExpBtn.Location = new System.Drawing.Point(0, 58);
-            this.addExpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addExpBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addExpBtn.Name = "addExpBtn";
             this.addExpBtn.ShadowDecoration.Parent = this.addExpBtn;
             this.addExpBtn.Size = new System.Drawing.Size(53, 38);
@@ -428,7 +428,7 @@
             this.guna2Panel16.Controls.Add(this.dashboard1);
             this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel16.Location = new System.Drawing.Point(66, 65);
-            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel16.Name = "guna2Panel16";
             this.guna2Panel16.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.guna2Panel16.ShadowDecoration.Parent = this.guna2Panel16;
@@ -440,7 +440,7 @@
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboard1.Location = new System.Drawing.Point(13, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(1);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(868, 572);
             this.dashboard1.TabIndex = 0;
@@ -455,9 +455,9 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "menuControls";
-            this.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.Padding = new System.Windows.Forms.Padding(13);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuControls";
             this.Load += new System.EventHandler(this.menuControls_Load);
