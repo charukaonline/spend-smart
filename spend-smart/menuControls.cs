@@ -46,6 +46,7 @@ namespace spend_smart
 
         private void dashboard_Click(object sender, EventArgs e)
         {
+            analytics1.Hide();
             dashboard1.Show();
         }
 
