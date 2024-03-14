@@ -52,6 +52,7 @@
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.analytics1 = new spend_smart.analytics();
             this.dashboard1 = new spend_smart.dashboard();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
@@ -394,6 +395,7 @@
             this.analyticsBtn.ShadowDecoration.Parent = this.analyticsBtn;
             this.analyticsBtn.Size = new System.Drawing.Size(71, 47);
             this.analyticsBtn.TabIndex = 2;
+            this.analyticsBtn.Click += new System.EventHandler(this.analyticsBtn_Click);
             // 
             // addExpBtn
             // 
@@ -425,6 +427,7 @@
             // 
             // guna2Panel16
             // 
+            this.guna2Panel16.Controls.Add(this.analytics1);
             this.guna2Panel16.Controls.Add(this.dashboard1);
             this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel16.Location = new System.Drawing.Point(88, 80);
@@ -434,6 +437,16 @@
             this.guna2Panel16.ShadowDecoration.Parent = this.guna2Panel16;
             this.guna2Panel16.Size = new System.Drawing.Size(1175, 704);
             this.guna2Panel16.TabIndex = 2;
+            // 
+            // analytics1
+            // 
+            this.analytics1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.analytics1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.analytics1.Location = new System.Drawing.Point(17, 0);
+            this.analytics1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.analytics1.Name = "analytics1";
+            this.analytics1.Size = new System.Drawing.Size(1158, 704);
+            this.analytics1.TabIndex = 1;
             // 
             // dashboard1
             // 
@@ -503,5 +516,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
         private dashboard dashboard1;
+        private analytics analytics1;
     }
 }

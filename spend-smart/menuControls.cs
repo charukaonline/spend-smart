@@ -24,6 +24,7 @@ namespace spend_smart
         private void menuControls_Load(object sender, EventArgs e)
         {
             dashboard1.Show();
+            analytics1.Hide();
         }
 
         // Dragging part
@@ -45,12 +46,19 @@ namespace spend_smart
 
         private void dashboard_Click(object sender, EventArgs e)
         {
+            analytics1.Hide();
             dashboard1.Show();
         }
 
         private void addExpBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
+        }
+
+        private void analyticsBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+            analytics1.Show();
         }
     }
 }
