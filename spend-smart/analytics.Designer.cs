@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,17 +52,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(880, 291);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 297);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(880, 275);
-            this.guna2Panel2.TabIndex = 1;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BorderRadius = 15;
@@ -76,6 +65,28 @@
             this.guna2Panel3.Size = new System.Drawing.Size(880, 291);
             this.guna2Panel3.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(30, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Earning Flow";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.guna2Panel4);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 297);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(880, 275);
+            this.guna2Panel2.TabIndex = 1;
+            // 
             // guna2Panel4
             // 
             this.guna2Panel4.BorderRadius = 15;
@@ -88,17 +99,6 @@
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(880, 275);
             this.guna2Panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Earning Flow";
             // 
             // label3
             // 
@@ -123,9 +123,9 @@
             this.Name = "analytics";
             this.Size = new System.Drawing.Size(880, 572);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);
