@@ -52,6 +52,7 @@
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.noteForm1 = new spend_smart.noteForm();
             this.transactionsForm1 = new spend_smart.transactionsForm();
             this.notificationsForm1 = new spend_smart.notificationsForm();
             this.expensesForm1 = new spend_smart.expensesForm();
@@ -373,6 +374,7 @@
             this.noteBtn.ShadowDecoration.Parent = this.noteBtn;
             this.noteBtn.Size = new System.Drawing.Size(71, 47);
             this.noteBtn.TabIndex = 2;
+            this.noteBtn.Click += new System.EventHandler(this.noteBtn_Click);
             // 
             // transactionBtn
             // 
@@ -432,6 +434,7 @@
             // 
             // guna2Panel16
             // 
+            this.guna2Panel16.Controls.Add(this.noteForm1);
             this.guna2Panel16.Controls.Add(this.transactionsForm1);
             this.guna2Panel16.Controls.Add(this.notificationsForm1);
             this.guna2Panel16.Controls.Add(this.expensesForm1);
@@ -446,10 +449,20 @@
             this.guna2Panel16.Size = new System.Drawing.Size(1175, 704);
             this.guna2Panel16.TabIndex = 2;
             // 
+            // noteForm1
+            // 
+            this.noteForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.noteForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.noteForm1.Location = new System.Drawing.Point(17, 0);
+            this.noteForm1.Name = "noteForm1";
+            this.noteForm1.Size = new System.Drawing.Size(1158, 704);
+            this.noteForm1.TabIndex = 5;
+            // 
             // transactionsForm1
             // 
             this.transactionsForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.transactionsForm1.Location = new System.Drawing.Point(17, 0);
+            this.transactionsForm1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.transactionsForm1.Name = "transactionsForm1";
             this.transactionsForm1.Size = new System.Drawing.Size(1157, 704);
             this.transactionsForm1.TabIndex = 4;
@@ -458,6 +471,7 @@
             // 
             this.notificationsForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.notificationsForm1.Location = new System.Drawing.Point(17, 0);
+            this.notificationsForm1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.notificationsForm1.Name = "notificationsForm1";
             this.notificationsForm1.Size = new System.Drawing.Size(1157, 704);
             this.notificationsForm1.TabIndex = 3;
@@ -553,5 +567,6 @@
         private expensesForm expensesForm1;
         private notificationsForm notificationsForm1;
         private transactionsForm transactionsForm1;
+        private noteForm noteForm1;
     }
 }
