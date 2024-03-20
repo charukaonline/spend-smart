@@ -113,6 +113,12 @@
     <Compile Include="menuControls.Designer.cs">
       <DependentUpon>menuControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="noteForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="noteForm.Designer.cs">
+      <DependentUpon>noteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="notificationsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menuControls.resx">
       <DependentUpon>menuControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="noteForm.resx">
+      <DependentUpon>noteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notificationsForm.resx">
       <DependentUpon>notificationsForm.cs</DependentUpon>
