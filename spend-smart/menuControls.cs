@@ -26,6 +26,7 @@ namespace spend_smart
             dashboard1.Show();
             analytics1.Hide();
             expensesForm1.Hide();
+            notificationsForm1.Hide();
         }
 
         // Dragging part
@@ -49,6 +50,7 @@ namespace spend_smart
         {
             analytics1.Hide();
             expensesForm1.Hide();
+            notificationsForm1.Hide();
             dashboard1.Show();
         }
 
@@ -56,6 +58,7 @@ namespace spend_smart
         {
             dashboard1.Hide();
             analytics1.Hide();
+            notificationsForm1.Hide();
             expensesForm1.Show();
         }
 
@@ -63,7 +66,16 @@ namespace spend_smart
         {
             dashboard1.Hide();
             expensesForm1.Hide();
+            notificationsForm1.Hide();
             analytics1.Show();
+        }
+
+        private void notificationBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+            expensesForm1.Hide();
+            analytics1.Hide();
+            notificationsForm1.Show();
         }
     }
 }
