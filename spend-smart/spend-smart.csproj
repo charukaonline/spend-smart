@@ -112,6 +112,12 @@
     <Compile Include="menuControls.Designer.cs">
       <DependentUpon>menuControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="notificationsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="notificationsForm.Designer.cs">
+      <DependentUpon>notificationsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registerForm.cs">
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menuControls.resx">
       <DependentUpon>menuControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notificationsForm.resx">
+      <DependentUpon>notificationsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
