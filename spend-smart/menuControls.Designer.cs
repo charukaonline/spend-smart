@@ -52,6 +52,7 @@
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.transactionsForm1 = new spend_smart.transactionsForm();
             this.notificationsForm1 = new spend_smart.notificationsForm();
             this.expensesForm1 = new spend_smart.expensesForm();
             this.analytics1 = new spend_smart.analytics();
@@ -385,6 +386,7 @@
             this.transactionBtn.ShadowDecoration.Parent = this.transactionBtn;
             this.transactionBtn.Size = new System.Drawing.Size(71, 47);
             this.transactionBtn.TabIndex = 2;
+            this.transactionBtn.Click += new System.EventHandler(this.transactionBtn_Click);
             // 
             // analyticsBtn
             // 
@@ -430,6 +432,7 @@
             // 
             // guna2Panel16
             // 
+            this.guna2Panel16.Controls.Add(this.transactionsForm1);
             this.guna2Panel16.Controls.Add(this.notificationsForm1);
             this.guna2Panel16.Controls.Add(this.expensesForm1);
             this.guna2Panel16.Controls.Add(this.analytics1);
@@ -442,6 +445,14 @@
             this.guna2Panel16.ShadowDecoration.Parent = this.guna2Panel16;
             this.guna2Panel16.Size = new System.Drawing.Size(1175, 704);
             this.guna2Panel16.TabIndex = 2;
+            // 
+            // transactionsForm1
+            // 
+            this.transactionsForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.transactionsForm1.Location = new System.Drawing.Point(17, 0);
+            this.transactionsForm1.Name = "transactionsForm1";
+            this.transactionsForm1.Size = new System.Drawing.Size(1157, 704);
+            this.transactionsForm1.TabIndex = 4;
             // 
             // notificationsForm1
             // 
@@ -541,5 +552,6 @@
         private analytics analytics1;
         private expensesForm expensesForm1;
         private notificationsForm notificationsForm1;
+        private transactionsForm transactionsForm1;
     }
 }
