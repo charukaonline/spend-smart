@@ -20,6 +20,9 @@ namespace spend_smart
         public loginForm()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(BorderRadius.CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
         }
 
         // Dragging part
@@ -128,6 +131,13 @@ namespace spend_smart
         private void passwordTxtBox_TextChanged(object sender, EventArgs e)
         {
             pinValidationLbl.Visible = false;
+        }
+
+        private void registerLbl_Click(object sender, EventArgs e)
+        {
+            registerForm registerForm = new registerForm();
+            registerForm.Show();
+            this.Hide();
         }
     }
 }
