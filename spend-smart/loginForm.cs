@@ -129,5 +129,12 @@ namespace spend_smart
         {
             pinValidationLbl.Visible = false;
         }
+
+        private void registerLbl_Click(object sender, EventArgs e)
+        {
+            registerForm registerForm = new registerForm();
+            registerForm.Show();
+            this.Hide();
+        }
     }
 }

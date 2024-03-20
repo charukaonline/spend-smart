@@ -36,7 +36,7 @@
             this.userNameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.loginBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.registerLbl = new System.Windows.Forms.Label();
             this.usernameValidationLbl = new System.Windows.Forms.Label();
             this.pinValidationLbl = new System.Windows.Forms.Label();
             this.labelLockoutTimer = new System.Windows.Forms.Label();
@@ -182,7 +182,7 @@
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.HoverState.Parent = this.loginBtn;
             this.loginBtn.Location = new System.Drawing.Point(316, 506);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.ShadowDecoration.Parent = this.loginBtn;
             this.loginBtn.Size = new System.Drawing.Size(240, 55);
@@ -203,18 +203,19 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Don\'t have an Account? ";
             // 
-            // label5
+            // registerLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(452, 604);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Register here...";
+            this.registerLbl.AutoSize = true;
+            this.registerLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
+            this.registerLbl.Location = new System.Drawing.Point(452, 604);
+            this.registerLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.registerLbl.Name = "registerLbl";
+            this.registerLbl.Size = new System.Drawing.Size(158, 25);
+            this.registerLbl.TabIndex = 4;
+            this.registerLbl.Text = "Register here...";
+            this.registerLbl.Click += new System.EventHandler(this.registerLbl_Click);
             // 
             // usernameValidationLbl
             // 
@@ -274,7 +275,7 @@
             this.Controls.Add(this.labelLockoutTimer);
             this.Controls.Add(this.pinValidationLbl);
             this.Controls.Add(this.usernameValidationLbl);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.registerLbl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.userNameTxt);
@@ -285,7 +286,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "loginForm";
             this.Padding = new System.Windows.Forms.Padding(40, 37, 40, 37);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -310,7 +311,7 @@
         private Guna.UI2.WinForms.Guna2TextBox userNameTxt;
         private Guna.UI2.WinForms.Guna2Button loginBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label registerLbl;
         private System.Windows.Forms.Label usernameValidationLbl;
         private System.Windows.Forms.Label pinValidationLbl;
         private System.Windows.Forms.Label labelLockoutTimer;
