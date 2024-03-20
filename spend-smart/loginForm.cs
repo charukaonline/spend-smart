@@ -20,6 +20,9 @@ namespace spend_smart
         public loginForm()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(BorderRadius.CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
         }
 
         // Dragging part

@@ -55,6 +55,7 @@
     <Compile Include="analytics.Designer.cs">
       <DependentUpon>analytics.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorderRadius.cs" />
     <Compile Include="Custom Tools\CirclePictureBox.cs">
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
