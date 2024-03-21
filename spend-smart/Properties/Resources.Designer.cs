@@ -103,6 +103,36 @@ namespace spend_smart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dollar_icon {
+            get {
+                object obj = ResourceManager.GetObject("dollar_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expense_icon {
+            get {
+                object obj = ResourceManager.GetObject("expense_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap income_icon {
+            get {
+                object obj = ResourceManager.GetObject("income_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading_image {
             get {
                 object obj = ResourceManager.GetObject("loading_image", resourceCulture);
@@ -133,6 +163,16 @@ namespace spend_smart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap money_icon {
+            get {
+                object obj = ResourceManager.GetObject("money_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap more_vertical_outline_icon {
             get {
                 object obj = ResourceManager.GetObject("more_vertical_outline_icon", resourceCulture);
@@ -146,6 +186,16 @@ namespace spend_smart.Properties {
         internal static System.Drawing.Bitmap notes_icon {
             get {
                 object obj = ResourceManager.GetObject("notes_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap payment_icon {
+            get {
+                object obj = ResourceManager.GetObject("payment_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

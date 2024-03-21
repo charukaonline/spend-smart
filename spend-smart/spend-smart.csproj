@@ -210,9 +210,14 @@
     <Content Include="icons\bell_icon.png" />
     <Content Include="icons\calendar_icon.png" />
     <Content Include="icons\dashboard_icon.png" />
+    <None Include="icons\dollar_icon.png" />
+    <None Include="icons\expense_icon.png" />
+    <None Include="icons\income_icon.png" />
     <Content Include="icons\logout_icon.png" />
+    <None Include="icons\money_icon.png" />
     <Content Include="icons\more-vertical-outline_icon.png" />
     <Content Include="icons\notes_icon.png" />
+    <None Include="icons\payment_icon.png" />
     <Content Include="icons\question_icon.png" />
     <Content Include="icons\settings_icon.png" />
     <Content Include="icons\transaction_icon.png" />
