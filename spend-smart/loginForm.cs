@@ -17,6 +17,8 @@ namespace spend_smart
         private int attempts = 0;
         private DateTime lockoutEndTime;
 
+        private dbConn db;
+
         public loginForm()
         {
             InitializeComponent();
@@ -42,10 +44,30 @@ namespace spend_smart
             }
         }
 
+        private void UpdateStatus(bool isConnected)
+        {
+            if (isConnected)
+            {
+                dbStatusCircle.FillColor = Color.FromArgb(0, 120, 212); ;
+                statusLabel.ForeColor = Color.FromArgb(0, 120, 212);
+                statusLabel.Text += " All Systems normal";
+            }
+            else
+            {
+                dbStatusCircle.FillColor = Color.Red;
+                statusLabel.ForeColor = Color.Red;
+                statusLabel.Text += " System Error";
+            }
+        }
+
         private void loginForm_Load(object sender, EventArgs e)
         {
             usernameValidationLbl.Visible = false;
             pinValidationLbl.Visible = false;
+
+            db = dbConn.Instance; // Initialize the dbConn object
+            bool isConnected = db.TestConnection(); 
+            UpdateStatus(isConnected);
         }
 
         private void loginBtn_Click(object sender, EventArgs e)

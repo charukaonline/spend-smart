@@ -79,6 +79,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
@@ -111,6 +115,10 @@
             this.guna2Panel23.SuspendLayout();
             this.guna2Panel22.SuspendLayout();
             this.guna2Panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).BeginInit();
@@ -145,6 +153,7 @@
             // guna2Panel11
             // 
             this.guna2Panel11.BorderRadius = 15;
+            this.guna2Panel11.Controls.Add(this.guna2CirclePictureBox4);
             this.guna2Panel11.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel11.Controls.Add(this.label6);
             this.guna2Panel11.Controls.Add(this.savinglbl);
@@ -208,6 +217,7 @@
             // guna2Panel9
             // 
             this.guna2Panel9.BorderRadius = 15;
+            this.guna2Panel9.Controls.Add(this.guna2CirclePictureBox3);
             this.guna2Panel9.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel9.Controls.Add(this.label4);
             this.guna2Panel9.Controls.Add(this.explbl);
@@ -271,6 +281,7 @@
             // guna2Panel8
             // 
             this.guna2Panel8.BorderRadius = 15;
+            this.guna2Panel8.Controls.Add(this.guna2CirclePictureBox2);
             this.guna2Panel8.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel8.Controls.Add(this.label2);
             this.guna2Panel8.Controls.Add(this.incomelbl);
@@ -335,6 +346,7 @@
             // guna2Panel7
             // 
             this.guna2Panel7.BorderRadius = 15;
+            this.guna2Panel7.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel7.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel7.Controls.Add(this.label1);
             this.guna2Panel7.Controls.Add(this.totBalancelbl);
@@ -797,6 +809,58 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Recent Transaction";
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.payment_icon;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox2.Image = global::spend_smart.Properties.Resources.dollar_icon;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox2.TabIndex = 1;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox3.Image = global::spend_smart.Properties.Resources.money_icon;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.ShadowDecoration.Parent = this.guna2CirclePictureBox3;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox3.TabIndex = 1;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
+            // guna2CirclePictureBox4
+            // 
+            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox4.Image = global::spend_smart.Properties.Resources.dollar_icon;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.ShadowDecoration.Parent = this.guna2CirclePictureBox4;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox4.TabIndex = 1;
+            this.guna2CirclePictureBox4.TabStop = false;
+            // 
             // circlePictureBox5
             // 
             this.circlePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(40)))), ((int)(((byte)(177)))));
@@ -915,6 +979,10 @@
             this.guna2Panel22.PerformLayout();
             this.guna2Panel21.ResumeLayout(false);
             this.guna2Panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
@@ -980,5 +1048,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
     }
 }
