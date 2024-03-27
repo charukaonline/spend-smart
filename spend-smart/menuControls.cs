@@ -29,6 +29,46 @@ namespace spend_smart
             notificationsForm1.Hide();
             transactionsForm1.Hide();
             noteForm1.Hide();
+
+            // Add tooltips to the icons
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(dashboardBtn, "Dashboard");
+
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.SetToolTip(addExpBtn, "Add Income and Expense");
+
+            ToolTip toolTip3 = new ToolTip();
+            toolTip3.SetToolTip(analyticsBtn, "Analytics");
+
+            ToolTip toolTip4 = new ToolTip();
+            toolTip4.SetToolTip(transactionBtn, "Transaction");
+
+            ToolTip toolTip5 = new ToolTip();
+            toolTip5.SetToolTip(noteBtn, "Add Note");
+
+            ToolTip toolTip6 = new ToolTip();
+            toolTip6.SetToolTip(notificationBtn, "Notification");
+
+            ToolTip toolTip7 = new ToolTip();
+            toolTip7.SetToolTip(logoutBtn, "Logout");
+
+            ToolTip toolTip8 = new ToolTip();
+            toolTip8.SetToolTip(settingBtn, "Setting");
+
+            ToolTip toolTip9 = new ToolTip();
+            toolTip9.SetToolTip(helpBtn, "Help");
+
+            ToolTip toolTip10 = new ToolTip();
+            toolTip10.SetToolTip(minimizaBtn, "Minimize");
+
+            ToolTip toolTip11 = new ToolTip();
+            toolTip11.SetToolTip(maximizeBtn, "Maximize");
+
+            ToolTip toolTip12 = new ToolTip();
+            toolTip12.SetToolTip(closingBtn, "Close");
+
+            // Attach MouseMove event handler to sidebarPanel or individual icons
+            menu.MouseMove += Sidebar_MouseMove;
         }
 
         // Dragging part
@@ -106,6 +146,18 @@ namespace spend_smart
             notificationsForm1.Hide();
             transactionsForm1.Hide();
             noteForm1.Show();
+        }
+
+        private void Sidebar_MouseMove(object sender, MouseEventArgs e)
+        {
+            Control control = menu.GetChildAtPoint(e.Location); 
+            if (control != null && control is PictureBox pictureBox)
+            {
+                // Display the name of the icon near the mouse pointer
+                string iconName = pictureBox.Name;
+                Point screenPoint = pictureBox.PointToScreen(Point.Empty);
+                Point adjustedPoint = new Point(screenPoint.X + 20, screenPoint.Y - 20);
+            }
         }
     }
 }
