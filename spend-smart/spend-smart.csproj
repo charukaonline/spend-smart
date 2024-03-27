@@ -92,6 +92,7 @@
     <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbConn.cs" />
     <Compile Include="expensesForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
