@@ -44,7 +44,7 @@ namespace spend_smart
             toolTip4.SetToolTip(transactionBtn, "Transaction");
 
             ToolTip toolTip5 = new ToolTip();
-            toolTip5.SetToolTip(noteBtn, "Add Note");
+            toolTip5.SetToolTip(noteBtn, "Note");
 
             ToolTip toolTip6 = new ToolTip();
             toolTip6.SetToolTip(notificationBtn, "Notification");
