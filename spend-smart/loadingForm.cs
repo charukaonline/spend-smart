@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,59 +18,32 @@ namespace spend_smart
         public loadingForm()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(BorderRadius.CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
         }
 
         private async void loadingForm_Load(object sender, EventArgs e)
         {
             await StartLoadingAsync();
-
-            loginForm login = new loginForm();
-            login.Show();
-            this.Hide();
         }
 
         private async Task StartLoadingAsync()
         {
-   
-            bool isDatabaseConnected = await CheckDatabaseConnectionAsync();
+
+            bool isDatabaseConnected = await Task.Run(() => dbConn.Instance.TestConnection());
 
             for (int i = 0; i <= 100; i += 10)
             {
                 await Task.Delay(200);
-
                 progressBar1.Value = i;
             }
 
             progressBar1.Visible = false;
 
-            if (isDatabaseConnected)
-            {
-                Console.WriteLine("Database connection successful.");
-            }
-            else
-            {
-                Console.WriteLine("Database connection failed.");
-            }
-        }
-
-        private async Task<bool> CheckDatabaseConnectionAsync()
-        {
-            
-            string connectionString = "YourConnectionStringHere";
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-                    return true; 
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Database connection error: " + ex.Message);
-                return false;
-            }
+            loginForm login = new loginForm();
+            login.Show();
+            this.Hide();
         }
     }
 }
