@@ -38,7 +38,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 432);
+            this.panel1.Size = new System.Drawing.Size(695, 426);
             this.panel1.TabIndex = 0;
             // 
             // progressBar1
@@ -64,6 +64,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loadingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loadingForm";
             this.Load += new System.EventHandler(this.loadingForm_Load);
             this.ResumeLayout(false);
