@@ -31,26 +31,24 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.savinglbl = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.explbl = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.incomelbl = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.totBalancelbl = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
@@ -81,10 +79,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.explbl = new System.Windows.Forms.Label();
-            this.totBalancelbl = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
@@ -92,19 +90,15 @@
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
@@ -121,6 +115,10 @@
             this.guna2Panel23.SuspendLayout();
             this.guna2Panel22.SuspendLayout();
             this.guna2Panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).BeginInit();
@@ -166,19 +164,6 @@
             this.guna2Panel11.ShadowDecoration.Parent = this.guna2Panel11;
             this.guna2Panel11.Size = new System.Drawing.Size(310, 180);
             this.guna2Panel11.TabIndex = 0;
-            // 
-            // guna2CirclePictureBox4
-            // 
-            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox4.Image = global::spend_smart.Properties.Resources.dollar_icon;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(32, 20);
-            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
-            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox4.ShadowDecoration.Parent = this.guna2CirclePictureBox4;
-            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(46, 48);
-            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox4.TabIndex = 1;
-            this.guna2CirclePictureBox4.TabStop = false;
             // 
             // guna2PictureBox4
             // 
@@ -236,7 +221,6 @@
             this.guna2Panel9.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel9.Controls.Add(this.label4);
             this.guna2Panel9.Controls.Add(this.explbl);
-            this.guna2Panel9.Controls.Add(this.label19);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2Panel9.Location = new System.Drawing.Point(0, 0);
@@ -244,19 +228,6 @@
             this.guna2Panel9.ShadowDecoration.Parent = this.guna2Panel9;
             this.guna2Panel9.Size = new System.Drawing.Size(310, 180);
             this.guna2Panel9.TabIndex = 0;
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::spend_smart.Properties.Resources.money_icon;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(32, 20);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.ShadowDecoration.Parent = this.guna2CirclePictureBox3;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(46, 48);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox3.TabIndex = 1;
-            this.guna2CirclePictureBox3.TabStop = false;
             // 
             // guna2PictureBox3
             // 
@@ -283,6 +254,19 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Expenses";
             // 
+            // explbl
+            // 
+            this.explbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.explbl.AutoSize = true;
+            this.explbl.BackColor = System.Drawing.Color.Transparent;
+            this.explbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explbl.ForeColor = System.Drawing.Color.White;
+            this.explbl.Location = new System.Drawing.Point(26, 116);
+            this.explbl.Name = "explbl";
+            this.explbl.Size = new System.Drawing.Size(118, 32);
+            this.explbl.TabIndex = 0;
+            this.explbl.Text = "$100.00";
+            // 
             // guna2Panel5
             // 
             this.guna2Panel5.Controls.Add(this.guna2Panel8);
@@ -301,7 +285,6 @@
             this.guna2Panel8.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel8.Controls.Add(this.label2);
             this.guna2Panel8.Controls.Add(this.incomelbl);
-            this.guna2Panel8.Controls.Add(this.label17);
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2Panel8.Location = new System.Drawing.Point(0, 0);
@@ -309,19 +292,6 @@
             this.guna2Panel8.ShadowDecoration.Parent = this.guna2Panel8;
             this.guna2Panel8.Size = new System.Drawing.Size(310, 180);
             this.guna2Panel8.TabIndex = 0;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox2.Image = global::spend_smart.Properties.Resources.dollar_icon;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(32, 20);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(46, 48);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox2.TabIndex = 1;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2PictureBox2
             // 
@@ -355,11 +325,11 @@
             this.incomelbl.BackColor = System.Drawing.Color.Transparent;
             this.incomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incomelbl.ForeColor = System.Drawing.Color.White;
-            this.incomelbl.Location = new System.Drawing.Point(47, 116);
+            this.incomelbl.Location = new System.Drawing.Point(26, 116);
             this.incomelbl.Name = "incomelbl";
-            this.incomelbl.Size = new System.Drawing.Size(102, 32);
+            this.incomelbl.Size = new System.Drawing.Size(118, 32);
             this.incomelbl.TabIndex = 0;
-            this.incomelbl.Text = "100.00";
+            this.incomelbl.Text = "$100.00";
             // 
             // guna2Panel4
             // 
@@ -388,19 +358,6 @@
             this.guna2Panel7.Size = new System.Drawing.Size(310, 180);
             this.guna2Panel7.TabIndex = 0;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.payment_icon;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(32, 20);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 48);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -425,6 +382,19 @@
             this.label1.Size = new System.Drawing.Size(161, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Balance";
+            // 
+            // totBalancelbl
+            // 
+            this.totBalancelbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.totBalancelbl.AutoSize = true;
+            this.totBalancelbl.BackColor = System.Drawing.Color.Transparent;
+            this.totBalancelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totBalancelbl.ForeColor = System.Drawing.Color.White;
+            this.totBalancelbl.Location = new System.Drawing.Point(26, 116);
+            this.totBalancelbl.Name = "totBalancelbl";
+            this.totBalancelbl.Size = new System.Drawing.Size(118, 32);
+            this.totBalancelbl.TabIndex = 0;
+            this.totBalancelbl.Text = "$100.00";
             // 
             // guna2Panel2
             // 
@@ -630,7 +600,6 @@
             this.addNoteBtn.Size = new System.Drawing.Size(189, 54);
             this.addNoteBtn.TabIndex = 1;
             this.addNoteBtn.Text = "Add Note";
-            this.addNoteBtn.Click += new System.EventHandler(this.addNoteBtn_Click);
             // 
             // label8
             // 
@@ -840,57 +809,57 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Recent Transaction";
             // 
-            // label17
+            // guna2CirclePictureBox1
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(26, 116);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 32);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "$";
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.payment_icon;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // label19
+            // guna2CirclePictureBox2
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(27, 116);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 32);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "$";
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox2.Image = global::spend_smart.Properties.Resources.dollar_icon;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox2.TabIndex = 1;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
-            // explbl
+            // guna2CirclePictureBox3
             // 
-            this.explbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.explbl.AutoSize = true;
-            this.explbl.BackColor = System.Drawing.Color.Transparent;
-            this.explbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.explbl.ForeColor = System.Drawing.Color.White;
-            this.explbl.Location = new System.Drawing.Point(48, 116);
-            this.explbl.Name = "explbl";
-            this.explbl.Size = new System.Drawing.Size(102, 32);
-            this.explbl.TabIndex = 0;
-            this.explbl.Text = "100.00";
+            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox3.Image = global::spend_smart.Properties.Resources.money_icon;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.ShadowDecoration.Parent = this.guna2CirclePictureBox3;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox3.TabIndex = 1;
+            this.guna2CirclePictureBox3.TabStop = false;
             // 
-            // totBalancelbl
+            // guna2CirclePictureBox4
             // 
-            this.totBalancelbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.totBalancelbl.AutoSize = true;
-            this.totBalancelbl.BackColor = System.Drawing.Color.Transparent;
-            this.totBalancelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totBalancelbl.ForeColor = System.Drawing.Color.White;
-            this.totBalancelbl.Location = new System.Drawing.Point(26, 116);
-            this.totBalancelbl.Name = "totBalancelbl";
-            this.totBalancelbl.Size = new System.Drawing.Size(118, 32);
-            this.totBalancelbl.TabIndex = 0;
-            this.totBalancelbl.Text = "$100.00";
+            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox4.Image = global::spend_smart.Properties.Resources.dollar_icon;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(32, 20);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.ShadowDecoration.Parent = this.guna2CirclePictureBox4;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2CirclePictureBox4.TabIndex = 1;
+            this.guna2CirclePictureBox4.TabStop = false;
             // 
             // circlePictureBox5
             // 
@@ -974,22 +943,18 @@
             this.guna2Panel10.ResumeLayout(false);
             this.guna2Panel11.ResumeLayout(false);
             this.guna2Panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel13.ResumeLayout(false);
@@ -1014,6 +979,10 @@
             this.guna2Panel22.PerformLayout();
             this.guna2Panel21.ResumeLayout(false);
             this.guna2Panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
@@ -1033,11 +1002,13 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totBalancelbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label savinglbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label explbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label incomelbl;
@@ -1081,9 +1052,5 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label explbl;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label totBalancelbl;
     }
 }
