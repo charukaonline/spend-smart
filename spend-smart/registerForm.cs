@@ -5,8 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace spend_smart
 {
@@ -92,6 +95,82 @@ namespace spend_smart
         private void regConPassTxt_TextChanged(object sender, EventArgs e)
         {
             conPinValidationLbl.Visible = false;
+        }
+
+        private string connString = dbConn.Instance.connString;
+
+        private static string hashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            string connString = dbConn.Instance.connString;
+            using (OleDbConnection conn = new OleDbConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    String username = regUserNameTxt.Text;
+                    String contactNum = contactNumber.Text;
+                    String pin = regPasswordTxt.Text;
+                    String conPin = regConPassTxt.Text;
+
+                    string hashedPin = hashPassword(pin);
+
+                    if (regUserNameTxt.Text == "" || contactNumber.Text == "" || regPasswordTxt.Text == "" || regConPassTxt.Text == "")
+                    {
+                        MessageBox.Show("Please fill all credentials", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (regConPassTxt.Text != regPasswordTxt.Text)
+                    {
+                        MessageBox.Show("PIN does not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (regPasswordTxt.Text.Length < 8)
+                    {
+                        MessageBox.Show("PIN must be at least 8 characters long", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (!Regex.IsMatch(regPasswordTxt.Text, @"^\d+$"))
+                    {
+                        MessageBox.Show("PIN must contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (contactNumber.Text.Length != 11)
+                    {
+                        MessageBox.Show("Contact number must be 11 digits long", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (!Regex.IsMatch(contactNumber.Text, @"^\d+$"))
+                    {
+                        MessageBox.Show("Contact number must contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        string query = "INSERT INTO users (username, phone, pin) VALUES (@username, @contactNum, @pin)";
+                        OleDbCommand cmd = new OleDbCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@contactNum", contactNum);
+                        cmd.Parameters.AddWithValue("@pin", hashedPin);
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Successfully registered", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        loginForm loginForm = new loginForm();
+                        loginForm.Show();
+                        this.Hide();
+                    }
+                }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show("Something went wrong: " + ex.Message);
+                }
+                
+            }
         }
     }
 }
