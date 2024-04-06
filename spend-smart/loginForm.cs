@@ -183,7 +183,6 @@ namespace spend_smart
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
             if (DateTime.Now >= lockoutEndTime)
             {
                 ((Timer)sender).Stop();
@@ -193,7 +192,7 @@ namespace spend_smart
             }
             else
             {
-                //TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
+                TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
                 string remainingTimeString = $"{(int)remainingTime.TotalMinutes}:{remainingTime.Seconds:00}";
                 labelLockoutTimer.Text = $"Lockout remaining: {remainingTimeString}";
             }
