@@ -8,6 +8,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace spend_smart
 {
@@ -70,6 +72,17 @@ namespace spend_smart
             UpdateStatus(isConnected);
         }
 
+        private string connString = dbConn.Instance.connString;
+
+        private static string hashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
             if (DateTime.Now < lockoutEndTime)
@@ -80,41 +93,97 @@ namespace spend_smart
                 return;
             }
 
-            if (userNameTxt.Text == "Admin" && passwordTxtBox.Text == "123")
+            string connString = dbConn.Instance.connString;
+            using (OleDbConnection conn = new OleDbConnection(connString))
             {
-                menuControls dashboard = new menuControls();
-                dashboard.Show();
-                this.Hide();
-                ResetAttempts(); // Reset attempts on successful login
-            }
-            else
-            {
-                attempts++;
-
-                if (attempts >= 3)
+                try
                 {
-                    lockoutEndTime = DateTime.Now.AddMinutes(1); // Lockout for 1 minute
-                    MessageBox.Show($"You have reached maximum number of attempts.\n Login will be disabled for 1 minute.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    MessageBox.Show($"Invalid credentials. Attempts done: {attempts} out of 3", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+                    conn.Open();
 
-            if (attempts >= 3)
-            {
-                loginBtn.Enabled = false; // Disable login button during lockout period
-                labelLockoutTimer.Visible = true; // Show lockout timer label
-                Timer timer = new Timer();
-                timer.Interval = 1000; // 1 second
-                timer.Tick += Timer_Tick;
-                timer.Start();
+                    string username = userNameTxt.Text;
+                    string pin = passwordTxtBox.Text;
+
+                    string hashedPin = hashPassword(pin);
+
+                    string query = "SELECT username, pin FROM users WHERE username = @username";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@pin", hashedPin);
+
+                        using (OleDbDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string storedUsername = reader["username"].ToString();
+                                string storedHashedPin = reader["pin"].ToString();
+
+                                if (storedHashedPin != null && hashedPin == storedHashedPin)
+                                {
+                                    MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    menuControls dashboard = new menuControls();
+                                    dashboard.Show();
+                                    this.Hide();
+                                    ResetAttempts(); //Reset attempts on successful logins
+                                }
+                                else
+                                {
+                                    attempts++;
+
+                                    if (attempts >= 3)
+                                    {
+                                        lockoutEndTime = DateTime.Now.AddMinutes(1); //lockout for 1 minute
+                                        MessageBox.Show($"You have reached maximum number of attempts.\n Login will be disabled for 1 minute.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        userNameTxt.Focus();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show($"Invalid PIN. Attempts done: {attempts} out of 3", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        passwordTxtBox.Text = "";
+                                        passwordTxtBox.Focus();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                attempts++;
+
+                                if (attempts >= 3)
+                                {
+                                    lockoutEndTime = DateTime.Now.AddMinutes(1); //lockout for 1 minute
+                                    MessageBox.Show($"You have reached maximum number of attempts.\n Login will be disabled for 1 minute.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    userNameTxt.Focus();
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"Invalid Username. Attempts done: {attempts} out of 3", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    passwordTxtBox.Text = "";
+                                    passwordTxtBox.Focus();
+                                }
+                            }
+                        }
+                    }
+                    if (attempts >= 3)
+                    {
+                        loginBtn.Enabled = false; //disable login button during lockout period
+                        labelLockoutTimer.Visible = true; //show lockout timer label
+                        Timer timer = new Timer();
+                        timer.Interval = 1000; //1 second
+                        timer.Tick += Timer_Tick;
+                        timer.Start();
+                    }
+                }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show("Something went wrong: " + ex.Message);
+                    conn.Close();
+                }
             }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
             if (DateTime.Now >= lockoutEndTime)
             {
                 ((Timer)sender).Stop();
@@ -124,7 +193,7 @@ namespace spend_smart
             }
             else
             {
-                TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
+                //TimeSpan remainingTime = lockoutEndTime - DateTime.Now;
                 string remainingTimeString = $"{(int)remainingTime.TotalMinutes}:{remainingTime.Seconds:00}";
                 labelLockoutTimer.Text = $"Lockout remaining: {remainingTimeString}";
             }
@@ -133,6 +202,7 @@ namespace spend_smart
         private void ResetAttempts()
         {
             attempts = 0;
+            labelLockoutTimer.Text = "";
         }
 
         private void userNameTxt_Enter(object sender, EventArgs e)
