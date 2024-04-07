@@ -34,12 +34,12 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtIncome = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCurrentPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNewPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCNewPin = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnChangePin = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.selectLan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.changeTheme = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2Panel1.SuspendLayout();
@@ -88,9 +88,9 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.btnChangePin);
-            this.guna2Panel2.Controls.Add(this.guna2TextBox2);
-            this.guna2Panel2.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel2.Controls.Add(this.txtIncome);
+            this.guna2Panel2.Controls.Add(this.txtCNewPin);
+            this.guna2Panel2.Controls.Add(this.txtNewPin);
+            this.guna2Panel2.Controls.Add(this.txtCurrentPin);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 100);
@@ -111,7 +111,7 @@
             // guna2Panel4
             // 
             this.guna2Panel4.Controls.Add(this.changeTheme);
-            this.guna2Panel4.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel4.Controls.Add(this.selectLan);
             this.guna2Panel4.Controls.Add(this.label4);
             this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -121,92 +121,92 @@
             this.guna2Panel4.Size = new System.Drawing.Size(1157, 235);
             this.guna2Panel4.TabIndex = 13;
             // 
-            // txtIncome
+            // txtCurrentPin
             // 
-            this.txtIncome.BorderColor = System.Drawing.Color.DimGray;
-            this.txtIncome.BorderRadius = 8;
-            this.txtIncome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIncome.DefaultText = "";
-            this.txtIncome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIncome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIncome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIncome.DisabledState.Parent = this.txtIncome;
-            this.txtIncome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIncome.FillColor = System.Drawing.Color.DimGray;
-            this.txtIncome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIncome.FocusedState.Parent = this.txtIncome;
-            this.txtIncome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIncome.ForeColor = System.Drawing.Color.White;
-            this.txtIncome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIncome.HoverState.Parent = this.txtIncome;
-            this.txtIncome.Location = new System.Drawing.Point(49, 80);
-            this.txtIncome.Margin = new System.Windows.Forms.Padding(5);
-            this.txtIncome.Name = "txtIncome";
-            this.txtIncome.PasswordChar = '\0';
-            this.txtIncome.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtIncome.PlaceholderText = "Current PIN";
-            this.txtIncome.SelectedText = "";
-            this.txtIncome.ShadowDecoration.Parent = this.txtIncome;
-            this.txtIncome.Size = new System.Drawing.Size(438, 55);
-            this.txtIncome.TabIndex = 12;
+            this.txtCurrentPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCurrentPin.BorderRadius = 8;
+            this.txtCurrentPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCurrentPin.DefaultText = "";
+            this.txtCurrentPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCurrentPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCurrentPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentPin.DisabledState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtCurrentPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentPin.FocusedState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentPin.ForeColor = System.Drawing.Color.White;
+            this.txtCurrentPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentPin.HoverState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Location = new System.Drawing.Point(49, 80);
+            this.txtCurrentPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCurrentPin.Name = "txtCurrentPin";
+            this.txtCurrentPin.PasswordChar = '\0';
+            this.txtCurrentPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtCurrentPin.PlaceholderText = "Current PIN";
+            this.txtCurrentPin.SelectedText = "";
+            this.txtCurrentPin.ShadowDecoration.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Size = new System.Drawing.Size(438, 55);
+            this.txtCurrentPin.TabIndex = 12;
             // 
-            // guna2TextBox1
+            // txtNewPin
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.BorderRadius = 8;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(49, 145);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.PlaceholderText = "New PIN";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(438, 55);
-            this.guna2TextBox1.TabIndex = 12;
+            this.txtNewPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtNewPin.BorderRadius = 8;
+            this.txtNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPin.DefaultText = "";
+            this.txtNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPin.DisabledState.Parent = this.txtNewPin;
+            this.txtNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPin.FocusedState.Parent = this.txtNewPin;
+            this.txtNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPin.ForeColor = System.Drawing.Color.White;
+            this.txtNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPin.HoverState.Parent = this.txtNewPin;
+            this.txtNewPin.Location = new System.Drawing.Point(49, 145);
+            this.txtNewPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewPin.Name = "txtNewPin";
+            this.txtNewPin.PasswordChar = '\0';
+            this.txtNewPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtNewPin.PlaceholderText = "New PIN";
+            this.txtNewPin.SelectedText = "";
+            this.txtNewPin.ShadowDecoration.Parent = this.txtNewPin;
+            this.txtNewPin.Size = new System.Drawing.Size(438, 55);
+            this.txtNewPin.TabIndex = 12;
             // 
-            // guna2TextBox2
+            // txtCNewPin
             // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.BorderRadius = 8;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(49, 210);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.White;
-            this.guna2TextBox2.PlaceholderText = "Confirm New PIN";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(438, 55);
-            this.guna2TextBox2.TabIndex = 12;
+            this.txtCNewPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCNewPin.BorderRadius = 8;
+            this.txtCNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCNewPin.DefaultText = "";
+            this.txtCNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCNewPin.DisabledState.Parent = this.txtCNewPin;
+            this.txtCNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCNewPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtCNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCNewPin.FocusedState.Parent = this.txtCNewPin;
+            this.txtCNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNewPin.ForeColor = System.Drawing.Color.White;
+            this.txtCNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCNewPin.HoverState.Parent = this.txtCNewPin;
+            this.txtCNewPin.Location = new System.Drawing.Point(49, 210);
+            this.txtCNewPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCNewPin.Name = "txtCNewPin";
+            this.txtCNewPin.PasswordChar = '\0';
+            this.txtCNewPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtCNewPin.PlaceholderText = "Confirm New PIN";
+            this.txtCNewPin.SelectedText = "";
+            this.txtCNewPin.ShadowDecoration.Parent = this.txtCNewPin;
+            this.txtCNewPin.Size = new System.Drawing.Size(438, 55);
+            this.txtCNewPin.TabIndex = 12;
             // 
             // btnChangePin
             // 
@@ -224,6 +224,7 @@
             this.btnChangePin.Size = new System.Drawing.Size(187, 55);
             this.btnChangePin.TabIndex = 13;
             this.btnChangePin.Text = "Submit";
+            this.btnChangePin.Click += new System.EventHandler(this.btnChangePin_Click);
             // 
             // label3
             // 
@@ -236,27 +237,27 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Change Language";
             // 
-            // guna2ComboBox1
+            // selectLan
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 8;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(276, 31);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(179, 36);
-            this.guna2ComboBox1.TabIndex = 12;
+            this.selectLan.BackColor = System.Drawing.Color.Transparent;
+            this.selectLan.BorderColor = System.Drawing.Color.Transparent;
+            this.selectLan.BorderRadius = 8;
+            this.selectLan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.selectLan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectLan.FillColor = System.Drawing.Color.DimGray;
+            this.selectLan.FocusedColor = System.Drawing.Color.Empty;
+            this.selectLan.FocusedState.Parent = this.selectLan;
+            this.selectLan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.selectLan.ForeColor = System.Drawing.Color.White;
+            this.selectLan.FormattingEnabled = true;
+            this.selectLan.HoverState.Parent = this.selectLan;
+            this.selectLan.ItemHeight = 30;
+            this.selectLan.ItemsAppearance.Parent = this.selectLan;
+            this.selectLan.Location = new System.Drawing.Point(276, 31);
+            this.selectLan.Name = "selectLan";
+            this.selectLan.ShadowDecoration.Parent = this.selectLan;
+            this.selectLan.Size = new System.Drawing.Size(179, 36);
+            this.selectLan.TabIndex = 12;
             // 
             // label4
             // 
@@ -293,6 +294,7 @@
             this.changeTheme.UncheckedState.InnerBorderRadius = 13;
             this.changeTheme.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.changeTheme.UncheckedState.Parent = this.changeTheme;
+            this.changeTheme.Click += new System.EventHandler(this.changeTheme_Click);
             // 
             // settingForm
             // 
@@ -320,12 +322,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtIncome;
+        private Guna.UI2.WinForms.Guna2TextBox txtCNewPin;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewPin;
+        private Guna.UI2.WinForms.Guna2TextBox txtCurrentPin;
         private Guna.UI2.WinForms.Guna2Button btnChangePin;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox selectLan;
         private Guna.UI2.WinForms.Guna2ToggleSwitch changeTheme;
         private System.Windows.Forms.Label label4;
     }

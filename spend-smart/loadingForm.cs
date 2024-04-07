@@ -41,8 +41,11 @@ namespace spend_smart
 
             progressBar1.Visible = false;
 
-            loginForm login = new loginForm();
-            login.Show();
+            //loginForm login = new loginForm();
+            //login.Show();
+
+            menuControls dash = new menuControls();
+            dash.Show();
             this.Hide();
         }
     }
