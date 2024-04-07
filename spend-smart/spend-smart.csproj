@@ -143,6 +143,12 @@
     <Compile Include="registerForm.Designer.cs">
       <DependentUpon>registerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="settingForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="settingForm.Designer.cs">
+      <DependentUpon>settingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="transactionsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="registerForm.resx">
       <DependentUpon>registerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingForm.resx">
+      <DependentUpon>settingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="transactionsForm.resx">
       <DependentUpon>transactionsForm.cs</DependentUpon>
