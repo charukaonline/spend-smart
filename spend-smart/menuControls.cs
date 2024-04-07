@@ -16,6 +16,9 @@ namespace spend_smart
     {
         public Point mouseLocation;
 
+        public int UserID { get; set; }
+        public string Username { get; set; }
+
         public menuControls()
         {
             InitializeComponent();

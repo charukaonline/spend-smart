@@ -53,13 +53,13 @@
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.noteForm1 = new spend_smart.noteForm();
             this.transactionsForm1 = new spend_smart.transactionsForm();
             this.notificationsForm1 = new spend_smart.notificationsForm();
             this.expensesForm1 = new spend_smart.expensesForm();
             this.analytics1 = new spend_smart.analytics();
             this.dashboard1 = new spend_smart.dashboard();
-            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
