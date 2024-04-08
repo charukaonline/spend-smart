@@ -234,12 +234,12 @@
     <Content Include="icons\bell_icon.png" />
     <Content Include="icons\calendar_icon.png" />
     <Content Include="icons\dashboard_icon.png" />
+    <None Include="icons\expenses_icon.png" />
+    <None Include="icons\incomes_icon.png" />
     <Content Include="ssmart.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="icons\dollar_icon.png" />
-    <None Include="icons\expense_icon.png" />
-    <None Include="icons\income_icon.png" />
     <Content Include="icons\logout_icon.png" />
     <None Include="icons\money_icon.png" />
     <Content Include="icons\more-vertical-outline_icon.png" />

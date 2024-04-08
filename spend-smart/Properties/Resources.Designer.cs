@@ -123,9 +123,9 @@ namespace spend_smart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap expense_icon {
+        internal static System.Drawing.Bitmap expenses_icon {
             get {
-                object obj = ResourceManager.GetObject("expense_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("expenses_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace spend_smart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap income_icon {
+        internal static System.Drawing.Bitmap incomes_icon {
             get {
-                object obj = ResourceManager.GetObject("income_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("incomes_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
