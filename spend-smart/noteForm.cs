@@ -15,6 +15,16 @@ namespace spend_smart
         public noteForm()
         {
             InitializeComponent();
+
+            ThemeManage.AddControlToColor(guna2Panel2);
+            ThemeManage.AddControlToColor(label1);
+
+            this.Load += noteForm_Load;
+        }
+
+        private void noteForm_Load(object sender, EventArgs e)
+        {
+            ThemeManage.ApplyTheme();
         }
     }
 }

@@ -149,6 +149,7 @@
     <Compile Include="settingForm.Designer.cs">
       <DependentUpon>settingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeManage.cs" />
     <Compile Include="transactionsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>

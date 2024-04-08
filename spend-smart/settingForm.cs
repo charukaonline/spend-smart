@@ -13,18 +13,26 @@ namespace spend_smart
     public partial class settingForm : UserControl
     {
 
-        private bool isDarkTheme = false;
-
         public settingForm()
         {
             InitializeComponent();
+
+            ThemeManage.AddControlToColor(guna2Panel1);
+            ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(label2);
+            ThemeManage.AddControlToColor(label3);
+            ThemeManage.AddControlToColor(label4);
         }
 
         private void btnChangePin_Click(object sender, EventArgs e)
         {
-            if (txtCurrentPin.Text == "" ||  txtCurrentPin.Text == "" || txtCNewPin.Text == "")
+            if (txtCurrentPin.Text == "" ||  txtNewPin.Text == "" || txtCNewPin.Text == "")
             {
                 MessageBox.Show("All fields are required", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txtNewPin.Text != txtCNewPin.Text)
+            {
+                MessageBox.Show("Password does not match, Please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -51,30 +59,8 @@ namespace spend_smart
 
         private void changeTheme_Click(object sender, EventArgs e)
         {
-            isDarkTheme = !isDarkTheme;
-            ApplyTheme();
-        }
-
-        private void ApplyTheme()
-        {
-            if (!isDarkTheme)
-            {
-                // Setting Form Color
-                guna2Panel1.FillColor = Color.FromArgb(255, 18, 18, 18);
-                label1.ForeColor = Color.White;
-                label2.ForeColor = Color.White;
-                label3.ForeColor = Color.White;
-                label4.ForeColor = Color.White;
-            }
-            else
-            {
-                // Setting Form Color
-                guna2Panel1.FillColor = Color.White;
-                label1.ForeColor = Color.Black;
-                label2.ForeColor = Color.Black;
-                label3.ForeColor = Color.Black;
-                label4.ForeColor = Color.Black;
-            }
+            ThemeManage.ToggleTheme();
+            ThemeManage.ApplyTheme();
         }
     }
 }

@@ -199,6 +199,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "notificationsForm";
             this.Size = new System.Drawing.Size(1157, 704);
+            this.Load += new System.EventHandler(this.notificationForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
