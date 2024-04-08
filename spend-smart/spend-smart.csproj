@@ -232,6 +232,7 @@
     </Content>
     <Content Include="icons\analytics_icon.png" />
     <None Include="icons\app_icon.ico" />
+    <None Include="icons\bell.ico" />
     <Content Include="icons\bell_icon.png" />
     <Content Include="icons\calendar_icon.png" />
     <Content Include="icons\dashboard_icon.png" />
