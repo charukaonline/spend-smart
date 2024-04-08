@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,10 @@ namespace spend_smart
 {
     public partial class dashboard : UserControl
     {
+        private OleDbConnection dbConnection;
+        public int UserID { get; set; }
+        public string Username { get; set; }
+
         public dashboard()
         {
             InitializeComponent();
@@ -53,6 +59,56 @@ namespace spend_smart
         private void dashboard_Load(object sender, EventArgs e)
         {
             ThemeManage.ApplyTheme();
+
+            InitializeDBConnection();
+
+            FetchUserIncomes();
+        }
+
+        private void InitializeDBConnection()
+        {
+            try
+            {
+                dbConnection = new OleDbConnection(dbConn.Instance.connString);
+                dbConnection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
+            }
+        }
+
+        private void FetchUserIncomes()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalIncome FROM income WHERE user_id = @UserID";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@UserID", UserID);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalIncome = Convert.ToDecimal(result);
+                        incomelbl.Text = totalIncome.ToString("C"); // Display as currency
+                    }
+                    else
+                    {
+                        incomelbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching income data: " + ex.Message);
+                }
+            }
         }
     }
 }
