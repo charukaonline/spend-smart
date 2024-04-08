@@ -69,8 +69,11 @@ namespace spend_smart
         {
             try
             {
-                dbConnection = new OleDbConnection(dbConn.Instance.connString);
-                dbConnection.Open();
+                if (dbConnection == null || dbConnection.State != ConnectionState.Open)
+                {
+                    dbConnection = new OleDbConnection(dbConn.Instance.connString);
+                    dbConnection.Open();
+                }
             }
             catch (Exception ex)
             {
@@ -110,5 +113,46 @@ namespace spend_smart
                 }
             }
         }
+
+        private void addNoteBtn_Click(object sender, EventArgs e)
+        {
+            if (msgTxtBox.Text == "" || subjectTxtBox.Text == "")
+            {
+                MessageBox.Show("All Fields are required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string insertNoteQuery = "INSERT INTO notes (user_id, subject, note, created_at) VALUES (@UserID, @Subject, @Note, @CreatedAt)";
+            using (OleDbCommand insertCommand = new OleDbCommand(insertNoteQuery, dbConnection))
+            {
+                insertCommand.Parameters.AddWithValue("@UserID", UserID);
+                insertCommand.Parameters.AddWithValue("@Subject", subjectTxtBox.Text); // Use .Text to get the string value
+                insertCommand.Parameters.AddWithValue("@Note", msgTxtBox.Text); // Use .Text to get the string value
+                insertCommand.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+
+                try
+                {
+                    int rowsAffected = insertCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Note Added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add note. No rows affected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error adding note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }// The using statement will automatically dispose of the connection
+        }
+
     }
 }
