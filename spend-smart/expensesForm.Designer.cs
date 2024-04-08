@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExpenseSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.txtExpenseAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExpenseTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExpenseCategory = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,9 +54,10 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(868, 217);
+            this.guna2Panel1.Size = new System.Drawing.Size(1157, 267);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel3
@@ -71,10 +72,11 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(868, 217);
+            this.guna2Panel3.Size = new System.Drawing.Size(1157, 267);
             this.guna2Panel3.TabIndex = 0;
             // 
             // btnIncomeSubmit
@@ -86,10 +88,11 @@
             this.btnIncomeSubmit.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncomeSubmit.ForeColor = System.Drawing.Color.White;
             this.btnIncomeSubmit.HoverState.Parent = this.btnIncomeSubmit;
-            this.btnIncomeSubmit.Location = new System.Drawing.Point(685, 154);
+            this.btnIncomeSubmit.Location = new System.Drawing.Point(913, 190);
+            this.btnIncomeSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomeSubmit.Name = "btnIncomeSubmit";
             this.btnIncomeSubmit.ShadowDecoration.Parent = this.btnIncomeSubmit;
-            this.btnIncomeSubmit.Size = new System.Drawing.Size(140, 45);
+            this.btnIncomeSubmit.Size = new System.Drawing.Size(187, 55);
             this.btnIncomeSubmit.TabIndex = 3;
             this.btnIncomeSubmit.Text = "Submit";
             // 
@@ -111,15 +114,15 @@
             this.txtBudget.ForeColor = System.Drawing.Color.White;
             this.txtBudget.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBudget.HoverState.Parent = this.txtBudget;
-            this.txtBudget.Location = new System.Drawing.Point(422, 81);
-            this.txtBudget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBudget.Location = new System.Drawing.Point(563, 100);
+            this.txtBudget.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtBudget.Name = "txtBudget";
             this.txtBudget.PasswordChar = '\0';
             this.txtBudget.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtBudget.PlaceholderText = "Monthly Budget ($)";
             this.txtBudget.SelectedText = "";
             this.txtBudget.ShadowDecoration.Parent = this.txtBudget;
-            this.txtBudget.Size = new System.Drawing.Size(300, 45);
+            this.txtBudget.Size = new System.Drawing.Size(400, 55);
             this.txtBudget.TabIndex = 2;
             // 
             // txtIncome
@@ -140,15 +143,15 @@
             this.txtIncome.ForeColor = System.Drawing.Color.White;
             this.txtIncome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIncome.HoverState.Parent = this.txtIncome;
-            this.txtIncome.Location = new System.Drawing.Point(46, 81);
-            this.txtIncome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIncome.Location = new System.Drawing.Point(61, 100);
+            this.txtIncome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtIncome.Name = "txtIncome";
             this.txtIncome.PasswordChar = '\0';
             this.txtIncome.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtIncome.PlaceholderText = "Monthly Income ($)";
             this.txtIncome.SelectedText = "";
             this.txtIncome.ShadowDecoration.Parent = this.txtIncome;
-            this.txtIncome.Size = new System.Drawing.Size(300, 45);
+            this.txtIncome.Size = new System.Drawing.Size(400, 55);
             this.txtIncome.TabIndex = 2;
             // 
             // label2
@@ -156,9 +159,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(418, 33);
+            this.label2.Location = new System.Drawing.Point(557, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 24);
+            this.label2.Size = new System.Drawing.Size(253, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Add Your Budget Limit";
             // 
@@ -167,9 +171,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 33);
+            this.label1.Location = new System.Drawing.Point(56, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 24);
+            this.label1.Size = new System.Drawing.Size(198, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Your Income";
             // 
@@ -178,17 +183,18 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 223);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 274);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(868, 349);
+            this.guna2Panel2.Size = new System.Drawing.Size(1157, 430);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 15;
-            this.guna2Panel4.Controls.Add(this.guna2Button1);
+            this.guna2Panel4.Controls.Add(this.btnExpenseSubmit);
             this.guna2Panel4.Controls.Add(this.txtExpenseAmount);
             this.guna2Panel4.Controls.Add(this.txtExpenseTitle);
             this.guna2Panel4.Controls.Add(this.txtExpenseCategory);
@@ -196,26 +202,28 @@
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(868, 349);
+            this.guna2Panel4.Size = new System.Drawing.Size(1157, 430);
             this.guna2Panel4.TabIndex = 0;
             // 
-            // guna2Button1
+            // btnExpenseSubmit
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(685, 285);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(140, 45);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Submit";
+            this.btnExpenseSubmit.BorderRadius = 10;
+            this.btnExpenseSubmit.CheckedState.Parent = this.btnExpenseSubmit;
+            this.btnExpenseSubmit.CustomImages.Parent = this.btnExpenseSubmit;
+            this.btnExpenseSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
+            this.btnExpenseSubmit.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpenseSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnExpenseSubmit.HoverState.Parent = this.btnExpenseSubmit;
+            this.btnExpenseSubmit.Location = new System.Drawing.Point(913, 351);
+            this.btnExpenseSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpenseSubmit.Name = "btnExpenseSubmit";
+            this.btnExpenseSubmit.ShadowDecoration.Parent = this.btnExpenseSubmit;
+            this.btnExpenseSubmit.Size = new System.Drawing.Size(187, 55);
+            this.btnExpenseSubmit.TabIndex = 8;
+            this.btnExpenseSubmit.Text = "Submit";
             // 
             // txtExpenseAmount
             // 
@@ -235,15 +243,15 @@
             this.txtExpenseAmount.ForeColor = System.Drawing.Color.White;
             this.txtExpenseAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpenseAmount.HoverState.Parent = this.txtExpenseAmount;
-            this.txtExpenseAmount.Location = new System.Drawing.Point(47, 220);
-            this.txtExpenseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExpenseAmount.Location = new System.Drawing.Point(63, 271);
+            this.txtExpenseAmount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtExpenseAmount.Name = "txtExpenseAmount";
             this.txtExpenseAmount.PasswordChar = '\0';
             this.txtExpenseAmount.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtExpenseAmount.PlaceholderText = "Amount ($)";
             this.txtExpenseAmount.SelectedText = "";
             this.txtExpenseAmount.ShadowDecoration.Parent = this.txtExpenseAmount;
-            this.txtExpenseAmount.Size = new System.Drawing.Size(675, 45);
+            this.txtExpenseAmount.Size = new System.Drawing.Size(900, 55);
             this.txtExpenseAmount.TabIndex = 7;
             // 
             // txtExpenseTitle
@@ -264,15 +272,15 @@
             this.txtExpenseTitle.ForeColor = System.Drawing.Color.White;
             this.txtExpenseTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpenseTitle.HoverState.Parent = this.txtExpenseTitle;
-            this.txtExpenseTitle.Location = new System.Drawing.Point(47, 149);
-            this.txtExpenseTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExpenseTitle.Location = new System.Drawing.Point(63, 183);
+            this.txtExpenseTitle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtExpenseTitle.Name = "txtExpenseTitle";
             this.txtExpenseTitle.PasswordChar = '\0';
             this.txtExpenseTitle.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtExpenseTitle.PlaceholderText = "Add a titile";
             this.txtExpenseTitle.SelectedText = "";
             this.txtExpenseTitle.ShadowDecoration.Parent = this.txtExpenseTitle;
-            this.txtExpenseTitle.Size = new System.Drawing.Size(675, 45);
+            this.txtExpenseTitle.Size = new System.Drawing.Size(900, 55);
             this.txtExpenseTitle.TabIndex = 7;
             // 
             // txtExpenseCategory
@@ -293,15 +301,15 @@
             this.txtExpenseCategory.ForeColor = System.Drawing.Color.White;
             this.txtExpenseCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpenseCategory.HoverState.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.Location = new System.Drawing.Point(47, 77);
-            this.txtExpenseCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExpenseCategory.Location = new System.Drawing.Point(63, 95);
+            this.txtExpenseCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtExpenseCategory.Name = "txtExpenseCategory";
             this.txtExpenseCategory.PasswordChar = '\0';
             this.txtExpenseCategory.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtExpenseCategory.PlaceholderText = "Select Category";
             this.txtExpenseCategory.SelectedText = "";
             this.txtExpenseCategory.ShadowDecoration.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.Size = new System.Drawing.Size(675, 45);
+            this.txtExpenseCategory.Size = new System.Drawing.Size(900, 55);
             this.txtExpenseCategory.TabIndex = 7;
             // 
             // label4
@@ -309,22 +317,24 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(43, 32);
+            this.label4.Location = new System.Drawing.Point(57, 39);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 24);
+            this.label4.Size = new System.Drawing.Size(225, 29);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Add Your Income";
+            this.label4.Text = "Add Your Expenses";
             // 
             // expensesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "expensesForm";
-            this.Size = new System.Drawing.Size(868, 572);
+            this.Size = new System.Drawing.Size(1157, 704);
+            this.Load += new System.EventHandler(this.expensesForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -346,7 +356,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtBudget;
         private Guna.UI2.WinForms.Guna2Button btnIncomeSubmit;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnExpenseSubmit;
         private Guna.UI2.WinForms.Guna2TextBox txtExpenseAmount;
         private Guna.UI2.WinForms.Guna2TextBox txtExpenseTitle;
         private Guna.UI2.WinForms.Guna2TextBox txtExpenseCategory;

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtCurrentPin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNewPin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCNewPin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnChangePin = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.changeTheme = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.selectLan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.changeTheme = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChangePin = new Guna.UI2.WinForms.Guna2Button();
+            this.txtCNewPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNewPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCurrentPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -63,51 +63,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1157, 704);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 29);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Settings";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(44, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 25);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Change Password";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.btnChangePin);
-            this.guna2Panel2.Controls.Add(this.txtCNewPin);
-            this.guna2Panel2.Controls.Add(this.txtNewPin);
-            this.guna2Panel2.Controls.Add(this.txtCurrentPin);
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 100);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1157, 369);
-            this.guna2Panel2.TabIndex = 12;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1157, 100);
-            this.guna2Panel3.TabIndex = 13;
-            // 
             // guna2Panel4
             // 
             this.guna2Panel4.Controls.Add(this.changeTheme);
@@ -121,121 +76,31 @@
             this.guna2Panel4.Size = new System.Drawing.Size(1157, 235);
             this.guna2Panel4.TabIndex = 13;
             // 
-            // txtCurrentPin
+            // changeTheme
             // 
-            this.txtCurrentPin.BorderColor = System.Drawing.Color.DimGray;
-            this.txtCurrentPin.BorderRadius = 8;
-            this.txtCurrentPin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCurrentPin.DefaultText = "";
-            this.txtCurrentPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCurrentPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCurrentPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentPin.DisabledState.Parent = this.txtCurrentPin;
-            this.txtCurrentPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentPin.FillColor = System.Drawing.Color.DimGray;
-            this.txtCurrentPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPin.FocusedState.Parent = this.txtCurrentPin;
-            this.txtCurrentPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentPin.ForeColor = System.Drawing.Color.White;
-            this.txtCurrentPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPin.HoverState.Parent = this.txtCurrentPin;
-            this.txtCurrentPin.Location = new System.Drawing.Point(49, 80);
-            this.txtCurrentPin.Margin = new System.Windows.Forms.Padding(5);
-            this.txtCurrentPin.Name = "txtCurrentPin";
-            this.txtCurrentPin.PasswordChar = '\0';
-            this.txtCurrentPin.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtCurrentPin.PlaceholderText = "Current PIN";
-            this.txtCurrentPin.SelectedText = "";
-            this.txtCurrentPin.ShadowDecoration.Parent = this.txtCurrentPin;
-            this.txtCurrentPin.Size = new System.Drawing.Size(438, 55);
-            this.txtCurrentPin.TabIndex = 12;
-            // 
-            // txtNewPin
-            // 
-            this.txtNewPin.BorderColor = System.Drawing.Color.DimGray;
-            this.txtNewPin.BorderRadius = 8;
-            this.txtNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPin.DefaultText = "";
-            this.txtNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewPin.DisabledState.Parent = this.txtNewPin;
-            this.txtNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewPin.FillColor = System.Drawing.Color.DimGray;
-            this.txtNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPin.FocusedState.Parent = this.txtNewPin;
-            this.txtNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPin.ForeColor = System.Drawing.Color.White;
-            this.txtNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPin.HoverState.Parent = this.txtNewPin;
-            this.txtNewPin.Location = new System.Drawing.Point(49, 145);
-            this.txtNewPin.Margin = new System.Windows.Forms.Padding(5);
-            this.txtNewPin.Name = "txtNewPin";
-            this.txtNewPin.PasswordChar = '\0';
-            this.txtNewPin.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtNewPin.PlaceholderText = "New PIN";
-            this.txtNewPin.SelectedText = "";
-            this.txtNewPin.ShadowDecoration.Parent = this.txtNewPin;
-            this.txtNewPin.Size = new System.Drawing.Size(438, 55);
-            this.txtNewPin.TabIndex = 12;
-            // 
-            // txtCNewPin
-            // 
-            this.txtCNewPin.BorderColor = System.Drawing.Color.DimGray;
-            this.txtCNewPin.BorderRadius = 8;
-            this.txtCNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCNewPin.DefaultText = "";
-            this.txtCNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCNewPin.DisabledState.Parent = this.txtCNewPin;
-            this.txtCNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCNewPin.FillColor = System.Drawing.Color.DimGray;
-            this.txtCNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCNewPin.FocusedState.Parent = this.txtCNewPin;
-            this.txtCNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNewPin.ForeColor = System.Drawing.Color.White;
-            this.txtCNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCNewPin.HoverState.Parent = this.txtCNewPin;
-            this.txtCNewPin.Location = new System.Drawing.Point(49, 210);
-            this.txtCNewPin.Margin = new System.Windows.Forms.Padding(5);
-            this.txtCNewPin.Name = "txtCNewPin";
-            this.txtCNewPin.PasswordChar = '\0';
-            this.txtCNewPin.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtCNewPin.PlaceholderText = "Confirm New PIN";
-            this.txtCNewPin.SelectedText = "";
-            this.txtCNewPin.ShadowDecoration.Parent = this.txtCNewPin;
-            this.txtCNewPin.Size = new System.Drawing.Size(438, 55);
-            this.txtCNewPin.TabIndex = 12;
-            // 
-            // btnChangePin
-            // 
-            this.btnChangePin.BorderRadius = 10;
-            this.btnChangePin.CheckedState.Parent = this.btnChangePin;
-            this.btnChangePin.CustomImages.Parent = this.btnChangePin;
-            this.btnChangePin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.btnChangePin.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePin.ForeColor = System.Drawing.Color.White;
-            this.btnChangePin.HoverState.Parent = this.btnChangePin;
-            this.btnChangePin.Location = new System.Drawing.Point(49, 288);
-            this.btnChangePin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChangePin.Name = "btnChangePin";
-            this.btnChangePin.ShadowDecoration.Parent = this.btnChangePin;
-            this.btnChangePin.Size = new System.Drawing.Size(187, 55);
-            this.btnChangePin.TabIndex = 13;
-            this.btnChangePin.Text = "Submit";
-            this.btnChangePin.Click += new System.EventHandler(this.btnChangePin_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(44, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Change Language";
+            this.changeTheme.Animated = true;
+            this.changeTheme.AutoRoundedCorners = true;
+            this.changeTheme.BackColor = System.Drawing.Color.Transparent;
+            this.changeTheme.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changeTheme.CheckedState.BorderRadius = 18;
+            this.changeTheme.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changeTheme.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.changeTheme.CheckedState.InnerBorderRadius = 14;
+            this.changeTheme.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.changeTheme.CheckedState.Parent = this.changeTheme;
+            this.changeTheme.Location = new System.Drawing.Point(276, 103);
+            this.changeTheme.Name = "changeTheme";
+            this.changeTheme.ShadowDecoration.Parent = this.changeTheme;
+            this.changeTheme.Size = new System.Drawing.Size(87, 38);
+            this.changeTheme.TabIndex = 13;
+            this.changeTheme.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.changeTheme.UncheckedState.BorderRadius = 18;
+            this.changeTheme.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.changeTheme.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.changeTheme.UncheckedState.InnerBorderRadius = 14;
+            this.changeTheme.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.changeTheme.UncheckedState.Parent = this.changeTheme;
+            this.changeTheme.Click += new System.EventHandler(this.changeTheme_Click);
             // 
             // selectLan
             // 
@@ -270,31 +135,166 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Change Color Theme";
             // 
-            // changeTheme
+            // label3
             // 
-            this.changeTheme.Animated = true;
-            this.changeTheme.AutoRoundedCorners = true;
-            this.changeTheme.BackColor = System.Drawing.Color.Transparent;
-            this.changeTheme.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeTheme.CheckedState.BorderRadius = 17;
-            this.changeTheme.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeTheme.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.changeTheme.CheckedState.InnerBorderRadius = 13;
-            this.changeTheme.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.changeTheme.CheckedState.Parent = this.changeTheme;
-            this.changeTheme.Location = new System.Drawing.Point(276, 105);
-            this.changeTheme.Name = "changeTheme";
-            this.changeTheme.ShadowDecoration.Parent = this.changeTheme;
-            this.changeTheme.Size = new System.Drawing.Size(88, 36);
-            this.changeTheme.TabIndex = 13;
-            this.changeTheme.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.changeTheme.UncheckedState.BorderRadius = 17;
-            this.changeTheme.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.changeTheme.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.changeTheme.UncheckedState.InnerBorderRadius = 13;
-            this.changeTheme.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.changeTheme.UncheckedState.Parent = this.changeTheme;
-            this.changeTheme.Click += new System.EventHandler(this.changeTheme_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(44, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Change Language";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(44, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 29);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Settings";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.btnChangePin);
+            this.guna2Panel2.Controls.Add(this.txtCNewPin);
+            this.guna2Panel2.Controls.Add(this.txtNewPin);
+            this.guna2Panel2.Controls.Add(this.txtCurrentPin);
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 100);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(1157, 369);
+            this.guna2Panel2.TabIndex = 12;
+            // 
+            // btnChangePin
+            // 
+            this.btnChangePin.BorderRadius = 10;
+            this.btnChangePin.CheckedState.Parent = this.btnChangePin;
+            this.btnChangePin.CustomImages.Parent = this.btnChangePin;
+            this.btnChangePin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
+            this.btnChangePin.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePin.ForeColor = System.Drawing.Color.White;
+            this.btnChangePin.HoverState.Parent = this.btnChangePin;
+            this.btnChangePin.Location = new System.Drawing.Point(49, 288);
+            this.btnChangePin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangePin.Name = "btnChangePin";
+            this.btnChangePin.ShadowDecoration.Parent = this.btnChangePin;
+            this.btnChangePin.Size = new System.Drawing.Size(187, 55);
+            this.btnChangePin.TabIndex = 13;
+            this.btnChangePin.Text = "Submit";
+            this.btnChangePin.Click += new System.EventHandler(this.btnChangePin_Click);
+            // 
+            // txtCNewPin
+            // 
+            this.txtCNewPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCNewPin.BorderRadius = 8;
+            this.txtCNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCNewPin.DefaultText = "";
+            this.txtCNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCNewPin.DisabledState.Parent = this.txtCNewPin;
+            this.txtCNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCNewPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtCNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCNewPin.FocusedState.Parent = this.txtCNewPin;
+            this.txtCNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNewPin.ForeColor = System.Drawing.Color.White;
+            this.txtCNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCNewPin.HoverState.Parent = this.txtCNewPin;
+            this.txtCNewPin.Location = new System.Drawing.Point(49, 210);
+            this.txtCNewPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCNewPin.Name = "txtCNewPin";
+            this.txtCNewPin.PasswordChar = '\0';
+            this.txtCNewPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtCNewPin.PlaceholderText = "Confirm New PIN";
+            this.txtCNewPin.SelectedText = "";
+            this.txtCNewPin.ShadowDecoration.Parent = this.txtCNewPin;
+            this.txtCNewPin.Size = new System.Drawing.Size(438, 55);
+            this.txtCNewPin.TabIndex = 12;
+            // 
+            // txtNewPin
+            // 
+            this.txtNewPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtNewPin.BorderRadius = 8;
+            this.txtNewPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPin.DefaultText = "";
+            this.txtNewPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNewPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNewPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPin.DisabledState.Parent = this.txtNewPin;
+            this.txtNewPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtNewPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPin.FocusedState.Parent = this.txtNewPin;
+            this.txtNewPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPin.ForeColor = System.Drawing.Color.White;
+            this.txtNewPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPin.HoverState.Parent = this.txtNewPin;
+            this.txtNewPin.Location = new System.Drawing.Point(49, 145);
+            this.txtNewPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewPin.Name = "txtNewPin";
+            this.txtNewPin.PasswordChar = '\0';
+            this.txtNewPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtNewPin.PlaceholderText = "New PIN";
+            this.txtNewPin.SelectedText = "";
+            this.txtNewPin.ShadowDecoration.Parent = this.txtNewPin;
+            this.txtNewPin.Size = new System.Drawing.Size(438, 55);
+            this.txtNewPin.TabIndex = 12;
+            // 
+            // txtCurrentPin
+            // 
+            this.txtCurrentPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCurrentPin.BorderRadius = 8;
+            this.txtCurrentPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCurrentPin.DefaultText = "";
+            this.txtCurrentPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCurrentPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCurrentPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentPin.DisabledState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtCurrentPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentPin.FocusedState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentPin.ForeColor = System.Drawing.Color.White;
+            this.txtCurrentPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentPin.HoverState.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Location = new System.Drawing.Point(49, 80);
+            this.txtCurrentPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCurrentPin.Name = "txtCurrentPin";
+            this.txtCurrentPin.PasswordChar = '\0';
+            this.txtCurrentPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtCurrentPin.PlaceholderText = "Current PIN";
+            this.txtCurrentPin.SelectedText = "";
+            this.txtCurrentPin.ShadowDecoration.Parent = this.txtCurrentPin;
+            this.txtCurrentPin.Size = new System.Drawing.Size(438, 55);
+            this.txtCurrentPin.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(44, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Change Password";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(1157, 100);
+            this.guna2Panel3.TabIndex = 13;
             // 
             // settingForm
             // 
@@ -306,10 +306,10 @@
             this.Size = new System.Drawing.Size(1157, 704);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

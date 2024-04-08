@@ -15,6 +15,16 @@ namespace spend_smart
         public notificationsForm()
         {
             InitializeComponent();
+
+            ThemeManage.AddControlToColor(guna2Panel2);
+            ThemeManage.AddControlToColor(label1);
+
+            this.Load += notificationForm_Load;
+        }
+
+        private void notificationForm_Load(object sender, EventArgs e)
+        {
+            ThemeManage.ApplyTheme();
         }
     }
 }
