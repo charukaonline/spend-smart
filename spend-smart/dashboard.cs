@@ -122,13 +122,13 @@ namespace spend_smart
                 return;
             }
 
-            string insertNoteQuery = "INSERT INTO notes (user_id, subject, note, created_at) VALUES (@UserID, @Subject, @Note, @CreatedAt)";
+            string insertNoteQuery = "INSERT INTO notes (user_id, user_subject, user_note, created_at) VALUES (?, ?, ?, ?)";
             using (OleDbCommand insertCommand = new OleDbCommand(insertNoteQuery, dbConnection))
             {
-                insertCommand.Parameters.AddWithValue("@UserID", UserID);
-                insertCommand.Parameters.AddWithValue("@Subject", subjectTxtBox.Text); // Use .Text to get the string value
-                insertCommand.Parameters.AddWithValue("@Note", msgTxtBox.Text); // Use .Text to get the string value
-                insertCommand.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+                insertCommand.Parameters.Add("@UserID", OleDbType.Integer).Value = UserID;
+                insertCommand.Parameters.Add("@Subject", OleDbType.VarChar).Value = subjectTxtBox.Text;
+                insertCommand.Parameters.Add("@Note", OleDbType.VarChar).Value = msgTxtBox.Text;
+                insertCommand.Parameters.Add("@CreatedAt", OleDbType.Date).Value = DateTime.Now;
 
                 try
                 {
@@ -151,8 +151,7 @@ namespace spend_smart
                 {
                     MessageBox.Show("Error adding note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }// The using statement will automatically dispose of the connection
+            } // The using statement will automatically dispose of the connection
         }
-
     }
 }
