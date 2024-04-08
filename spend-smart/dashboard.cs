@@ -63,6 +63,8 @@ namespace spend_smart
             InitializeDBConnection();
 
             FetchUserIncomes();
+            FetchUserExpenses();
+            FetchTotalBalance();
         }
 
         private void InitializeDBConnection()
@@ -114,6 +116,96 @@ namespace spend_smart
             }
         }
 
+        private void FetchUserExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalExpense FROM expense WHERE user_id = @User_ID";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@User_ID", UserID);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalExpense = Convert.ToDecimal(result);
+                        explbl.Text = totalExpense.ToString("C"); // Display as currency
+                    }
+                    else
+                    {
+                        explbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching expense data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchTotalBalance()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string incomeQuery = "SELECT SUM(amount) FROM income WHERE user_id = @UserID";
+            string expenseQuery = "SELECT SUM(amount) FROM expense WHERE user_id = @UserID";
+
+            decimal totalIncome = 0;
+            decimal totalExpense = 0;
+
+            // Fetch total income
+            using (OleDbCommand incomeCommand = new OleDbCommand(incomeQuery, dbConnection))
+            {
+                incomeCommand.Parameters.AddWithValue("@UserID", UserID);
+
+                try
+                {
+                    object incomeResult = incomeCommand.ExecuteScalar();
+                    if (incomeResult != null && incomeResult != DBNull.Value)
+                    {
+                        totalIncome = Convert.ToDecimal(incomeResult);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching income data: " + ex.Message);
+                }
+            }
+
+            // Fetch total expense
+            using (OleDbCommand expenseCommand = new OleDbCommand(expenseQuery, dbConnection))
+            {
+                expenseCommand.Parameters.AddWithValue("@UserID", UserID);
+
+                try
+                {
+                    object expenseResult = expenseCommand.ExecuteScalar();
+                    if (expenseResult != null && expenseResult != DBNull.Value)
+                    {
+                        totalExpense = Convert.ToDecimal(expenseResult);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching expense data: " + ex.Message);
+                }
+            }
+
+            // Calculate total balance
+            decimal totalBalance = totalIncome - totalExpense;
+            totBalancelbl.Text = totalBalance.ToString("C");
+        }
+
         private void addNoteBtn_Click(object sender, EventArgs e)
         {
             if (msgTxtBox.Text == "" || subjectTxtBox.Text == "")
@@ -151,7 +243,7 @@ namespace spend_smart
                 {
                     MessageBox.Show("Error adding note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } // The using statement will automatically dispose of the connection
+            }
         }
     }
 }
