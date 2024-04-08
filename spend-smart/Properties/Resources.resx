@@ -121,6 +121,12 @@
   <data name="analytics_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\analytics_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="app_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\app_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\bell.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bell_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\bell_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,11 +139,11 @@
   <data name="dollar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\dollar_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="expense_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\expense_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="expenses_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\expenses_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="income_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\income_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="incomes_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\incomes_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loading_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\Spend Smart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

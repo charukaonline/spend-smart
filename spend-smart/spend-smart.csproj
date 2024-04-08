@@ -149,6 +149,7 @@
     <Compile Include="settingForm.Designer.cs">
       <DependentUpon>settingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeManage.cs" />
     <Compile Include="transactionsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,15 +231,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icons\analytics_icon.png" />
+    <None Include="icons\app_icon.ico" />
+    <None Include="icons\bell.ico" />
     <Content Include="icons\bell_icon.png" />
     <Content Include="icons\calendar_icon.png" />
     <Content Include="icons\dashboard_icon.png" />
+    <None Include="icons\expenses_icon.png" />
+    <None Include="icons\incomes_icon.png" />
     <Content Include="ssmart.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="icons\dollar_icon.png" />
-    <None Include="icons\expense_icon.png" />
-    <None Include="icons\income_icon.png" />
     <Content Include="icons\logout_icon.png" />
     <None Include="icons\money_icon.png" />
     <Content Include="icons\more-vertical-outline_icon.png" />

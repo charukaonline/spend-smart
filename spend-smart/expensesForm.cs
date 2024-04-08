@@ -15,6 +15,21 @@ namespace spend_smart
         public expensesForm()
         {
             InitializeComponent();
+
+            ThemeManage.AddControlToColor(guna2Panel3);
+            ThemeManage.AddControlToColor(guna2Panel4);
+            ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(label2);
+            ThemeManage.AddControlToColor(label4);
+            ThemeManage.AddControlToColor(btnIncomeSubmit);
+            ThemeManage.AddControlToColor(btnExpenseSubmit);
+
+            this.Load += expensesForm_Load;
+        }
+
+        private void expensesForm_Load(object sender, EventArgs e)
+        {
+            ThemeManage.ApplyTheme();
         }
     }
 }
