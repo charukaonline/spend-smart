@@ -230,6 +230,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icons\analytics_icon.png" />
+    <None Include="icons\app_icon.ico" />
     <Content Include="icons\bell_icon.png" />
     <Content Include="icons\calendar_icon.png" />
     <Content Include="icons\dashboard_icon.png" />
