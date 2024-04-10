@@ -214,13 +214,13 @@ namespace spend_smart
                 return;
             }
 
-            string insertNoteQuery = "INSERT INTO notes (user_id, user_subject, user_note, created_at) VALUES (?, ?, ?, ?)";
+            string insertNoteQuery = "INSERT INTO notes (user_id, user_subject, user_note, created_on) VALUES (?, ?, ?, ?)";
             using (OleDbCommand insertCommand = new OleDbCommand(insertNoteQuery, dbConnection))
             {
                 insertCommand.Parameters.Add("@UserID", OleDbType.Integer).Value = UserID;
                 insertCommand.Parameters.Add("@Subject", OleDbType.VarChar).Value = subjectTxtBox.Text;
                 insertCommand.Parameters.Add("@Note", OleDbType.VarChar).Value = msgTxtBox.Text;
-                insertCommand.Parameters.Add("@CreatedAt", OleDbType.Date).Value = DateTime.Now;
+                insertCommand.Parameters.Add("@CreatedOn", OleDbType.Date).Value = DateTime.Now;
 
                 try
                 {

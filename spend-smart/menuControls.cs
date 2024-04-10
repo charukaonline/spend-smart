@@ -192,10 +192,9 @@ namespace spend_smart
 
         private void InitializeDBConnection()
         {
-            try 
+            try
             {
                 dbConnection = new OleDbConnection(dbConn.Instance.connString);
-                dbConnection.Open();
             }
             catch (Exception ex)
             {
