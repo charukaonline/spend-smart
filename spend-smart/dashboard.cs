@@ -64,8 +64,8 @@ namespace spend_smart
             InitializeDBConnection();
 
             //access UserID and Username from UserSession
-            int currentID = UserSession.CurrentUserID;
-            string currentName = UserSession.CurrentUsername;
+            currentID = UserSession.CurrentUserID;
+            currentName = UserSession.CurrentUsername;
 
             FetchUserIncomes();
             FetchUserExpenses();

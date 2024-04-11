@@ -30,8 +30,8 @@ namespace spend_smart
         private void menuControls_Load(object sender, EventArgs e)
         {
             // access UserID and Username from UserSession
-            int currentID = UserSession.CurrentUserID;
-            string currentName = UserSession.CurrentUsername;
+            currentID = UserSession.CurrentUserID;
+            currentName = UserSession.CurrentUsername;
 
             dashboard1.Show();
             analytics1.Hide();
