@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -15,6 +16,8 @@ namespace spend_smart
     public partial class menuControls : Form
     {
         public Point mouseLocation;
+
+        private OleDbConnection dbConnection;
 
         public int UserID { get; set; }
         public string Username { get; set; }
@@ -34,45 +37,8 @@ namespace spend_smart
             noteForm1.Hide();
             settingForm1.Hide();
 
-            // Add tooltips to the icons
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(dashboardBtn, "Dashboard");
-
-            ToolTip toolTip2 = new ToolTip();
-            toolTip2.SetToolTip(addExpBtn, "Add Income and Expense");
-
-            ToolTip toolTip3 = new ToolTip();
-            toolTip3.SetToolTip(analyticsBtn, "Analytics");
-
-            ToolTip toolTip4 = new ToolTip();
-            toolTip4.SetToolTip(transactionBtn, "Transaction");
-
-            ToolTip toolTip5 = new ToolTip();
-            toolTip5.SetToolTip(noteBtn, "Add Note");
-
-            ToolTip toolTip6 = new ToolTip();
-            toolTip6.SetToolTip(notificationBtn, "Notification");
-
-            ToolTip toolTip7 = new ToolTip();
-            toolTip7.SetToolTip(logoutBtn, "Logout");
-
-            ToolTip toolTip8 = new ToolTip();
-            toolTip8.SetToolTip(settingBtn, "Setting");
-
-            ToolTip toolTip9 = new ToolTip();
-            toolTip9.SetToolTip(helpBtn, "Help");
-
-            ToolTip toolTip10 = new ToolTip();
-            toolTip10.SetToolTip(minimizaBtn, "Minimize");
-
-            ToolTip toolTip11 = new ToolTip();
-            toolTip11.SetToolTip(maximizeBtn, "Maximize");
-
-            ToolTip toolTip12 = new ToolTip();
-            toolTip12.SetToolTip(closingBtn, "Close");
-
-            // Attach MouseMove event handler to sidebarPanel or individual icons
-            menu.MouseMove += Sidebar_MouseMove;
+            InitializeToolTips();
+            InitializeDBConnection();
         }
 
         // Dragging part
@@ -169,6 +135,49 @@ namespace spend_smart
             settingForm1.Show();
         }
 
+        private void InitializeToolTips()
+        {
+            // Add tooltips to the icons
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(dashboardBtn, "Dashboard");
+
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.SetToolTip(addExpBtn, "Add Income and Expense");
+
+            ToolTip toolTip3 = new ToolTip();
+            toolTip3.SetToolTip(analyticsBtn, "Analytics");
+
+            ToolTip toolTip4 = new ToolTip();
+            toolTip4.SetToolTip(transactionBtn, "Transaction");
+
+            ToolTip toolTip5 = new ToolTip();
+            toolTip5.SetToolTip(noteBtn, "Add Note");
+
+            ToolTip toolTip6 = new ToolTip();
+            toolTip6.SetToolTip(notificationBtn, "Notification");
+
+            ToolTip toolTip7 = new ToolTip();
+            toolTip7.SetToolTip(logoutBtn, "Logout");
+
+            ToolTip toolTip8 = new ToolTip();
+            toolTip8.SetToolTip(settingBtn, "Setting");
+
+            ToolTip toolTip9 = new ToolTip();
+            toolTip9.SetToolTip(helpBtn, "Help");
+
+            ToolTip toolTip10 = new ToolTip();
+            toolTip10.SetToolTip(minimizaBtn, "Minimize");
+
+            ToolTip toolTip11 = new ToolTip();
+            toolTip11.SetToolTip(maximizeBtn, "Maximize");
+
+            ToolTip toolTip12 = new ToolTip();
+            toolTip12.SetToolTip(closingBtn, "Close");
+
+            // Attach MouseMove event handler to sidebarPanel or individual icons
+            menu.MouseMove += Sidebar_MouseMove;
+        }
+
         private void Sidebar_MouseMove(object sender, MouseEventArgs e)
         {
             Control control = menu.GetChildAtPoint(e.Location); 
@@ -178,6 +187,18 @@ namespace spend_smart
                 string iconName = pictureBox.Name;
                 Point screenPoint = pictureBox.PointToScreen(Point.Empty);
                 Point adjustedPoint = new Point(screenPoint.X + 20, screenPoint.Y - 20);
+            }
+        }
+
+        private void InitializeDBConnection()
+        {
+            try
+            {
+                dbConnection = new OleDbConnection(dbConn.Instance.connString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
             }
         }
     }
