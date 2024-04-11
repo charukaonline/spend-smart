@@ -15,8 +15,9 @@ namespace spend_smart
     public partial class dashboard : UserControl
     {
         private OleDbConnection dbConnection;
-        public int UserID { get; set; }
-        public string Username { get; set; }
+        private int currentID;
+        private string currentName;
+        
 
         public dashboard()
         {
@@ -62,6 +63,10 @@ namespace spend_smart
 
             InitializeDBConnection();
 
+            //access UserID and Username from UserSession
+            int currentID = UserSession.CurrentUserID;
+            string currentName = UserSession.CurrentUsername;
+
             FetchUserIncomes();
             FetchUserExpenses();
             FetchTotalBalance();
@@ -91,10 +96,10 @@ namespace spend_smart
                 return;
             }
 
-            string query = "SELECT SUM(amount) AS TotalIncome FROM income WHERE user_id = @UserID";
+            string query = "SELECT SUM(amount) AS TotalIncome FROM income WHERE user_id = @currentID";
             using (OleDbCommand command = new OleDbCommand(query, dbConnection))
             {
-                command.Parameters.AddWithValue("@UserID", UserID);
+                command.Parameters.AddWithValue("@currentID", currentID);
 
                 try
                 {
@@ -124,10 +129,10 @@ namespace spend_smart
                 return;
             }
 
-            string query = "SELECT SUM(amount) AS TotalExpense FROM expense WHERE user_id = @User_ID";
+            string query = "SELECT SUM(amount) AS TotalExpense FROM expense WHERE user_id = @currentID";
             using (OleDbCommand command = new OleDbCommand(query, dbConnection))
             {
-                command.Parameters.AddWithValue("@User_ID", UserID);
+                command.Parameters.AddWithValue("@currentID", currentID);
 
                 try
                 {
@@ -157,8 +162,8 @@ namespace spend_smart
                 return;
             }
 
-            string incomeQuery = "SELECT SUM(amount) FROM income WHERE user_id = @UserID";
-            string expenseQuery = "SELECT SUM(amount) FROM expense WHERE user_id = @UserID";
+            string incomeQuery = "SELECT SUM(amount) FROM income WHERE user_id = @currentID";
+            string expenseQuery = "SELECT SUM(amount) FROM expense WHERE user_id = @currentID";
 
             decimal totalIncome = 0;
             decimal totalExpense = 0;
@@ -166,7 +171,7 @@ namespace spend_smart
             // Fetch total income
             using (OleDbCommand incomeCommand = new OleDbCommand(incomeQuery, dbConnection))
             {
-                incomeCommand.Parameters.AddWithValue("@UserID", UserID);
+                incomeCommand.Parameters.AddWithValue("@currentID", currentID);
 
                 try
                 {
@@ -185,7 +190,7 @@ namespace spend_smart
             // Fetch total expense
             using (OleDbCommand expenseCommand = new OleDbCommand(expenseQuery, dbConnection))
             {
-                expenseCommand.Parameters.AddWithValue("@UserID", UserID);
+                expenseCommand.Parameters.AddWithValue("@currentID", currentID);
 
                 try
                 {
@@ -217,7 +222,7 @@ namespace spend_smart
             string insertNoteQuery = "INSERT INTO notes (user_id, user_subject, user_note, created_on) VALUES (?, ?, ?, ?)";
             using (OleDbCommand insertCommand = new OleDbCommand(insertNoteQuery, dbConnection))
             {
-                insertCommand.Parameters.Add("@UserID", OleDbType.Integer).Value = UserID;
+                insertCommand.Parameters.AddWithValue("@currentID", currentID);
                 insertCommand.Parameters.Add("@Subject", OleDbType.VarChar).Value = subjectTxtBox.Text;
                 insertCommand.Parameters.Add("@Note", OleDbType.VarChar).Value = msgTxtBox.Text;
                 insertCommand.Parameters.Add("@CreatedOn", OleDbType.Date).Value = DateTime.Now;

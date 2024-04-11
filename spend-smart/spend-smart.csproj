@@ -157,6 +157,7 @@
     <Compile Include="transactionsForm.Designer.cs">
       <DependentUpon>transactionsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="analytics.resx">
       <DependentUpon>analytics.cs</DependentUpon>
     </EmbeddedResource>
