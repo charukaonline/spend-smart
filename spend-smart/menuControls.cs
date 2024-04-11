@@ -17,10 +17,10 @@ namespace spend_smart
     {
         public Point mouseLocation;
 
-        private OleDbConnection dbConnection;
+        //private OleDbConnection dbConnection;
 
-        public int UserID { get; set; }
-        public string Username { get; set; }
+        private int currentID;
+        private string currentName;
 
         public menuControls()
         {
@@ -29,6 +29,10 @@ namespace spend_smart
 
         private void menuControls_Load(object sender, EventArgs e)
         {
+            // access UserID and Username from UserSession
+            currentID = UserSession.CurrentUserID;
+            currentName = UserSession.CurrentUsername;
+
             dashboard1.Show();
             analytics1.Hide();
             expensesForm1.Hide();
@@ -38,7 +42,7 @@ namespace spend_smart
             settingForm1.Hide();
 
             InitializeToolTips();
-            InitializeDBConnection();
+            //InitializeDBConnection();
         }
 
         // Dragging part
@@ -190,16 +194,16 @@ namespace spend_smart
             }
         }
 
-        private void InitializeDBConnection()
-        {
-            try
-            {
-                dbConnection = new OleDbConnection(dbConn.Instance.connString);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error connecting to the database: " + ex.Message);
-            }
-        }
+        //private void InitializeDBConnection()
+        //{
+        //    try
+        //    {
+        //        dbConnection = new OleDbConnection(dbConn.Instance.connString);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error connecting to the database: " + ex.Message);
+        //    }
+        //}
     }
 }

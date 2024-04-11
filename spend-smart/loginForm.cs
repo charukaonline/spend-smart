@@ -137,12 +137,11 @@ namespace spend_smart
                                 if (storedHashedPin != null && hashedPin == storedHashedPin)
                                 {
                                     MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    menuControls dashboard = new menuControls();
-                                    dashboard.UserID = user.UserID;
-                                    dashboard.Username = user.Username;
+                                    UserSession.StartSession(user.UserID, user.Username); // Start session
+                                    menuControls dashboard = new menuControls(); // Pass UserSession
                                     dashboard.Show();
                                     this.Hide();
-                                    ResetAttempts(); //Reset attempts on successful logins
+                                    ResetAttempts(); // Reset attempts on successful logins
                                 }
                                 else
                                 {
