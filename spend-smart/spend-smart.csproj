@@ -94,11 +94,11 @@
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConn.cs" />
-    <Compile Include="expensesForm.cs">
+    <Compile Include="addTransactions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="expensesForm.Designer.cs">
-      <DependentUpon>expensesForm.cs</DependentUpon>
+    <Compile Include="addTransactions.Designer.cs">
+      <DependentUpon>addTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -151,11 +151,11 @@
       <DependentUpon>settingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeManage.cs" />
-    <Compile Include="transactionsForm.cs">
+    <Compile Include="showExpenses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="transactionsForm.Designer.cs">
-      <DependentUpon>transactionsForm.cs</DependentUpon>
+    <Compile Include="showExpenses.Designer.cs">
+      <DependentUpon>showExpenses.cs</DependentUpon>
     </Compile>
     <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="analytics.resx">
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="expensesForm.resx">
-      <DependentUpon>expensesForm.cs</DependentUpon>
+    <EmbeddedResource Include="addTransactions.resx">
+      <DependentUpon>addTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -205,8 +205,8 @@
     <EmbeddedResource Include="settingForm.resx">
       <DependentUpon>settingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="transactionsForm.resx">
-      <DependentUpon>transactionsForm.cs</DependentUpon>
+    <EmbeddedResource Include="showExpenses.resx">
+      <DependentUpon>showExpenses.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Keygen.exe.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
