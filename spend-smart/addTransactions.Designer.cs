@@ -39,8 +39,9 @@
             this.btnExpenseSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.txtExpenseAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExpenseTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtExpenseCategory = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.expenseCategories = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -93,7 +94,7 @@
             // 
             // txtIncomeAmount
             // 
-            this.txtIncomeAmount.BorderColor = System.Drawing.Color.DimGray;
+            this.txtIncomeAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtIncomeAmount.BorderRadius = 5;
             this.txtIncomeAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIncomeAmount.DefaultText = "";
@@ -102,7 +103,7 @@
             this.txtIncomeAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIncomeAmount.DisabledState.Parent = this.txtIncomeAmount;
             this.txtIncomeAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIncomeAmount.FillColor = System.Drawing.Color.DimGray;
+            this.txtIncomeAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtIncomeAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIncomeAmount.FocusedState.Parent = this.txtIncomeAmount;
             this.txtIncomeAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +123,7 @@
             // 
             // txtIncomeSrc
             // 
-            this.txtIncomeSrc.BorderColor = System.Drawing.Color.DimGray;
+            this.txtIncomeSrc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtIncomeSrc.BorderRadius = 5;
             this.txtIncomeSrc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIncomeSrc.DefaultText = "";
@@ -131,7 +132,7 @@
             this.txtIncomeSrc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIncomeSrc.DisabledState.Parent = this.txtIncomeSrc;
             this.txtIncomeSrc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIncomeSrc.FillColor = System.Drawing.Color.DimGray;
+            this.txtIncomeSrc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtIncomeSrc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIncomeSrc.FocusedState.Parent = this.txtIncomeSrc;
             this.txtIncomeSrc.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,10 +176,11 @@
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 15;
+            this.guna2Panel4.Controls.Add(this.expenseCategories);
             this.guna2Panel4.Controls.Add(this.btnExpenseSubmit);
             this.guna2Panel4.Controls.Add(this.txtExpenseAmount);
             this.guna2Panel4.Controls.Add(this.txtExpenseTitle);
-            this.guna2Panel4.Controls.Add(this.txtExpenseCategory);
+            this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.Controls.Add(this.label4);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -206,7 +208,7 @@
             // 
             // txtExpenseAmount
             // 
-            this.txtExpenseAmount.BorderColor = System.Drawing.Color.DimGray;
+            this.txtExpenseAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtExpenseAmount.BorderRadius = 5;
             this.txtExpenseAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExpenseAmount.DefaultText = "";
@@ -215,7 +217,7 @@
             this.txtExpenseAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtExpenseAmount.DisabledState.Parent = this.txtExpenseAmount;
             this.txtExpenseAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpenseAmount.FillColor = System.Drawing.Color.DimGray;
+            this.txtExpenseAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtExpenseAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpenseAmount.FocusedState.Parent = this.txtExpenseAmount;
             this.txtExpenseAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,7 +237,7 @@
             // 
             // txtExpenseTitle
             // 
-            this.txtExpenseTitle.BorderColor = System.Drawing.Color.DimGray;
+            this.txtExpenseTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtExpenseTitle.BorderRadius = 5;
             this.txtExpenseTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExpenseTitle.DefaultText = "";
@@ -244,7 +246,7 @@
             this.txtExpenseTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtExpenseTitle.DisabledState.Parent = this.txtExpenseTitle;
             this.txtExpenseTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpenseTitle.FillColor = System.Drawing.Color.DimGray;
+            this.txtExpenseTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.txtExpenseTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpenseTitle.FocusedState.Parent = this.txtExpenseTitle;
             this.txtExpenseTitle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,35 +264,6 @@
             this.txtExpenseTitle.Size = new System.Drawing.Size(675, 45);
             this.txtExpenseTitle.TabIndex = 7;
             // 
-            // txtExpenseCategory
-            // 
-            this.txtExpenseCategory.BorderColor = System.Drawing.Color.DimGray;
-            this.txtExpenseCategory.BorderRadius = 5;
-            this.txtExpenseCategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpenseCategory.DefaultText = "";
-            this.txtExpenseCategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtExpenseCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtExpenseCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpenseCategory.DisabledState.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpenseCategory.FillColor = System.Drawing.Color.DimGray;
-            this.txtExpenseCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpenseCategory.FocusedState.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpenseCategory.ForeColor = System.Drawing.Color.White;
-            this.txtExpenseCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpenseCategory.HoverState.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.Location = new System.Drawing.Point(47, 77);
-            this.txtExpenseCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtExpenseCategory.Name = "txtExpenseCategory";
-            this.txtExpenseCategory.PasswordChar = '\0';
-            this.txtExpenseCategory.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtExpenseCategory.PlaceholderText = "Select Category";
-            this.txtExpenseCategory.SelectedText = "";
-            this.txtExpenseCategory.ShadowDecoration.Parent = this.txtExpenseCategory;
-            this.txtExpenseCategory.Size = new System.Drawing.Size(675, 45);
-            this.txtExpenseCategory.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -301,6 +274,46 @@
             this.label4.Size = new System.Drawing.Size(180, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Add Your Expenses";
+            // 
+            // expenseCategories
+            // 
+            this.expenseCategories.BackColor = System.Drawing.Color.Transparent;
+            this.expenseCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.expenseCategories.BorderRadius = 8;
+            this.expenseCategories.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.expenseCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.expenseCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.expenseCategories.FocusedColor = System.Drawing.Color.Empty;
+            this.expenseCategories.FocusedState.Parent = this.expenseCategories;
+            this.expenseCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expenseCategories.ForeColor = System.Drawing.Color.White;
+            this.expenseCategories.FormattingEnabled = true;
+            this.expenseCategories.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.expenseCategories.HoverState.Parent = this.expenseCategories;
+            this.expenseCategories.ItemHeight = 30;
+            this.expenseCategories.Items.AddRange(new object[] {
+            "Foods",
+            "Healthcare",
+            "Entertainment",
+            "Others"});
+            this.expenseCategories.ItemsAppearance.Parent = this.expenseCategories;
+            this.expenseCategories.Location = new System.Drawing.Point(171, 88);
+            this.expenseCategories.Name = "expenseCategories";
+            this.expenseCategories.ShadowDecoration.Parent = this.expenseCategories;
+            this.expenseCategories.Size = new System.Drawing.Size(163, 36);
+            this.expenseCategories.StartIndex = 0;
+            this.expenseCategories.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(43, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Select Category";
             // 
             // addTransactions
             // 
@@ -336,7 +349,8 @@
         private Guna.UI2.WinForms.Guna2Button btnExpenseSubmit;
         private Guna.UI2.WinForms.Guna2TextBox txtExpenseAmount;
         private Guna.UI2.WinForms.Guna2TextBox txtExpenseTitle;
-        private Guna.UI2.WinForms.Guna2TextBox txtExpenseCategory;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ComboBox expenseCategories;
+        private System.Windows.Forms.Label label2;
     }
 }
