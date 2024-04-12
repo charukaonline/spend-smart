@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.Common;
+using System.Text.RegularExpressions;
 
 namespace spend_smart
 {
@@ -69,6 +70,12 @@ namespace spend_smart
                 {
                     MessageBox.Show("Please fill in all fields.");
                 }
+
+                else if (!Regex.IsMatch(IncomeAmt, @"^\d+(\.\d+)?$"))
+                {
+                    MessageBox.Show("Amount must contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else
                 {
                     // Ensure the database connection is open
@@ -78,13 +85,14 @@ namespace spend_smart
                     }
 
                     // Use parameterized query to prevent SQL injection
-                    string query = "INSERT INTO income (user_id, source, amount) VALUES (@currentID, @IncomeSource, @IncomeAmount)";
+                    string query = "INSERT INTO income (user_id, source, amount, added_date) VALUES (@currentID, @IncomeSource, @IncomeAmount, @AddedDate)";
                     OleDbCommand cmd = new OleDbCommand(query, dbConnection);
 
                     // Add parameters with appropriate data types
                     cmd.Parameters.AddWithValue("@currentID", currentID);
-                    cmd.Parameters.AddWithValue("@IncomeSource", IncomeSrc);
+                    cmd.Parameters.Add("@IncomeSource", OleDbType.VarChar).Value = IncomeSrc;
                     cmd.Parameters.AddWithValue("@IncomeAmount", decimal.Parse(IncomeAmt)); // Convert string to decimal
+                    cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now; // Add current date
 
                     // Execute the query
                     int rowsAffected = cmd.ExecuteNonQuery();
