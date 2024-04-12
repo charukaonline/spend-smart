@@ -91,6 +91,7 @@
             this.btnIncomeSubmit.Size = new System.Drawing.Size(140, 45);
             this.btnIncomeSubmit.TabIndex = 3;
             this.btnIncomeSubmit.Text = "Submit";
+            this.btnIncomeSubmit.Click += new System.EventHandler(this.btnIncomeSubmit_Click);
             // 
             // txtIncomeAmount
             // 
