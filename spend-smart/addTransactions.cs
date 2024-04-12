@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace spend_smart
 {
-    public partial class expensesForm : UserControl
+    public partial class addTransactions : UserControl
     {
-        public expensesForm()
+        public addTransactions()
         {
             InitializeComponent();
 
@@ -23,10 +23,10 @@ namespace spend_smart
             ThemeManage.AddControlToColor(btnIncomeSubmit);
             ThemeManage.AddControlToColor(btnExpenseSubmit);
 
-            this.Load += expensesForm_Load;
+            this.Load += addTransactions_Load;
         }
 
-        private void expensesForm_Load(object sender, EventArgs e)
+        private void addTransactions_Load(object sender, EventArgs e)
         {
             ThemeManage.ApplyTheme();
         }

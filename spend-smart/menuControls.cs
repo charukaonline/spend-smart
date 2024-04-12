@@ -35,9 +35,9 @@ namespace spend_smart
 
             dashboard1.Show();
             analytics1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
 
@@ -65,9 +65,9 @@ namespace spend_smart
         private void dashboard_Click(object sender, EventArgs e)
         {
             analytics1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
             dashboard1.Show();
@@ -78,18 +78,18 @@ namespace spend_smart
             dashboard1.Hide();
             analytics1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
-            expensesForm1.Show();
+            addTransactions1.Show();
         }
 
         private void analyticsBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
             analytics1.Show();
@@ -98,9 +98,9 @@ namespace spend_smart
         private void notificationBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             analytics1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
             notificationsForm1.Show();
@@ -109,21 +109,21 @@ namespace spend_smart
         private void transactionBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             analytics1.Hide();
             notificationsForm1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
-            transactionsForm1.Show();
+            showExpenses1.Show();
         }
 
         private void noteBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             analytics1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             settingForm1.Hide();
             noteForm1.Show();
         }
@@ -131,10 +131,10 @@ namespace spend_smart
         private void settingBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
-            expensesForm1.Hide();
+            addTransactions1.Hide();
             analytics1.Hide();
             notificationsForm1.Hide();
-            transactionsForm1.Hide();
+            showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Show();
         }
