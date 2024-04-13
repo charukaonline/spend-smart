@@ -34,7 +34,7 @@ namespace spend_smart
             ThemeManage.AddControlToColor(totBalancelbl);
             ThemeManage.AddControlToColor(incomelbl);
             ThemeManage.AddControlToColor(explbl);
-            ThemeManage.AddControlToColor(savinglbl);
+            ThemeManage.AddControlToColor(lastIncomelbl);
 
             ThemeManage.AddControlToColor(guna2Panel14);
             ThemeManage.AddControlToColor(guna2Panel15);
@@ -73,6 +73,7 @@ namespace spend_smart
             FetchUserIncomes();
             FetchUserExpenses();
             FetchTotalBalance();
+            FetchLastIncome();
         }
 
         private void InitializeDBConnection()
@@ -212,6 +213,39 @@ namespace spend_smart
             // Calculate total balance
             decimal totalBalance = totalIncome - totalExpense;
             totBalancelbl.Text = totalBalance.ToString("C");
+        }
+
+        private void FetchLastIncome()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT TOP 1 amount FROM income WHERE user_id = @currentID ORDER BY added_date DESC";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal lastIncome = Convert.ToDecimal(result);
+                        lastIncomelbl.Text = lastIncome.ToString("C"); // Display as currency
+                    }
+                    else
+                    {
+                        lastIncomelbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching last income data: " + ex.Message);
+                }
+            }
         }
 
         private void addNoteBtn_Click(object sender, EventArgs e)

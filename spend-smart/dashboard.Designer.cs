@@ -34,7 +34,7 @@
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.savinglbl = new System.Windows.Forms.Label();
+            this.lastIncomelbl = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -158,7 +158,7 @@
             this.guna2Panel11.Controls.Add(this.guna2CirclePictureBox4);
             this.guna2Panel11.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel11.Controls.Add(this.label6);
-            this.guna2Panel11.Controls.Add(this.savinglbl);
+            this.guna2Panel11.Controls.Add(this.lastIncomelbl);
             this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.guna2Panel11.Location = new System.Drawing.Point(0, 0);
@@ -204,22 +204,22 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(27, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 29);
+            this.label6.Size = new System.Drawing.Size(142, 29);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Savings";
+            this.label6.Text = "Last Income";
             // 
-            // savinglbl
+            // lastIncomelbl
             // 
-            this.savinglbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.savinglbl.AutoSize = true;
-            this.savinglbl.BackColor = System.Drawing.Color.Transparent;
-            this.savinglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savinglbl.ForeColor = System.Drawing.Color.White;
-            this.savinglbl.Location = new System.Drawing.Point(26, 116);
-            this.savinglbl.Name = "savinglbl";
-            this.savinglbl.Size = new System.Drawing.Size(86, 32);
-            this.savinglbl.TabIndex = 0;
-            this.savinglbl.Text = "$0.00";
+            this.lastIncomelbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lastIncomelbl.AutoSize = true;
+            this.lastIncomelbl.BackColor = System.Drawing.Color.Transparent;
+            this.lastIncomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastIncomelbl.ForeColor = System.Drawing.Color.White;
+            this.lastIncomelbl.Location = new System.Drawing.Point(26, 116);
+            this.lastIncomelbl.Name = "lastIncomelbl";
+            this.lastIncomelbl.Size = new System.Drawing.Size(86, 32);
+            this.lastIncomelbl.TabIndex = 0;
+            this.lastIncomelbl.Text = "$0.00";
             // 
             // guna2Panel6
             // 
@@ -1045,7 +1045,7 @@
         private System.Windows.Forms.Label totBalancelbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label savinglbl;
+        private System.Windows.Forms.Label lastIncomelbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label explbl;
