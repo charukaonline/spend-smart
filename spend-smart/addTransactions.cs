@@ -118,5 +118,91 @@ namespace spend_smart
                 dbConnection.Close();
             }
         }
+
+        private void btnExpenseSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int categoryId = GetCategoryId(expenseCategories.SelectedItem.ToString()); // Get category ID based on selected category name
+                string expenseTitle = txtExpenseTitle.Text;
+                string expenseAmount = txtExpenseAmount.Text;
+
+                // Validate fields
+                if (string.IsNullOrEmpty(expenseTitle) || string.IsNullOrEmpty(expenseAmount))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
+
+                else if (!Regex.IsMatch(expenseAmount, @"^\d+(\.\d+)?$"))
+                {
+                    MessageBox.Show("Please enter a valid amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                else
+                {
+                    if (dbConnection.State != ConnectionState.Open)
+                    {
+                        dbConnection.Open();
+                    }
+
+                    // Insert expense into database
+                    string query = "INSERT INTO expense (user_id, category_id, title, amount, added_date) VALUES (@currentID, @CategoryId, @ExpenseTitle, @ExpenseAmount, @AddedDate)";
+                    OleDbCommand cmd = new OleDbCommand(query, dbConnection);
+                    cmd.Parameters.AddWithValue("@currentID", currentID);
+                    cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                    cmd.Parameters.Add("@ExpenseTitle", OleDbType.VarChar).Value = expenseTitle;
+                    cmd.Parameters.AddWithValue("@ExpenseAmount", decimal.Parse(expenseAmount)); // Convert string to decimal
+                    cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now;
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    // Check if the query was successful
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Expense added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtExpenseTitle.Text = "";
+                        txtExpenseAmount.Text = "";
+                        expenseCategories.SelectedIndex = 0; // Reset category selection
+                        dbConnection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add the expense", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dbConnection.Close();
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding expense: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private int GetCategoryId(string categoryName)
+        {
+            int categoryId = -1; // Default to -1 if not found
+
+            // Mapping category name to category ID
+            switch (categoryName)
+            {
+                case "Foods":
+                    categoryId = 1;
+                    break;
+                case "Healthcare":
+                    categoryId = 2;
+                    break;
+                case "Entertainment":
+                    categoryId = 3;
+                    break;
+                case "Others":
+                    categoryId = 4;
+                    break;
+            }
+
+            return categoryId;
+        }
     }
 }

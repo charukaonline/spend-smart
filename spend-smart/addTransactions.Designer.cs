@@ -206,6 +206,7 @@
             this.btnExpenseSubmit.Size = new System.Drawing.Size(140, 45);
             this.btnExpenseSubmit.TabIndex = 8;
             this.btnExpenseSubmit.Text = "Submit";
+            this.btnExpenseSubmit.Click += new System.EventHandler(this.btnExpenseSubmit_Click);
             // 
             // txtExpenseAmount
             // 
