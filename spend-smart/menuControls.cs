@@ -28,6 +28,9 @@ namespace spend_smart
         {
             InitializeComponent();
 
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(BorderRadius.CreateRoundRectRgn(0, 0, Width, Height, 18, 18));
+
             refreshTimer = new System.Windows.Forms.Timer();
             refreshTimer.Interval = 2000;
             refreshTimer.Tick += RefreshTimer_Tick;

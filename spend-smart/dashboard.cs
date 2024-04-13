@@ -45,14 +45,14 @@ namespace spend_smart
             ThemeManage.AddControlToColor(guna2Panel19);
             ThemeManage.AddControlToColor(label7);
             ThemeManage.AddControlToColor(label8);
-            ThemeManage.AddControlToColor(label9);
+            ThemeManage.AddControlToColor(healthcareLbl);
             ThemeManage.AddControlToColor(label10);
             ThemeManage.AddControlToColor(label11);
             ThemeManage.AddControlToColor(label12);
             ThemeManage.AddControlToColor(label13);
-            ThemeManage.AddControlToColor(label14);
-            ThemeManage.AddControlToColor(label15);
-            ThemeManage.AddControlToColor(label16);
+            ThemeManage.AddControlToColor(foodsLbl);
+            ThemeManage.AddControlToColor(entertainmentLbl);
+            ThemeManage.AddControlToColor(othersLbl);
 
             this.Load += dashboard_Load;
         }
@@ -74,6 +74,11 @@ namespace spend_smart
             FetchUserExpenses();
             FetchTotalBalance();
             FetchLastIncome();
+
+            FetchHealthExpenses();
+            FetchFoodsExpenses();
+            FetchEntertainmentExpenses();
+            FetchOthersExpenses();
         }
 
         private void InitializeDBConnection()
@@ -234,7 +239,7 @@ namespace spend_smart
                     if (result != null && result != DBNull.Value)
                     {
                         decimal lastIncome = Convert.ToDecimal(result);
-                        lastIncomelbl.Text = lastIncome.ToString("C"); // Display as currency
+                        lastIncomelbl.Text = lastIncome.ToString("C");
                     }
                     else
                     {
@@ -244,6 +249,138 @@ namespace spend_smart
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error fetching last income data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchHealthExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalHealthExpenses FROM expense WHERE user_id = @currentID AND category_id = 2";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+
+                try
+                {
+                    object healthExpensesResult = command.ExecuteScalar();
+                    if (healthExpensesResult != null && healthExpensesResult != DBNull.Value)
+                    {
+                        decimal healthExpenses = Convert.ToDecimal(healthExpensesResult);
+                        healthcareLbl.Text = healthExpenses.ToString("C");
+                    }
+                    else
+                    {
+                        healthcareLbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchFoodsExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalFoodExpense FROM expense WHERE user_id = @currentID AND category_id = 1";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+
+                try
+                {
+                    object foodExpenseResult = command.ExecuteScalar();
+                    if (foodExpenseResult != null && foodExpenseResult != DBNull.Value)
+                    {
+                        decimal foodsExpenses = Convert.ToDecimal(foodExpenseResult);
+                        foodsLbl.Text = foodsExpenses.ToString("C");
+                    }
+                    else
+                    {
+                        foodsLbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchEntertainmentExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalFoodExpense FROM expense WHERE user_id = @currentID AND category_id = 3";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+
+                try
+                {
+                    object entExpensesResult = command.ExecuteScalar();
+                    if (entExpensesResult != null && entExpensesResult != DBNull.Value)
+                    {
+                        decimal entExpenses = Convert.ToDecimal(entExpensesResult);
+                        entertainmentLbl.Text = entExpenses.ToString("C");
+                    }
+                    else
+                    {
+                        entertainmentLbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchOthersExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            string query = "SELECT SUM(amount) AS TotalFoodExpense FROM expense WHERE user_id = @currentID AND category_id = 4";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+
+                try
+                {
+                    object otherExpensesResult = command.ExecuteScalar();
+                    if (otherExpensesResult != null && otherExpensesResult != DBNull.Value)
+                    {
+                        decimal otherExpenses = Convert.ToDecimal(otherExpensesResult);
+                        othersLbl.Text = otherExpenses.ToString("C");
+                    }
+                    else
+                    {
+                        othersLbl.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching data: " + ex.Message);
                 }
             }
         }

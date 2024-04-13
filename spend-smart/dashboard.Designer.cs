@@ -71,22 +71,22 @@
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
-            this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.healthcareLbl = new System.Windows.Forms.Label();
             this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
-            this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.foodsLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
-            this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.entertainmentLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
-            this.circlePictureBox4 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.othersLbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
+            this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
+            this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
+            this.circlePictureBox4 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
@@ -116,12 +116,12 @@
             this.guna2Panel16.SuspendLayout();
             this.guna2Panel18.SuspendLayout();
             this.guna2Panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).BeginInit();
             this.guna2Panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).BeginInit();
             this.guna2Panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).BeginInit();
             this.guna2Panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -727,15 +727,173 @@
             this.guna2Panel24.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel24.Controls.Add(this.circlePictureBox5);
             this.guna2Panel24.Controls.Add(this.label13);
-            this.guna2Panel24.Controls.Add(this.label9);
+            this.guna2Panel24.Controls.Add(this.healthcareLbl);
             this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel24.Location = new System.Drawing.Point(0, 102);
+            this.guna2Panel24.Location = new System.Drawing.Point(0, 87);
             this.guna2Panel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel24.Name = "guna2Panel24";
             this.guna2Panel24.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
             this.guna2Panel24.ShadowDecoration.Parent = this.guna2Panel24;
-            this.guna2Panel24.Size = new System.Drawing.Size(664, 55);
+            this.guna2Panel24.Size = new System.Drawing.Size(664, 56);
             this.guna2Panel24.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(99, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 29);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Healthcare";
+            // 
+            // healthcareLbl
+            // 
+            this.healthcareLbl.AutoSize = true;
+            this.healthcareLbl.BackColor = System.Drawing.Color.Transparent;
+            this.healthcareLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.healthcareLbl.ForeColor = System.Drawing.Color.White;
+            this.healthcareLbl.Location = new System.Drawing.Point(537, 14);
+            this.healthcareLbl.Name = "healthcareLbl";
+            this.healthcareLbl.Size = new System.Drawing.Size(71, 29);
+            this.healthcareLbl.TabIndex = 0;
+            this.healthcareLbl.Text = "$0.00";
+            // 
+            // guna2Panel23
+            // 
+            this.guna2Panel23.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel23.Controls.Add(this.circlePictureBox2);
+            this.guna2Panel23.Controls.Add(this.foodsLbl);
+            this.guna2Panel23.Controls.Add(this.label10);
+            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel23.Location = new System.Drawing.Point(0, 143);
+            this.guna2Panel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel23.Name = "guna2Panel23";
+            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
+            this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
+            this.guna2Panel23.Size = new System.Drawing.Size(664, 57);
+            this.guna2Panel23.TabIndex = 1;
+            // 
+            // foodsLbl
+            // 
+            this.foodsLbl.AutoSize = true;
+            this.foodsLbl.BackColor = System.Drawing.Color.Transparent;
+            this.foodsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foodsLbl.ForeColor = System.Drawing.Color.White;
+            this.foodsLbl.Location = new System.Drawing.Point(537, 14);
+            this.foodsLbl.Name = "foodsLbl";
+            this.foodsLbl.Size = new System.Drawing.Size(71, 29);
+            this.foodsLbl.TabIndex = 0;
+            this.foodsLbl.Text = "$0.00";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(99, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 29);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Foods";
+            // 
+            // guna2Panel22
+            // 
+            this.guna2Panel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel22.Controls.Add(this.circlePictureBox3);
+            this.guna2Panel22.Controls.Add(this.entertainmentLbl);
+            this.guna2Panel22.Controls.Add(this.label11);
+            this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel22.Location = new System.Drawing.Point(0, 200);
+            this.guna2Panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel22.Name = "guna2Panel22";
+            this.guna2Panel22.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
+            this.guna2Panel22.ShadowDecoration.Parent = this.guna2Panel22;
+            this.guna2Panel22.Size = new System.Drawing.Size(664, 56);
+            this.guna2Panel22.TabIndex = 1;
+            // 
+            // entertainmentLbl
+            // 
+            this.entertainmentLbl.AutoSize = true;
+            this.entertainmentLbl.BackColor = System.Drawing.Color.Transparent;
+            this.entertainmentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entertainmentLbl.ForeColor = System.Drawing.Color.White;
+            this.entertainmentLbl.Location = new System.Drawing.Point(537, 14);
+            this.entertainmentLbl.Name = "entertainmentLbl";
+            this.entertainmentLbl.Size = new System.Drawing.Size(71, 29);
+            this.entertainmentLbl.TabIndex = 0;
+            this.entertainmentLbl.Text = "$0.00";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(99, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(161, 29);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Entertainment";
+            // 
+            // guna2Panel21
+            // 
+            this.guna2Panel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel21.Controls.Add(this.circlePictureBox4);
+            this.guna2Panel21.Controls.Add(this.othersLbl);
+            this.guna2Panel21.Controls.Add(this.label12);
+            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel21.Location = new System.Drawing.Point(0, 256);
+            this.guna2Panel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel21.Name = "guna2Panel21";
+            this.guna2Panel21.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
+            this.guna2Panel21.ShadowDecoration.Parent = this.guna2Panel21;
+            this.guna2Panel21.Size = new System.Drawing.Size(664, 66);
+            this.guna2Panel21.TabIndex = 1;
+            // 
+            // othersLbl
+            // 
+            this.othersLbl.AutoSize = true;
+            this.othersLbl.BackColor = System.Drawing.Color.Transparent;
+            this.othersLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.othersLbl.ForeColor = System.Drawing.Color.White;
+            this.othersLbl.Location = new System.Drawing.Point(537, 17);
+            this.othersLbl.Name = "othersLbl";
+            this.othersLbl.Size = new System.Drawing.Size(71, 29);
+            this.othersLbl.TabIndex = 0;
+            this.othersLbl.Text = "$0.00";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(99, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 29);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Others";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(27, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(210, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Expense Category";
             // 
             // circlePictureBox5
             // 
@@ -755,46 +913,6 @@
             this.circlePictureBox5.TabIndex = 0;
             this.circlePictureBox5.TabStop = false;
             // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(99, 14);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(171, 29);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Transaction 01";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(543, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 29);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "$100.00";
-            // 
-            // guna2Panel23
-            // 
-            this.guna2Panel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel23.Controls.Add(this.circlePictureBox2);
-            this.guna2Panel23.Controls.Add(this.label14);
-            this.guna2Panel23.Controls.Add(this.label10);
-            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel23.Location = new System.Drawing.Point(0, 157);
-            this.guna2Panel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel23.Name = "guna2Panel23";
-            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
-            this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
-            this.guna2Panel23.Size = new System.Drawing.Size(664, 55);
-            this.guna2Panel23.TabIndex = 1;
-            // 
             // circlePictureBox2
             // 
             this.circlePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(212)))), ((int)(((byte)(146)))));
@@ -812,46 +930,6 @@
             this.circlePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.circlePictureBox2.TabIndex = 0;
             this.circlePictureBox2.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(543, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 29);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "$100.00";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(99, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(171, 29);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Transaction 02";
-            // 
-            // guna2Panel22
-            // 
-            this.guna2Panel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel22.Controls.Add(this.circlePictureBox3);
-            this.guna2Panel22.Controls.Add(this.label15);
-            this.guna2Panel22.Controls.Add(this.label11);
-            this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel22.Location = new System.Drawing.Point(0, 212);
-            this.guna2Panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel22.Name = "guna2Panel22";
-            this.guna2Panel22.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
-            this.guna2Panel22.ShadowDecoration.Parent = this.guna2Panel22;
-            this.guna2Panel22.Size = new System.Drawing.Size(664, 55);
-            this.guna2Panel22.TabIndex = 1;
             // 
             // circlePictureBox3
             // 
@@ -871,46 +949,6 @@
             this.circlePictureBox3.TabIndex = 0;
             this.circlePictureBox3.TabStop = false;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(543, 14);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 29);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "$100.00";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(99, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(171, 29);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Transaction 03";
-            // 
-            // guna2Panel21
-            // 
-            this.guna2Panel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel21.Controls.Add(this.circlePictureBox4);
-            this.guna2Panel21.Controls.Add(this.label16);
-            this.guna2Panel21.Controls.Add(this.label12);
-            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel21.Location = new System.Drawing.Point(0, 267);
-            this.guna2Panel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
-            this.guna2Panel21.ShadowDecoration.Parent = this.guna2Panel21;
-            this.guna2Panel21.Size = new System.Drawing.Size(664, 55);
-            this.guna2Panel21.TabIndex = 1;
-            // 
             // circlePictureBox4
             // 
             this.circlePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
@@ -928,44 +966,6 @@
             this.circlePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.circlePictureBox4.TabIndex = 0;
             this.circlePictureBox4.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(543, 12);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 29);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "$100.00";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(99, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 29);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Transaction 04";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(27, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Recent Transaction";
             // 
             // dashboard
             // 
@@ -1017,15 +1017,15 @@
             this.guna2Panel18.PerformLayout();
             this.guna2Panel24.ResumeLayout(false);
             this.guna2Panel24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
             this.guna2Panel23.ResumeLayout(false);
             this.guna2Panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
             this.guna2Panel22.ResumeLayout(false);
             this.guna2Panel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
             this.guna2Panel21.ResumeLayout(false);
             this.guna2Panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -1084,10 +1084,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label healthcareLbl;
+        private System.Windows.Forms.Label foodsLbl;
+        private System.Windows.Forms.Label entertainmentLbl;
+        private System.Windows.Forms.Label othersLbl;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
