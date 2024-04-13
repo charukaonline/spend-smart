@@ -22,9 +22,16 @@ namespace spend_smart
         private int currentID;
         private string currentName;
 
+        private System.Windows.Forms.Timer refreshTimer;
+
         public menuControls()
         {
             InitializeComponent();
+
+            refreshTimer = new System.Windows.Forms.Timer();
+            refreshTimer.Interval = 2000;
+            refreshTimer.Tick += RefreshTimer_Tick;
+            refreshTimer.Start();
         }
 
         private void menuControls_Load(object sender, EventArgs e)
@@ -44,6 +51,13 @@ namespace spend_smart
             InitializeToolTips();
             //InitializeDBConnection();
         }
+
+        private void RefreshTimer_Tick(object sender, EventArgs e)
+        {
+            // Refresh the data
+            dashboard1.RefreshData();
+        }
+
 
         // Dragging part
         private void mouse_Down(object sender, MouseEventArgs e)

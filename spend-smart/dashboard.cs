@@ -66,7 +66,10 @@ namespace spend_smart
             //access UserID and Username from UserSession
             currentID = UserSession.CurrentUserID;
             currentName = UserSession.CurrentUsername;
+        }
 
+        public void RefreshData()
+        {
             FetchUserIncomes();
             FetchUserExpenses();
             FetchTotalBalance();
@@ -234,6 +237,8 @@ namespace spend_smart
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Note Added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        msgTxtBox.Text = "";
+                        subjectTxtBox.Text = "";
                     }
                     else
                     {
