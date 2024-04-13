@@ -217,9 +217,9 @@
             this.savinglbl.ForeColor = System.Drawing.Color.White;
             this.savinglbl.Location = new System.Drawing.Point(26, 116);
             this.savinglbl.Name = "savinglbl";
-            this.savinglbl.Size = new System.Drawing.Size(118, 32);
+            this.savinglbl.Size = new System.Drawing.Size(86, 32);
             this.savinglbl.TabIndex = 0;
-            this.savinglbl.Text = "$100.00";
+            this.savinglbl.Text = "$0.00";
             // 
             // guna2Panel6
             // 
@@ -298,9 +298,9 @@
             this.explbl.ForeColor = System.Drawing.Color.White;
             this.explbl.Location = new System.Drawing.Point(26, 116);
             this.explbl.Name = "explbl";
-            this.explbl.Size = new System.Drawing.Size(118, 32);
+            this.explbl.Size = new System.Drawing.Size(86, 32);
             this.explbl.TabIndex = 0;
-            this.explbl.Text = "$100.00";
+            this.explbl.Text = "$0.00";
             // 
             // guna2Panel5
             // 
@@ -379,9 +379,9 @@
             this.incomelbl.ForeColor = System.Drawing.Color.White;
             this.incomelbl.Location = new System.Drawing.Point(26, 116);
             this.incomelbl.Name = "incomelbl";
-            this.incomelbl.Size = new System.Drawing.Size(118, 32);
+            this.incomelbl.Size = new System.Drawing.Size(86, 32);
             this.incomelbl.TabIndex = 0;
-            this.incomelbl.Text = "$100.00";
+            this.incomelbl.Text = "$0.00";
             // 
             // guna2Panel4
             // 
@@ -461,9 +461,9 @@
             this.totBalancelbl.ForeColor = System.Drawing.Color.White;
             this.totBalancelbl.Location = new System.Drawing.Point(26, 116);
             this.totBalancelbl.Name = "totBalancelbl";
-            this.totBalancelbl.Size = new System.Drawing.Size(118, 32);
+            this.totBalancelbl.Size = new System.Drawing.Size(86, 32);
             this.totBalancelbl.TabIndex = 0;
-            this.totBalancelbl.Text = "$100.00";
+            this.totBalancelbl.Text = "$0.00";
             // 
             // guna2Panel2
             // 
