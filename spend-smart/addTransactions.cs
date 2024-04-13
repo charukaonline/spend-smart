@@ -73,7 +73,7 @@ namespace spend_smart
 
                 else if (!Regex.IsMatch(IncomeAmt, @"^\d+(\.\d+)?$"))
                 {
-                    MessageBox.Show("Amount must contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter a valid amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else
