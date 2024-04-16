@@ -240,6 +240,7 @@
     <Content Include="icons\dashboard_icon.png" />
     <None Include="icons\expenses_icon.png" />
     <None Include="icons\incomes_icon.png" />
+    <None Include="icons\loading_2.png" />
     <Content Include="ssmart.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

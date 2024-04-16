@@ -153,9 +153,9 @@ namespace spend_smart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loading_image {
+        internal static System.Drawing.Bitmap loading_2 {
             get {
-                object obj = ResourceManager.GetObject("loading_image", resourceCulture);
+                object obj = ResourceManager.GetObject("loading_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
