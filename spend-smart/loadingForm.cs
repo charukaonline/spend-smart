@@ -57,10 +57,10 @@ namespace spend_smart
         private int EveningCalculateTimerInterval()
         {
             DateTime now = DateTime.Now;
-            DateTime eveningNotificationTime = new DateTime(now.Year, now.Month, now.Day, 18, 44, 0); // 6:00 PM
+            DateTime eveningNotificationTime = new DateTime(now.Year, now.Month, now.Day, 19, 32, 0);
             if (now > eveningNotificationTime)
             {
-                eveningNotificationTime = eveningNotificationTime.AddDays(1); // If it's already past 6:00 PM, schedule for the next day
+                eveningNotificationTime = eveningNotificationTime.AddDays(1);
             }
             return (int)(eveningNotificationTime - now).TotalMilliseconds;
         }
@@ -86,7 +86,16 @@ namespace spend_smart
         // Event handler for the menu item to show the application window
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Show the loading form
             this.Show();
+            this.Activate();
+
+            // Start loading tasks if they haven't been started yet
+            if (!progressBar1.Visible)
+            {
+                progressBar1.Visible = true;
+                _ = StartLoadingAsync();
+            }
         }
 
         // Event handler for the menu item to exit the application
@@ -99,22 +108,23 @@ namespace spend_smart
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Show();
+            this.Activate(); // Activate the form and bring it to the front
+
+            // Start loading tasks if they haven't been started yet
+            if (!progressBar1.Visible)
+            {
+                progressBar1.Visible = true;
+                _ = StartLoadingAsync();
+            }
         }
 
         private void loading_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Hide the form instead of closing it
-            e.Cancel = true;
-            this.Hide();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            panel1.Width += 13;
-            if (panel1.Width >= 700)
+            // Check if the form is closing due to application exit
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
             {
-                timer1.Stop();
-                this.Hide();
+                // Show the notification
+                ShowNotification("Application is closing. Goodbye!");
             }
         }
     }
