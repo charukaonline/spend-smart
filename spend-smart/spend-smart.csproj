@@ -255,7 +255,6 @@
     <Content Include="icons\transaction_icon.png" />
     <Content Include="icons\trending_up_icon.png" />
     <Content Include="icons\wallet_icon.png" />
-    <None Include="icons\Spend Smart.png" />
     <None Include="Resources\loading_image.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
