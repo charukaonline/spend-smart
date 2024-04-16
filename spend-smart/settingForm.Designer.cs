@@ -304,6 +304,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "settingForm";
             this.Size = new System.Drawing.Size(1157, 704);
+            this.Load += new System.EventHandler(this.settingForm_load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
