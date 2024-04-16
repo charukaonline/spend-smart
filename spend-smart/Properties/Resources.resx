@@ -145,8 +145,8 @@
   <data name="incomes_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\incomes_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\Spend Smart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loading_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\loading_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

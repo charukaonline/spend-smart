@@ -34,35 +34,38 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::spend_smart.Properties.Resources.loading_image;
+            this.panel1.BackgroundImage = global::spend_smart.Properties.Resources.loading_2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 426);
+            this.panel1.Size = new System.Drawing.Size(463, 277);
             this.panel1.TabIndex = 0;
             // 
             // progressBar1
             // 
             this.progressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.progressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.progressBar1.Location = new System.Drawing.Point(1, 432);
+            this.progressBar1.Location = new System.Drawing.Point(1, 281);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(126)))), ((int)(((byte)(199)))));
             this.progressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(126)))), ((int)(((byte)(199)))));
             this.progressBar1.ShadowDecoration.Parent = this.progressBar1;
-            this.progressBar1.Size = new System.Drawing.Size(692, 19);
+            this.progressBar1.Size = new System.Drawing.Size(461, 12);
             this.progressBar1.TabIndex = 2;
             this.progressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // loadingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(695, 452);
+            this.ClientSize = new System.Drawing.Size(463, 294);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "loadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loadingForm";
