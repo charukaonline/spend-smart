@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -154,6 +155,31 @@ namespace spend_smart
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Show();
+        }
+
+        public static int parentX, parentY;
+
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            Form helpBackground = new Form();
+            using (helpForm help = new helpForm())
+            {
+                helpBackground.StartPosition = FormStartPosition.Manual;
+                helpBackground.FormBorderStyle = FormBorderStyle.None;
+                helpBackground.Opacity = .50d;
+                helpBackground.BackColor = Color.Black;
+                helpBackground.Size = this.Size;
+                helpBackground.Location = this.Location;
+                helpBackground.ShowInTaskbar = false;
+                helpBackground.Show();
+                help.Owner = helpBackground;
+
+                parentX = this.Location.X;
+                parentY = this.Location.Y;
+
+                help.ShowDialog();
+                helpBackground.Dispose();
+            }
         }
 
         private void InitializeToolTips()
