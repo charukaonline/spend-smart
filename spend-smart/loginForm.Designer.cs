@@ -54,10 +54,10 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(342, 81);
+            this.label1.Location = new System.Drawing.Point(304, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 52);
+            this.label1.Size = new System.Drawing.Size(273, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome back!";
             // 
@@ -67,10 +67,10 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 278);
+            this.label2.Location = new System.Drawing.Point(172, 222);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 29);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "User Name";
             // 
@@ -80,10 +80,10 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(194, 465);
+            this.label3.Location = new System.Drawing.Point(172, 372);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 29);
+            this.label3.Size = new System.Drawing.Size(44, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "PIN";
             // 
@@ -105,14 +105,14 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(696, 1285);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
+            this.guna2TextBox1.Location = new System.Drawing.Point(619, 1028);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(1268, 146);
+            this.guna2TextBox1.Size = new System.Drawing.Size(1127, 117);
             this.guna2TextBox1.TabIndex = 2;
             // 
             // passwordTxtBox
@@ -133,14 +133,14 @@
             this.passwordTxtBox.ForeColor = System.Drawing.Color.White;
             this.passwordTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTxtBox.HoverState.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Location = new System.Drawing.Point(199, 509);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
+            this.passwordTxtBox.Location = new System.Drawing.Point(177, 407);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '*';
             this.passwordTxtBox.PlaceholderText = "";
             this.passwordTxtBox.SelectedText = "";
             this.passwordTxtBox.ShadowDecoration.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Size = new System.Drawing.Size(585, 61);
+            this.passwordTxtBox.Size = new System.Drawing.Size(520, 49);
             this.passwordTxtBox.TabIndex = 2;
             this.passwordTxtBox.TextChanged += new System.EventHandler(this.passwordTxtBox_TextChanged);
             this.passwordTxtBox.Enter += new System.EventHandler(this.passwordTxtBox_Enter);
@@ -163,14 +163,14 @@
             this.userNameTxt.ForeColor = System.Drawing.Color.White;
             this.userNameTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNameTxt.HoverState.Parent = this.userNameTxt;
-            this.userNameTxt.Location = new System.Drawing.Point(199, 315);
-            this.userNameTxt.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userNameTxt.Location = new System.Drawing.Point(177, 252);
+            this.userNameTxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.PasswordChar = '\0';
             this.userNameTxt.PlaceholderText = "";
             this.userNameTxt.SelectedText = "";
             this.userNameTxt.ShadowDecoration.Parent = this.userNameTxt;
-            this.userNameTxt.Size = new System.Drawing.Size(585, 61);
+            this.userNameTxt.Size = new System.Drawing.Size(520, 49);
             this.userNameTxt.TabIndex = 2;
             this.userNameTxt.TextChanged += new System.EventHandler(this.userNameTxt_TextChange);
             this.userNameTxt.Enter += new System.EventHandler(this.userNameTxt_Enter);
@@ -185,11 +185,11 @@
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.HoverState.Parent = this.loginBtn;
-            this.loginBtn.Location = new System.Drawing.Point(356, 632);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.loginBtn.Location = new System.Drawing.Point(316, 506);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.ShadowDecoration.Parent = this.loginBtn;
-            this.loginBtn.Size = new System.Drawing.Size(270, 69);
+            this.loginBtn.Size = new System.Drawing.Size(240, 55);
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "Login";
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -200,10 +200,10 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(267, 738);
+            this.label4.Location = new System.Drawing.Point(237, 590);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(265, 29);
+            this.label4.Size = new System.Drawing.Size(225, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Don\'t have an Account? ";
             // 
@@ -213,10 +213,10 @@
             this.registerLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.registerLbl.Location = new System.Drawing.Point(524, 738);
+            this.registerLbl.Location = new System.Drawing.Point(466, 590);
             this.registerLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registerLbl.Name = "registerLbl";
-            this.registerLbl.Size = new System.Drawing.Size(193, 29);
+            this.registerLbl.Size = new System.Drawing.Size(158, 25);
             this.registerLbl.TabIndex = 4;
             this.registerLbl.Text = "Register here...";
             this.registerLbl.Click += new System.EventHandler(this.registerLbl_Click);
@@ -226,10 +226,10 @@
             this.usernameValidationLbl.AutoSize = true;
             this.usernameValidationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameValidationLbl.ForeColor = System.Drawing.Color.Red;
-            this.usernameValidationLbl.Location = new System.Drawing.Point(195, 385);
+            this.usernameValidationLbl.Location = new System.Drawing.Point(173, 308);
             this.usernameValidationLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameValidationLbl.Name = "usernameValidationLbl";
-            this.usernameValidationLbl.Size = new System.Drawing.Size(229, 25);
+            this.usernameValidationLbl.Size = new System.Drawing.Size(178, 20);
             this.usernameValidationLbl.TabIndex = 5;
             this.usernameValidationLbl.Text = "*Enter valid user name";
             // 
@@ -238,10 +238,10 @@
             this.pinValidationLbl.AutoSize = true;
             this.pinValidationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinValidationLbl.ForeColor = System.Drawing.Color.Red;
-            this.pinValidationLbl.Location = new System.Drawing.Point(195, 581);
+            this.pinValidationLbl.Location = new System.Drawing.Point(173, 465);
             this.pinValidationLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinValidationLbl.Name = "pinValidationLbl";
-            this.pinValidationLbl.Size = new System.Drawing.Size(162, 25);
+            this.pinValidationLbl.Size = new System.Drawing.Size(126, 20);
             this.pinValidationLbl.TabIndex = 5;
             this.pinValidationLbl.Text = "*Enter valid PIN";
             // 
@@ -250,22 +250,22 @@
             this.labelLockoutTimer.AutoSize = true;
             this.labelLockoutTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLockoutTimer.ForeColor = System.Drawing.Color.White;
-            this.labelLockoutTimer.Location = new System.Drawing.Point(384, 189);
+            this.labelLockoutTimer.Location = new System.Drawing.Point(341, 151);
             this.labelLockoutTimer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLockoutTimer.Name = "labelLockoutTimer";
-            this.labelLockoutTimer.Size = new System.Drawing.Size(0, 25);
+            this.labelLockoutTimer.Size = new System.Drawing.Size(0, 20);
             this.labelLockoutTimer.TabIndex = 6;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 51);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(44, 41);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(120, 122);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(107, 98);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -274,11 +274,12 @@
             // 
             this.dbStatusCircle.BackColor = System.Drawing.Color.Transparent;
             this.dbStatusCircle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.dbStatusCircle.Location = new System.Drawing.Point(693, 818);
+            this.dbStatusCircle.Location = new System.Drawing.Point(616, 654);
+            this.dbStatusCircle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dbStatusCircle.Name = "dbStatusCircle";
             this.dbStatusCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.dbStatusCircle.ShadowDecoration.Parent = this.dbStatusCircle;
-            this.dbStatusCircle.Size = new System.Drawing.Size(27, 27);
+            this.dbStatusCircle.Size = new System.Drawing.Size(24, 22);
             this.dbStatusCircle.TabIndex = 7;
             this.dbStatusCircle.TabStop = false;
             // 
@@ -287,18 +288,19 @@
             this.statusLabel.AutoSize = true;
             this.statusLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(717, 818);
+            this.statusLabel.Location = new System.Drawing.Point(637, 654);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 29);
+            this.statusLabel.Size = new System.Drawing.Size(0, 25);
             this.statusLabel.TabIndex = 8;
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // loginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AcceptButton = this.loginBtn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(975, 862);
+            this.ClientSize = new System.Drawing.Size(867, 690);
             this.Controls.Add(this.dbStatusCircle);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.labelLockoutTimer);
@@ -316,9 +318,9 @@
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "loginForm";
-            this.Padding = new System.Windows.Forms.Padding(45, 46, 45, 46);
+            this.Padding = new System.Windows.Forms.Padding(40, 37, 40, 37);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loginForm";
             this.Load += new System.EventHandler(this.loginForm_Load);

@@ -57,7 +57,7 @@ namespace spend_smart
         private int EveningCalculateTimerInterval()
         {
             DateTime now = DateTime.Now;
-            DateTime eveningNotificationTime = new DateTime(now.Year, now.Month, now.Day, 19, 32, 0);
+            DateTime eveningNotificationTime = new DateTime(now.Year, now.Month, now.Day, 22, 35, 0);
             if (now > eveningNotificationTime)
             {
                 eveningNotificationTime = eveningNotificationTime.AddDays(1);
