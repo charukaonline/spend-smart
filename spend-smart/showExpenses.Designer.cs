@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +39,6 @@
             this.expenseDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.expense_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.added_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.expenseIdTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.expenseTitleTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -121,41 +117,40 @@
             // 
             // expenseDataGrid
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.expenseDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.expenseDataGrid.AllowUserToAddRows = false;
+            this.expenseDataGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.expenseDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.expenseDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.expenseDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.expenseDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.expenseDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.expenseDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.expenseDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.expenseDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.expenseDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.expenseDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.expense_id,
-            this.title,
-            this.amount,
-            this.added_date});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.expenseDataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.expenseDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.expenseDataGrid.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.expenseDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.expenseDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expenseDataGrid.EnableHeadersVisualStyles = false;
             this.expenseDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.expenseDataGrid.Location = new System.Drawing.Point(25, 0);
             this.expenseDataGrid.Name = "expenseDataGrid";
+            this.expenseDataGrid.ReadOnly = true;
             this.expenseDataGrid.RowHeadersVisible = false;
+            this.expenseDataGrid.RowTemplate.Height = 25;
             this.expenseDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.expenseDataGrid.Size = new System.Drawing.Size(818, 296);
             this.expenseDataGrid.TabIndex = 0;
@@ -171,15 +166,15 @@
             this.expenseDataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.expenseDataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.expenseDataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.expenseDataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.expenseDataGrid.ThemeStyle.HeaderStyle.Height = 21;
-            this.expenseDataGrid.ThemeStyle.ReadOnly = false;
-            this.expenseDataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.expenseDataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.expenseDataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.expenseDataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.expenseDataGrid.ThemeStyle.HeaderStyle.Height = 30;
+            this.expenseDataGrid.ThemeStyle.ReadOnly = true;
+            this.expenseDataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.expenseDataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.expenseDataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expenseDataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.expenseDataGrid.ThemeStyle.RowsStyle.Height = 22;
-            this.expenseDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.expenseDataGrid.ThemeStyle.RowsStyle.Height = 25;
+            this.expenseDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.expenseDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // guna2Panel5
@@ -202,26 +197,6 @@
             this.label2.Size = new System.Drawing.Size(266, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Edit existing records from here";
-            // 
-            // expense_id
-            // 
-            this.expense_id.HeaderText = "Expense ID";
-            this.expense_id.Name = "expense_id";
-            // 
-            // title
-            // 
-            this.title.HeaderText = "Title";
-            this.title.Name = "title";
-            // 
-            // amount
-            // 
-            this.amount.HeaderText = "Amount ($)";
-            this.amount.Name = "amount";
-            // 
-            // added_date
-            // 
-            this.added_date.HeaderText = "Added Date";
-            this.added_date.Name = "added_date";
             // 
             // guna2Panel6
             // 
@@ -419,10 +394,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView expenseDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expense_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn added_date;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2TextBox expenseAmountTxt;
         private Guna.UI2.WinForms.Guna2TextBox expenseTitleTxt;
