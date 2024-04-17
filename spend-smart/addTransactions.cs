@@ -162,6 +162,7 @@ namespace spend_smart
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Expense added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        OnExpenseAdded(EventArgs.Empty);
                         txtExpenseTitle.Text = "";
                         txtExpenseAmount.Text = "";
                         expenseCategories.SelectedIndex = 0; // Reset category selection
@@ -203,6 +204,13 @@ namespace spend_smart
             }
 
             return categoryId;
+        }
+
+        public event EventHandler ExpenseAdded;
+
+        protected virtual void OnExpenseAdded(EventArgs e)
+        {
+            ExpenseAdded?.Invoke(this, e);
         }
     }
 }
