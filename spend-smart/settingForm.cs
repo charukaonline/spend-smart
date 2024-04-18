@@ -154,16 +154,16 @@ namespace spend_smart
         {
             string enteredPin = hashPassword(txtPin.Text);
 
-            if (string.IsNullOrEmpty(enteredPin))
+            if (txtPin.Text == "")
             {
-                MessageBox.Show("Please enter your PIN.");
+                MessageBox.Show("Please enter your PIN.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Verify PIN
             if (!VerifyPin(enteredPin))
             {
-                MessageBox.Show("Incorrect PIN. Please try again.");
+                MessageBox.Show("Incorrect PIN. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPin.Text = "";
                 txtPin.Focus();
                 return;
@@ -204,12 +204,13 @@ namespace spend_smart
                             cmd.ExecuteNonQuery();
                         }
 
-                        MessageBox.Show("All your data has been deleted successfully.");
+                        MessageBox.Show("All your data has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtPin.Text = "";
                     }
                 }
-                catch (Exception ex)
+                catch (OleDbException ex)
                 {
-                    MessageBox.Show("Error deleting data: " + ex.Message);
+                    MessageBox.Show("Error deleting data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -235,9 +236,9 @@ namespace spend_smart
                     }
                 }
             }
-            catch (Exception ex)
+            catch (OleDbException ex)
             {
-                MessageBox.Show("Error verifying PIN: " + ex.Message);
+                MessageBox.Show("Error verifying PIN: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return false;
