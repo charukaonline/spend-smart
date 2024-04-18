@@ -149,5 +149,98 @@ namespace spend_smart
             ThemeManage.ToggleTheme();
             ThemeManage.ApplyTheme();
         }
+
+        private void btnDelData_Click(object sender, EventArgs e)
+        {
+            string enteredPin = hashPassword(txtPin.Text);
+
+            if (string.IsNullOrEmpty(enteredPin))
+            {
+                MessageBox.Show("Please enter your PIN.");
+                return;
+            }
+
+            // Verify PIN
+            if (!VerifyPin(enteredPin))
+            {
+                MessageBox.Show("Incorrect PIN. Please try again.");
+                txtPin.Text = "";
+                txtPin.Focus();
+                return;
+            }
+
+            // Confirmation message
+            DialogResult result = MessageBox.Show("Are you sure you want to delete all your data? This action cannot be undone.", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    using (OleDbConnection conn = new OleDbConnection(dbConn.Instance.connString))
+                    {
+                        conn.Open();
+
+                        // Delete income data
+                        string deleteIncomeQuery = "DELETE FROM income WHERE user_id = @currentID";
+                        using (OleDbCommand cmd = new OleDbCommand(deleteIncomeQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // Delete expense data
+                        string deleteExpenseQuery = "DELETE FROM expense WHERE user_id = @currentID";
+                        using (OleDbCommand cmd = new OleDbCommand(deleteExpenseQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // Delete notes data
+                        string deleteNotesQuery = "DELETE FROM notes WHERE user_id = @currentID";
+                        using (OleDbCommand cmd = new OleDbCommand(deleteNotesQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("All your data has been deleted successfully.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting data: " + ex.Message);
+                }
+            }
+        }
+
+        private bool VerifyPin(string enteredPin)
+        {
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(dbConn.Instance.connString))
+                {
+                    conn.Open();
+
+                    string query = "SELECT pin FROM users WHERE user_id = @currentID";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                        string storedPin = cmd.ExecuteScalar()?.ToString();
+
+                        if (storedPin == enteredPin)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error verifying PIN: " + ex.Message);
+            }
+
+            return false;
+        }
     }
 }

@@ -42,9 +42,14 @@
             this.txtCurrentPin = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnDelData = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -159,6 +164,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.guna2Panel5);
             this.guna2Panel2.Controls.Add(this.btnChangePin);
             this.guna2Panel2.Controls.Add(this.txtCNewPin);
             this.guna2Panel2.Controls.Add(this.txtNewPin);
@@ -296,6 +302,78 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1157, 100);
             this.guna2Panel3.TabIndex = 13;
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Controls.Add(this.btnDelData);
+            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.Controls.Add(this.txtPin);
+            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel5.Location = new System.Drawing.Point(640, 0);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(517, 369);
+            this.guna2Panel5.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(205, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Reset App";
+            // 
+            // txtPin
+            // 
+            this.txtPin.BorderColor = System.Drawing.Color.DimGray;
+            this.txtPin.BorderRadius = 8;
+            this.txtPin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPin.DefaultText = "";
+            this.txtPin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPin.DisabledState.Parent = this.txtPin;
+            this.txtPin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPin.FillColor = System.Drawing.Color.DimGray;
+            this.txtPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPin.FocusedState.Parent = this.txtPin;
+            this.txtPin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPin.ForeColor = System.Drawing.Color.White;
+            this.txtPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPin.HoverState.Parent = this.txtPin;
+            this.txtPin.Location = new System.Drawing.Point(105, 100);
+            this.txtPin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPin.Name = "txtPin";
+            this.txtPin.PasswordChar = '\0';
+            this.txtPin.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtPin.PlaceholderText = "Enter your current PIN";
+            this.txtPin.SelectedText = "";
+            this.txtPin.ShadowDecoration.Parent = this.txtPin;
+            this.txtPin.Size = new System.Drawing.Size(295, 55);
+            this.txtPin.TabIndex = 12;
+            // 
+            // btnDelData
+            // 
+            this.btnDelData.BorderColor = System.Drawing.Color.Red;
+            this.btnDelData.BorderRadius = 10;
+            this.btnDelData.BorderThickness = 2;
+            this.btnDelData.CheckedState.Parent = this.btnDelData;
+            this.btnDelData.CustomImages.Parent = this.btnDelData;
+            this.btnDelData.FillColor = System.Drawing.Color.Transparent;
+            this.btnDelData.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelData.ForeColor = System.Drawing.Color.White;
+            this.btnDelData.HoverState.Parent = this.btnDelData;
+            this.btnDelData.Location = new System.Drawing.Point(105, 188);
+            this.btnDelData.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelData.Name = "btnDelData";
+            this.btnDelData.ShadowDecoration.Parent = this.btnDelData;
+            this.btnDelData.Size = new System.Drawing.Size(295, 55);
+            this.btnDelData.TabIndex = 13;
+            this.btnDelData.Text = "Delete All data";
+            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
+            // 
             // settingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,6 +389,8 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +411,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox selectLan;
         private Guna.UI2.WinForms.Guna2ToggleSwitch changeTheme;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2TextBox txtPin;
+        private Guna.UI2.WinForms.Guna2Button btnDelData;
     }
 }
