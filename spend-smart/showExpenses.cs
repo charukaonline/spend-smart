@@ -59,7 +59,7 @@ namespace spend_smart
             }
             catch (OleDbException ex)
             {
-                MessageBox.Show("Error connecting to the database: " + ex.Message);
+                MessageBox.Show("Error connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -79,7 +79,7 @@ namespace spend_smart
             string query = "SELECT expense_id AS [Expense ID], title AS [Title], amount AS [Amount ($)], added_date AS [Added Date] FROM expense WHERE user_id = @currentID";
             using (OleDbCommand command = new OleDbCommand(query, dbConnection))
             {
-                command.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                command.Parameters.AddWithValue("@currentID", currentID);
 
                 try
                 {
@@ -163,7 +163,7 @@ namespace spend_smart
                         cmd.Parameters.AddWithValue("@title", title);
                         cmd.Parameters.AddWithValue("@amount", amount);
                         cmd.Parameters.AddWithValue("@expenseId", expenseId);
-                        cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                        cmd.Parameters.AddWithValue("@currentID", currentID);
 
                         int rowsUpdated = cmd.ExecuteNonQuery();
                         if (rowsUpdated > 0)
@@ -207,7 +207,7 @@ namespace spend_smart
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@expenseId", expenseId);
-                        cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+                        cmd.Parameters.AddWithValue("@currentID", currentID);
 
                         int rowsDeleted = cmd.ExecuteNonQuery();
                         if (rowsDeleted > 0)
