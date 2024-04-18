@@ -21,6 +21,12 @@ namespace spend_smart
         {
             InitializeComponent();
             SubscribeToAddExpenseEvent();
+
+            ThemeManage.AddControlToColor(guna2Panel2);
+            ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(label2);
+
+            this.Load += showExpenses_Load;
         }
 
         public void SubscribeToAddExpenseEvent()
