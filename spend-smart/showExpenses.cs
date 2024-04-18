@@ -21,26 +21,6 @@ namespace spend_smart
         {
             InitializeComponent();
             SubscribeToAddExpenseEvent();
-
-            //ThemeManage.AddControlToColor(guna2Panel2);
-            //ThemeManage.AddControlToColor(label1);
-            //ThemeManage.AddControlToColor(label2);
-            //ThemeManage.AddControlToColor(label3);
-            //ThemeManage.AddControlToColor(label4);
-            //ThemeManage.AddControlToColor(label6);
-            //ThemeManage.AddControlToColor(label8);
-            //ThemeManage.AddControlToColor(label9);
-            //ThemeManage.AddControlToColor(label10);
-            //ThemeManage.AddControlToColor(label12);
-            //ThemeManage.AddControlToColor(label13);
-            //ThemeManage.AddControlToColor(label14);
-            //ThemeManage.AddControlToColor(label16);
-            //ThemeManage.AddControlToColor(label17);
-            //ThemeManage.AddControlToColor(label18);
-            //ThemeManage.AddControlToColor(label20);
-            //ThemeManage.AddControlToColor(label21);
-
-            //this.Load += showExpenses_Load;
         }
 
         public void SubscribeToAddExpenseEvent()
@@ -77,7 +57,7 @@ namespace spend_smart
                     dbConnection.Open();
                 }
             }
-            catch (Exception ex)
+            catch (OleDbException ex)
             {
                 MessageBox.Show("Error connecting to the database: " + ex.Message);
             }
@@ -109,12 +89,144 @@ namespace spend_smart
 
                     expenseDataGrid.DataSource = dt; // Assign data source to DataGridView
                 }
-                catch (Exception ex)
+                catch (OleDbException ex)
                 {
                     MessageBox.Show("Error fetching expense data: " + ex.Message);
                 }
             }
         }
 
+        private int GetCategoryId(string categoryName)
+        {
+            int categoryId = -1; // Default to -1 if not found
+
+            // Mapping category name to category ID
+            switch (categoryName)
+            {
+                case "Foods":
+                    categoryId = 1;
+                    break;
+                case "Healthcare":
+                    categoryId = 2;
+                    break;
+                case "Entertainment":
+                    categoryId = 3;
+                    break;
+                case "Others":
+                    categoryId = 4;
+                    break;
+            }
+
+            return categoryId;
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            int expenseId;
+            if (!int.TryParse(expenseIdTxt.Text, out expenseId))
+            {
+                MessageBox.Show("Please enter a valid Expense ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int categoryId = GetCategoryId(expenseCategoriesCombo.Text);
+            if (categoryId == -1)
+            {
+                MessageBox.Show("Please select a valid category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string title = expenseTitleTxt.Text;
+            if (title == "")
+            {
+                MessageBox.Show("Please enter a title.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            decimal amount;
+            if (!decimal.TryParse(expenseAmountTxt.Text, out amount))
+            {
+                MessageBox.Show("Please enter a valid amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(dbConn.Instance.connString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE expense SET category_id = @categoryId, title = @title, amount = @amount WHERE expense_id = @expenseId AND user_id = @currentID";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@categoryId", categoryId);
+                        cmd.Parameters.AddWithValue("@title", title);
+                        cmd.Parameters.AddWithValue("@amount", amount);
+                        cmd.Parameters.AddWithValue("@expenseId", expenseId);
+                        cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+
+                        int rowsUpdated = cmd.ExecuteNonQuery();
+                        if (rowsUpdated > 0)
+                        {
+                            MessageBox.Show("Expense updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FetchExpenseRecords();  // Refresh the DataGridView
+                            expenseIdTxt.Text = "";
+                            expenseCategoriesCombo.SelectedIndex = 0;
+                            expenseTitleTxt.Text = "";
+                            expenseAmountTxt.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No records updated.","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error updating expense: " + ex.Message, "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            int expenseId;
+            if (!int.TryParse(expenseIdTxt.Text, out expenseId))
+            {
+                MessageBox.Show("Please enter a valid Expense ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(dbConn.Instance.connString))
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM expense WHERE expense_id = @expenseId AND user_id = @currentID";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@expenseId", expenseId);
+                        cmd.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+
+                        int rowsDeleted = cmd.ExecuteNonQuery();
+                        if (rowsDeleted > 0)
+                        {
+                            MessageBox.Show("Expense deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FetchExpenseRecords();  // Refresh the DataGridView
+                            expenseIdTxt.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No records deleted.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error deleting expense: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
