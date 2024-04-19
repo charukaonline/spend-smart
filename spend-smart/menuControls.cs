@@ -125,28 +125,6 @@ namespace spend_smart
             notificationsForm1.Show();
         }
 
-        private void transactionBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-            addTransactions1.Hide();
-            analytics1.Hide();
-            notificationsForm1.Hide();
-            noteForm1.Hide();
-            settingForm1.Hide();
-            showExpenses1.Show();
-        }
-
-        private void noteBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-            addTransactions1.Hide();
-            analytics1.Hide();
-            notificationsForm1.Hide();
-            showExpenses1.Hide();
-            settingForm1.Hide();
-            noteForm1.Show();
-        }
-
         private void settingBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
@@ -156,6 +134,28 @@ namespace spend_smart
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Show();
+        }
+
+        private void ExpensesBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+            addTransactions1.Hide();
+            analytics1.Hide();
+            notificationsForm1.Hide();
+            showExpenses1.Show();
+            noteForm1.Hide();
+            settingForm1.Hide();
+        }
+
+        private void NotesBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+            addTransactions1.Hide();
+            analytics1.Hide();
+            notificationsForm1.Hide();
+            showExpenses1.Hide();
+            noteForm1.Show();
+            settingForm1.Hide();
         }
 
         public static int parentX, parentY;
@@ -196,10 +196,10 @@ namespace spend_smart
             toolTip3.SetToolTip(analyticsBtn, "Analytics");
 
             ToolTip toolTip4 = new ToolTip();
-            toolTip4.SetToolTip(transactionBtn, "Transaction");
+            toolTip4.SetToolTip(IncomesBtn, "Transaction");
 
             ToolTip toolTip5 = new ToolTip();
-            toolTip5.SetToolTip(noteBtn, "Add Note");
+            toolTip5.SetToolTip(ExpensesBtn, "Add Note");
 
             ToolTip toolTip6 = new ToolTip();
             toolTip6.SetToolTip(notificationBtn, "Notification");
