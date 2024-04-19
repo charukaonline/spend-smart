@@ -4,15 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Diagnostics;
 using System.Globalization;
+using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace spend_smart
 {
@@ -21,19 +17,16 @@ namespace spend_smart
         private OleDbConnection dbConnection;
         private int currentID;
         private string currentName;
-        private bool isChartPopulated = false; // Flag to track if the chart has been populated
+        private bool isChartPopulated = false;
+
+        private LiveCharts.WinForms.PieChart pieChart;
 
         public analytics()
         {
             InitializeComponent();
+            InitializeChart();
             InitializeDBConnection();
 
-            ThemeManage.AddControlToColor(guna2Panel3);
-            ThemeManage.AddControlToColor(guna2Panel4);
-            ThemeManage.AddControlToColor(label1);
-            ThemeManage.AddControlToColor(label3);
-
-            InitializeChart(); // Call InitializeChart in the constructor
             this.Load += analytics_Load;
         }
 
@@ -45,21 +38,17 @@ namespace spend_smart
             currentID = UserSession.CurrentUserID;
             currentName = UserSession.CurrentUsername;
 
-            if (!isChartPopulated) // Check if the chart has not been populated yet
+            if (!isChartPopulated)
             {
                 PopulateChart();
-                isChartPopulated = true; // Set the flag to true after populating the chart
+                PopulatePieChart();
+                isChartPopulated = true;
             }
         }
 
         private void InitializeChart()
         {
-            if (dbConnection == null || dbConnection.State != System.Data.ConnectionState.Open)
-            {
-                MessageBox.Show("Database connection is not open.");
-                return;
-            }
-
+            // Initialize the cartesian chart
             cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
             {
                 Title = "Month",
@@ -71,17 +60,21 @@ namespace spend_smart
                 LabelFormatter = value => value.ToString("C")
             });
             cartesianChart1.LegendLocation = LiveCharts.LegendLocation.Right;
+
+            // Initialize the pie chart
+            pieChart = new LiveCharts.WinForms.PieChart
+            {
+                Dock = DockStyle.Fill
+            };
+            guna2Panel7.Controls.Add(pieChart);
         }
 
         private void InitializeDBConnection()
         {
             try
             {
-                if (dbConnection == null || dbConnection.State != ConnectionState.Open)
-                {
-                    dbConnection = new OleDbConnection(dbConn.Instance.connString);
-                    dbConnection.Open();
-                }
+                dbConnection = new OleDbConnection(dbConn.Instance.connString);
+                dbConnection.Open(); // Open the database connection
             }
             catch (Exception ex)
             {
@@ -100,6 +93,12 @@ namespace spend_smart
 
             try
             {
+                if (dbConnection == null || dbConnection.State != ConnectionState.Open)
+                {
+                    MessageBox.Show("Database connection is not open.");
+                    return;
+                }
+
                 // Modify the query to include the current user's ID
                 string query = $"SELECT added_year, added_month, amount FROM income WHERE user_id = {currentID} ORDER BY added_year, added_month";
                 OleDbCommand command = new OleDbCommand(query, dbConnection);
@@ -139,6 +138,70 @@ namespace spend_smart
         private void updateBtn_Click(object sender, EventArgs e)
         {
             PopulateChart();
+            PopulatePieChart(); // Call PopulatePieChart when the update button is clicked
+        }
+
+        private void PopulatePieChart()
+        {
+            try
+            {
+                if (dbConnection == null || dbConnection.State != ConnectionState.Open)
+                {
+                    MessageBox.Show("Database connection is not open.");
+                    return;
+                }
+
+                pieChart.Series = new SeriesCollection(); // Initialize the series collection
+
+                // Modify the query to retrieve expenses grouped by category and sum the amounts, joining with expenseCategory table to get category IDs
+                string query = $"SELECT category_id, SUM(amount) AS total_amount " +
+                               $"FROM expense " +
+                               $"WHERE user_id = {currentID} " +
+                               $"GROUP BY category_id";
+
+                OleDbCommand command = new OleDbCommand(query, dbConnection);
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int categoryId = Convert.ToInt32(reader["category_id"]);
+                    double totalAmount = Convert.ToDouble(reader["total_amount"]);
+
+                    // Use switch case to map category IDs to category names
+                    string categoryName = GetCategoryName(categoryId);
+
+                    pieChart.Series.Add(new PieSeries
+                    {
+                        Title = categoryName,
+                        Values = new ChartValues<double> { totalAmount },
+                        DataLabels = true // Show data labels on the pie chart
+                    });
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving expense data: " + ex.Message);
+                Debug.WriteLine("Error in PopulatePieChart: " + ex.ToString());
+            }
+        }
+
+        private string GetCategoryName(int categoryId)
+        {
+            switch (categoryId)
+            {
+                case 1:
+                    return "Foods";
+                case 2:
+                    return "Healthcare";
+                case 3:
+                    return "Entertainment";
+                case 4:
+                    return "Others";
+                default:
+                    return "Unknown";
+            }
         }
     }
 }
