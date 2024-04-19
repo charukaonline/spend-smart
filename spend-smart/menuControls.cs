@@ -51,6 +51,7 @@ namespace spend_smart
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
+            showIncomes1.Hide();
 
             InitializeToolTips();
             //InitializeDBConnection();
@@ -90,6 +91,7 @@ namespace spend_smart
             noteForm1.Hide();
             settingForm1.Hide();
             dashboard1.Show();
+            showIncomes1.Hide();
         }
 
         private void addExpBtn_Click(object sender, EventArgs e)
@@ -101,6 +103,7 @@ namespace spend_smart
             noteForm1.Hide();
             settingForm1.Hide();
             addTransactions1.Show();
+            showIncomes1.Hide();
         }
 
         private void analyticsBtn_Click(object sender, EventArgs e)
@@ -112,6 +115,7 @@ namespace spend_smart
             noteForm1.Hide();
             settingForm1.Hide();
             analytics1.Show();
+            showIncomes1.Hide();
         }
 
         private void notificationBtn_Click(object sender, EventArgs e)
@@ -123,6 +127,7 @@ namespace spend_smart
             noteForm1.Hide();
             settingForm1.Hide();
             notificationsForm1.Show();
+            showIncomes1.Hide();
         }
 
         private void settingBtn_Click(object sender, EventArgs e)
@@ -134,6 +139,7 @@ namespace spend_smart
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Show();
+            showIncomes1.Hide();
         }
 
         private void ExpensesBtn_Click(object sender, EventArgs e)
@@ -145,6 +151,7 @@ namespace spend_smart
             showExpenses1.Show();
             noteForm1.Hide();
             settingForm1.Hide();
+            showIncomes1.Hide();
         }
 
         private void NotesBtn_Click(object sender, EventArgs e)
@@ -156,6 +163,19 @@ namespace spend_smart
             showExpenses1.Hide();
             noteForm1.Show();
             settingForm1.Hide();
+            showIncomes1.Hide();
+        }
+
+        private void IncomesBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Hide();
+            addTransactions1.Hide();
+            analytics1.Hide();
+            notificationsForm1.Hide();
+            showExpenses1.Hide();
+            noteForm1.Hide();
+            settingForm1.Hide();
+            showIncomes1.Show();
         }
 
         public static int parentX, parentY;
@@ -196,10 +216,10 @@ namespace spend_smart
             toolTip3.SetToolTip(analyticsBtn, "Analytics");
 
             ToolTip toolTip4 = new ToolTip();
-            toolTip4.SetToolTip(IncomesBtn, "Transaction");
+            toolTip4.SetToolTip(IncomesBtn, "Show Incomes");
 
             ToolTip toolTip5 = new ToolTip();
-            toolTip5.SetToolTip(ExpensesBtn, "Add Note");
+            toolTip5.SetToolTip(ExpensesBtn, "Show Expenses");
 
             ToolTip toolTip6 = new ToolTip();
             toolTip6.SetToolTip(notificationBtn, "Notification");
@@ -222,9 +242,14 @@ namespace spend_smart
             ToolTip toolTip12 = new ToolTip();
             toolTip12.SetToolTip(closingBtn, "Close");
 
+            ToolTip toolTip13 = new ToolTip();
+            toolTip5.SetToolTip(NotesBtn, "Show added notes");
+
             // Attach MouseMove event handler to sidebarPanel or individual icons
             menu.MouseMove += Sidebar_MouseMove;
         }
+
+        
 
         private void Sidebar_MouseMove(object sender, MouseEventArgs e)
         {
