@@ -61,7 +61,6 @@ namespace spend_smart
             // Refresh the data
             dashboard1.RefreshData();
             showExpenses1.RefreshData();
-            analytics1.RefreshData();
         }
 
 

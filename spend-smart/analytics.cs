@@ -52,11 +52,6 @@ namespace spend_smart
             }
         }
 
-        public void RefreshData()
-        {
-            PopulateChart();
-        }
-
         private void InitializeChart()
         {
             if (dbConnection == null || dbConnection.State != System.Data.ConnectionState.Open)
@@ -141,6 +136,9 @@ namespace spend_smart
             }
         }
 
-
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            PopulateChart();
+        }
     }
 }
