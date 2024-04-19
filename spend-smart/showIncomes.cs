@@ -19,6 +19,11 @@ namespace spend_smart
         public showIncomes()
         {
             InitializeComponent();
+            SubscribeToAddIncomeEvent();
+
+            ThemeManage.AddControlToColor(guna2Panel2);
+            ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(label2);
         }
 
         public void SubscribeToAddIncomeEvent()
@@ -88,6 +93,98 @@ namespace spend_smart
                 {
                     MessageBox.Show("Error fetching expense data: " + ex.Message);
                 }
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            int incomeId;
+            if (!int.TryParse(incomeIdTxt.Text, out incomeId))
+            {
+                MessageBox.Show("Please enter a valid income ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string incomeSrc = incomeSrcTxt.Text;
+            if (incomeSrc == "")
+            {
+                MessageBox.Show("Please enter a source for the income.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            decimal amount;
+            if (!decimal.TryParse(incomeAmountTxt.Text, out amount))
+            {
+                MessageBox.Show("Please enter a valid amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                string query = "UPDATE income SET source = @IncomeSource, amount = @IncomeAmount WHERE income_id = @IncomeID AND user_id = @currentID";
+                using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+                {
+                    command.Parameters.AddWithValue("@IncomeSource", incomeSrc);
+                    command.Parameters.AddWithValue("@IncomeAmount", amount);
+                    command.Parameters.AddWithValue("@IncomeID", incomeId);
+                    command.Parameters.AddWithValue("@currentID", currentID);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Income updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FetchIncomeRecords();
+                        incomeIdTxt.Text = "";
+                        incomeSrcTxt.Text = "";
+                        incomeAmountTxt.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records updated.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error updating income: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            int incomeId;
+            if (!int.TryParse(incomeIdTxt.Text, out incomeId))
+            {
+                MessageBox.Show("Please enter a valid Income ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                string query = "DELETE FROM income WHERE income_id = @IncomeID AND user_id = @currentID";
+                using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+                {
+                    command.Parameters.AddWithValue("@IncomeID", incomeId);
+                    command.Parameters.AddWithValue("@currentID", currentID);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Income deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FetchIncomeRecords();
+                        incomeIdTxt.Text = "";
+                        incomeSrcTxt.Text = "";
+                        incomeAmountTxt.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records deleted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error deleting income: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

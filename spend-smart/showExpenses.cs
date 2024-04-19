@@ -221,6 +221,9 @@ namespace spend_smart
                             MessageBox.Show("Expense deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             FetchExpenseRecords();  // Refresh the DataGridView
                             expenseIdTxt.Text = "";
+                            expenseCategoriesCombo.SelectedIndex = 0;
+                            expenseTitleTxt.Text = "";
+                            expenseAmountTxt.Text = "";
                         }
                         else
                         {

@@ -28,6 +28,7 @@ namespace spend_smart
             ThemeManage.AddControlToColor(label2);
             ThemeManage.AddControlToColor(label3);
             ThemeManage.AddControlToColor(label4);
+            ThemeManage.AddControlToColor(label5);
 
             this.Load += settingForm_load;
         }
