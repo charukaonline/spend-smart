@@ -106,6 +106,7 @@ namespace spend_smart
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Income added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        OnIncomeAdded(EventArgs.Empty);
                         txtIncomeSrc.Text = "";
                         txtIncomeAmount.Text = "";
                         dbConnection.Close();
@@ -220,6 +221,13 @@ namespace spend_smart
         protected virtual void OnExpenseAdded(EventArgs e)
         {
             ExpenseAdded?.Invoke(this, e);
+        }
+
+        public event EventHandler IncomeAdded;
+
+        protected virtual void OnIncomeAdded(EventArgs e)
+        {
+            IncomeAdded?.Invoke(this, e);
         }
     }
 }
