@@ -66,6 +66,8 @@ namespace spend_smart
             {
                 string IncomeSrc = txtIncomeSrc.Text;
                 string IncomeAmt = txtIncomeAmount.Text;
+                int currentYear = DateTime.Now.Year;
+                int currentMonth = DateTime.Now.Month;
 
                 if (IncomeSrc == "" || IncomeAmt == "")
                 {
@@ -86,7 +88,7 @@ namespace spend_smart
                     }
 
                     // Use parameterized query to prevent SQL injection
-                    string query = "INSERT INTO income (user_id, source, amount, added_date) VALUES (@currentID, @IncomeSource, @IncomeAmount, @AddedDate)";
+                    string query = "INSERT INTO income (user_id, source, amount, added_date, added_year, added_month) VALUES (@currentID, @IncomeSource, @IncomeAmount, @AddedDate, @Year, @MonthNumber)";
                     OleDbCommand cmd = new OleDbCommand(query, dbConnection);
 
                     // Add parameters with appropriate data types
@@ -94,6 +96,8 @@ namespace spend_smart
                     cmd.Parameters.Add("@IncomeSource", OleDbType.VarChar).Value = IncomeSrc;
                     cmd.Parameters.AddWithValue("@IncomeAmount", decimal.Parse(IncomeAmt)); // Convert string to decimal
                     cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now; // Add current date
+                    cmd.Parameters.AddWithValue("@Year", currentYear); // Add current year parameter
+                    cmd.Parameters.AddWithValue("@MonthNumber", currentMonth); // Add current month parameter
 
                     // Execute the query
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -127,6 +131,8 @@ namespace spend_smart
                 int categoryId = GetCategoryId(expenseCategories.SelectedItem.ToString()); // Get category ID based on selected category name
                 string expenseTitle = txtExpenseTitle.Text;
                 string expenseAmount = txtExpenseAmount.Text;
+                int currentYear = DateTime.Now.Year;
+                int currentMonth = DateTime.Now.Month;
 
                 // Validate fields
                 if (string.IsNullOrEmpty(expenseTitle) || string.IsNullOrEmpty(expenseAmount))
@@ -149,13 +155,15 @@ namespace spend_smart
                     }
 
                     // Insert expense into database
-                    string query = "INSERT INTO expense (user_id, category_id, title, amount, added_date) VALUES (@currentID, @CategoryId, @ExpenseTitle, @ExpenseAmount, @AddedDate)";
+                    string query = "INSERT INTO expense (user_id, category_id, title, amount, added_date, added_year, added_month) VALUES (@currentID, @CategoryId, @ExpenseTitle, @ExpenseAmount, @AddedDate, @Year, @MonthNumber)";
                     OleDbCommand cmd = new OleDbCommand(query, dbConnection);
                     cmd.Parameters.AddWithValue("@currentID", currentID);
                     cmd.Parameters.AddWithValue("@CategoryId", categoryId);
                     cmd.Parameters.Add("@ExpenseTitle", OleDbType.VarChar).Value = expenseTitle;
                     cmd.Parameters.AddWithValue("@ExpenseAmount", decimal.Parse(expenseAmount)); // Convert string to decimal
                     cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@Year", currentYear); // Add current year parameter
+                    cmd.Parameters.AddWithValue("@MonthNumber", currentMonth); // Add current month parameter
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
