@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace spend_smart
 {
@@ -95,55 +97,50 @@ namespace spend_smart
         private void PopulateChart()
         {
             cartesianChart1.Series.Clear();
-            SeriesCollection series = new SeriesCollection();
+            LineSeries series = new LineSeries()
+            {
+                Title = "Flow Line",
+                Values = new ChartValues<double>()
+            };
 
             try
             {
                 // Modify the query to include the current user's ID
-                string query = $"SELECT added_year, added_month, amount FROM income WHERE user_id = {currentID}";
+                string query = $"SELECT added_year, added_month, amount FROM income WHERE user_id = {currentID} ORDER BY added_year, added_month";
                 OleDbCommand command = new OleDbCommand(query, dbConnection);
                 OleDbDataReader reader = command.ExecuteReader();
 
-                // Define a list to store unique months
-                List<int> uniqueMonths = new List<int>();
+                List<string> monthLabels = new List<string>(); // List to store month labels
 
                 while (reader.Read())
                 {
-                    int month = Convert.ToInt32(reader["added_month"]);
-                    // Add the month to the list if it's not already present
-                    if (!uniqueMonths.Contains(month))
-                    {
-                        uniqueMonths.Add(month);
-                    }
-
-                    int year = Convert.ToInt32(reader["added_year"]);
                     double value = Convert.ToDouble(reader["amount"]);
+                    series.Values.Add(value);
 
-                    series.Add(new LineSeries()
-                    {
-                        Title = $"{year} - {month}",
-                        Values = new ChartValues<double> { value }
-                    });
+                    // Get the month and year from the database
+                    int month = Convert.ToInt32(reader["added_month"]);
+                    int year = Convert.ToInt32(reader["added_year"]);
+
+                    // Create a formatted label for the x-axis
+                    string label = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month)} {year}";
+                    monthLabels.Add(label); // Add the label to the list
                 }
 
-                cartesianChart1.Series = series;
+                cartesianChart1.Series.Add(series);
 
-                // Sort the unique months in ascending order
-                uniqueMonths.Sort();
+                // Set the x-axis labels based on the list of month labels
+                cartesianChart1.AxisX[0].Labels = monthLabels.ToArray();
 
-                // Set the X-axis labels based on the sorted unique months
-                cartesianChart1.AxisX[0].Labels = uniqueMonths.Select(m => m.ToString()).ToArray();
-
-                // Debug output to check uniqueMonths and X-axis labels
-                string debugOutput = "Unique Months: " + string.Join(", ", uniqueMonths);
-                debugOutput += "\nX-Axis Labels: " + string.Join(", ", cartesianChart1.AxisX[0].Labels);
-
+                // Debug output for checking series data
+                Debug.WriteLine("Series Values: " + string.Join(", ", series.Values));
+                Debug.WriteLine("X-Axis Labels: " + string.Join(", ", cartesianChart1.AxisX[0].Labels));
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error retrieving data from the database: " + ex.Message);
             }
         }
+
 
     }
 }
