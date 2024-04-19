@@ -250,7 +250,14 @@ namespace spend_smart
             menu.MouseMove += Sidebar_MouseMove;
         }
 
-        
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            UserSession.EndSession();
+
+            loginForm login = new loginForm();
+            login.Show();
+            this.Hide();
+        }
 
         private void Sidebar_MouseMove(object sender, MouseEventArgs e)
         {
