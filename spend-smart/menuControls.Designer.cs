@@ -332,6 +332,7 @@
             this.logoutBtn.ShadowDecoration.Parent = this.logoutBtn;
             this.logoutBtn.Size = new System.Drawing.Size(53, 38);
             this.logoutBtn.TabIndex = 2;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // settingBtn
             // 
