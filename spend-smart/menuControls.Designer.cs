@@ -48,14 +48,14 @@
             this.settingBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.helpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.NotesBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.ExpensesBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.IncomesBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.analyticsBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
-            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.NotesBtn = new Guna.UI2.WinForms.Guna2Panel();
+            this.showIncomes1 = new spend_smart.showIncomes();
             this.showExpenses1 = new spend_smart.showExpenses();
             this.notificationsForm1 = new spend_smart.notificationsForm();
             this.addTransactions1 = new spend_smart.addTransactions();
@@ -63,6 +63,7 @@
             this.dashboard1 = new spend_smart.dashboard();
             this.settingForm1 = new spend_smart.settingForm();
             this.noteForm1 = new spend_smart.noteForm();
+            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -102,7 +103,7 @@
             this.guna2Panel6.Location = new System.Drawing.Point(607, 0);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(139, 52);
             this.guna2Panel6.TabIndex = 3;
@@ -260,7 +261,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(881, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(53, 52);
             this.guna2Panel2.TabIndex = 1;
@@ -323,6 +324,7 @@
             this.logoutBtn.BackColor = System.Drawing.Color.Transparent;
             this.logoutBtn.BackgroundImage = global::spend_smart.Properties.Resources.logout_icon;
             this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoutBtn.Location = new System.Drawing.Point(0, 514);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -336,6 +338,7 @@
             this.settingBtn.BackColor = System.Drawing.Color.Transparent;
             this.settingBtn.BackgroundImage = global::spend_smart.Properties.Resources.settings_icon;
             this.settingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.settingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.settingBtn.Location = new System.Drawing.Point(0, 476);
             this.settingBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -372,11 +375,27 @@
             this.guna2Panel15.Size = new System.Drawing.Size(53, 190);
             this.guna2Panel15.TabIndex = 2;
             // 
+            // NotesBtn
+            // 
+            this.NotesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.NotesBtn.BackgroundImage = global::spend_smart.Properties.Resources.notes_icon;
+            this.NotesBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.NotesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NotesBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NotesBtn.Location = new System.Drawing.Point(0, 210);
+            this.NotesBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.NotesBtn.Name = "NotesBtn";
+            this.NotesBtn.ShadowDecoration.Parent = this.NotesBtn;
+            this.NotesBtn.Size = new System.Drawing.Size(53, 38);
+            this.NotesBtn.TabIndex = 2;
+            this.NotesBtn.Click += new System.EventHandler(this.NotesBtn_Click);
+            // 
             // ExpensesBtn
             // 
             this.ExpensesBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExpensesBtn.BackgroundImage = global::spend_smart.Properties.Resources.expenses_icon;
             this.ExpensesBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ExpensesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExpensesBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ExpensesBtn.Location = new System.Drawing.Point(0, 172);
             this.ExpensesBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -391,6 +410,7 @@
             this.IncomesBtn.BackColor = System.Drawing.Color.Transparent;
             this.IncomesBtn.BackgroundImage = global::spend_smart.Properties.Resources.incomes_icon;
             this.IncomesBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.IncomesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IncomesBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.IncomesBtn.Location = new System.Drawing.Point(0, 134);
             this.IncomesBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -398,12 +418,14 @@
             this.IncomesBtn.ShadowDecoration.Parent = this.IncomesBtn;
             this.IncomesBtn.Size = new System.Drawing.Size(53, 38);
             this.IncomesBtn.TabIndex = 2;
+            this.IncomesBtn.Click += new System.EventHandler(this.IncomesBtn_Click);
             // 
             // analyticsBtn
             // 
             this.analyticsBtn.BackColor = System.Drawing.Color.Transparent;
             this.analyticsBtn.BackgroundImage = global::spend_smart.Properties.Resources.analytics_icon;
             this.analyticsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.analyticsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.analyticsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.analyticsBtn.Location = new System.Drawing.Point(0, 96);
             this.analyticsBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -418,6 +440,7 @@
             this.addExpBtn.BackColor = System.Drawing.Color.Transparent;
             this.addExpBtn.BackgroundImage = global::spend_smart.Properties.Resources.wallet_icon;
             this.addExpBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.addExpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addExpBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.addExpBtn.Location = new System.Drawing.Point(0, 58);
             this.addExpBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -432,6 +455,7 @@
             this.dashboardBtn.BackColor = System.Drawing.Color.Transparent;
             this.dashboardBtn.BackgroundImage = global::spend_smart.Properties.Resources.dashboard_icon;
             this.dashboardBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.dashboardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboardBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.dashboardBtn.Location = new System.Drawing.Point(0, 20);
             this.dashboardBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -443,6 +467,7 @@
             // 
             // guna2Panel16
             // 
+            this.guna2Panel16.Controls.Add(this.showIncomes1);
             this.guna2Panel16.Controls.Add(this.showExpenses1);
             this.guna2Panel16.Controls.Add(this.notificationsForm1);
             this.guna2Panel16.Controls.Add(this.addTransactions1);
@@ -459,19 +484,15 @@
             this.guna2Panel16.Size = new System.Drawing.Size(881, 572);
             this.guna2Panel16.TabIndex = 2;
             // 
-            // NotesBtn
+            // showIncomes1
             // 
-            this.NotesBtn.BackColor = System.Drawing.Color.Transparent;
-            this.NotesBtn.BackgroundImage = global::spend_smart.Properties.Resources.notes_icon;
-            this.NotesBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.NotesBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NotesBtn.Location = new System.Drawing.Point(0, 210);
-            this.NotesBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.NotesBtn.Name = "NotesBtn";
-            this.NotesBtn.ShadowDecoration.Parent = this.NotesBtn;
-            this.NotesBtn.Size = new System.Drawing.Size(53, 38);
-            this.NotesBtn.TabIndex = 2;
-            this.NotesBtn.Click += new System.EventHandler(this.NotesBtn_Click);
+            this.showIncomes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.showIncomes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showIncomes1.Location = new System.Drawing.Point(13, 0);
+            this.showIncomes1.Margin = new System.Windows.Forms.Padding(2);
+            this.showIncomes1.Name = "showIncomes1";
+            this.showIncomes1.Size = new System.Drawing.Size(868, 572);
+            this.showIncomes1.TabIndex = 9;
             // 
             // showExpenses1
             // 
@@ -556,7 +577,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "menuControls";
-            this.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.Padding = new System.Windows.Forms.Padding(13);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuControls";
             this.Load += new System.EventHandler(this.menuControls_Load);
@@ -610,5 +631,6 @@
         private addTransactions addTransactions1;
         private showExpenses showExpenses1;
         private Guna.UI2.WinForms.Guna2Panel NotesBtn;
+        private showIncomes showIncomes1;
     }
 }
