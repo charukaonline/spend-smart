@@ -18,7 +18,7 @@ namespace spend_smart
     {
         public Point mouseLocation;
 
-        //private OleDbConnection dbConnection;
+        private OleDbConnection dbConnection;
 
         private int currentID;
         private string currentName;
@@ -54,7 +54,9 @@ namespace spend_smart
             showIncomes1.Hide();
 
             InitializeToolTips();
-            //InitializeDBConnection();
+            InitializeDBConnection();
+
+            welcomeUser.Text = "Welcome, " + currentName;
         }
 
         private void RefreshTimer_Tick(object sender, EventArgs e)
@@ -271,16 +273,16 @@ namespace spend_smart
             }
         }
 
-        //private void InitializeDBConnection()
-        //{
-        //    try
-        //    {
-        //        dbConnection = new OleDbConnection(dbConn.Instance.connString);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error connecting to the database: " + ex.Message);
-        //    }
-        //}
+        private void InitializeDBConnection()
+        {
+            try
+            {
+                dbConnection = new OleDbConnection(dbConn.Instance.connString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
+            }
+        }
     }
 }
