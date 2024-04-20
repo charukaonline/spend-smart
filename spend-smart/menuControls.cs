@@ -47,7 +47,6 @@ namespace spend_smart
             dashboard1.Show();
             analytics1.Hide();
             addTransactions1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -89,7 +88,6 @@ namespace spend_smart
         {
             analytics1.Hide();
             addTransactions1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -101,7 +99,6 @@ namespace spend_smart
         {
             dashboard1.Hide();
             analytics1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -113,7 +110,6 @@ namespace spend_smart
         {
             dashboard1.Hide();
             addTransactions1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -121,24 +117,23 @@ namespace spend_smart
             showIncomes1.Hide();
         }
 
-        private void notificationBtn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Hide();
-            addTransactions1.Hide();
-            analytics1.Hide();
-            showExpenses1.Hide();
-            noteForm1.Hide();
-            settingForm1.Hide();
-            notificationsForm1.Show();
-            showIncomes1.Hide();
-        }
+        //private void notificationBtn_Click(object sender, EventArgs e)
+        //{
+        //    dashboard1.Hide();
+        //    addTransactions1.Hide();
+        //    analytics1.Hide();
+        //    showExpenses1.Hide();
+        //    noteForm1.Hide();
+        //    settingForm1.Hide();
+        //    notificationsForm1.Show();
+        //    showIncomes1.Hide();
+        //}
 
         private void settingBtn_Click(object sender, EventArgs e)
         {
             dashboard1.Hide();
             addTransactions1.Hide();
             analytics1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Show();
@@ -150,7 +145,6 @@ namespace spend_smart
             dashboard1.Hide();
             addTransactions1.Hide();
             analytics1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Show();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -162,7 +156,6 @@ namespace spend_smart
             dashboard1.Hide();
             addTransactions1.Hide();
             analytics1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Show();
             settingForm1.Hide();
@@ -174,7 +167,6 @@ namespace spend_smart
             dashboard1.Hide();
             addTransactions1.Hide();
             analytics1.Hide();
-            notificationsForm1.Hide();
             showExpenses1.Hide();
             noteForm1.Hide();
             settingForm1.Hide();
@@ -224,8 +216,8 @@ namespace spend_smart
             ToolTip toolTip5 = new ToolTip();
             toolTip5.SetToolTip(ExpensesBtn, "Show Expenses");
 
-            ToolTip toolTip6 = new ToolTip();
-            toolTip6.SetToolTip(notificationBtn, "Notification");
+            //ToolTip toolTip6 = new ToolTip();
+            //toolTip6.SetToolTip(notificationBtn, "Notification");
 
             ToolTip toolTip7 = new ToolTip();
             toolTip7.SetToolTip(logoutBtn, "Logout");
