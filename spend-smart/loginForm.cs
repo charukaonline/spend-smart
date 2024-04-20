@@ -129,7 +129,8 @@ namespace spend_smart
                                 {
                                     UserID = Convert.ToInt32(reader["user_id"]),
                                     Username = reader["username"].ToString(),
-                                    Pin = reader["pin"].ToString()
+                                    Pin = reader["pin"].ToString(),
+
                                 };
 
                                 string storedHashedPin = user.Pin;
