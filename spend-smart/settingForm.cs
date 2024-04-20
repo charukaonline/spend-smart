@@ -298,7 +298,8 @@ namespace spend_smart
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT * FROM income"; // Adjust the query based on your database schema
+            // Adjust the query to filter by user_id
+            string query = "SELECT * FROM income WHERE user_id = @currentID";
 
             using (OleDbConnection connection = new OleDbConnection(dbConn.Instance.connString))
             {
@@ -306,6 +307,9 @@ namespace spend_smart
                 {
                     try
                     {
+                        // Add parameter for user_id
+                        adapter.SelectCommand.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+
                         connection.Open();
                         adapter.Fill(dataTable);
                     }
@@ -323,7 +327,8 @@ namespace spend_smart
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT * FROM expense"; // Adjust the query based on your database schema
+            // Adjust the query to filter by user_id
+            string query = "SELECT * FROM expense WHERE user_id = @currentID";
 
             using (OleDbConnection connection = new OleDbConnection(dbConn.Instance.connString))
             {
@@ -331,6 +336,9 @@ namespace spend_smart
                 {
                     try
                     {
+                        // Add parameter for user_id
+                        adapter.SelectCommand.Parameters.AddWithValue("@currentID", UserSession.CurrentUserID);
+
                         connection.Open();
                         adapter.Fill(dataTable);
                     }
