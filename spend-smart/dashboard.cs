@@ -40,6 +40,12 @@ namespace spend_smart
             ThemeManage.AddControlToColor(guna2Panel15);
             ThemeManage.AddControlToColor(label3);
             ThemeManage.AddControlToColor(label5);
+            ThemeManage.AddControlToColor(thisMonthIncome);
+            ThemeManage.AddControlToColor(thisMonthExpenses);
+            ThemeManage.AddControlToColor(thisYearIncome);
+            ThemeManage.AddControlToColor(thisYearExpenses);
+            ThemeManage.AddControlToColor(label14);
+            ThemeManage.AddControlToColor(label15);
 
             ThemeManage.AddControlToColor(guna2Panel18);
             ThemeManage.AddControlToColor(guna2Panel19);

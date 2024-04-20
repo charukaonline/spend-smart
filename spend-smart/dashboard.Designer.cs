@@ -56,9 +56,15 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.thisYearExpenses = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.thisYearIncome = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.thisMonthExpenses = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.thisMonthIncome = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
@@ -71,28 +77,22 @@
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
+            this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.healthcareLbl = new System.Windows.Forms.Label();
             this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
+            this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.foodsLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
+            this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.entertainmentLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
+            this.circlePictureBox4 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.othersLbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.thisMonthIncome = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.thisMonthExpenses = new System.Windows.Forms.Label();
-            this.thisYearIncome = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.thisYearExpenses = new System.Windows.Forms.Label();
-            this.circlePictureBox5 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.circlePictureBox2 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.circlePictureBox3 = new spend_smart.Custom_Tools.CirclePictureBox();
-            this.circlePictureBox4 = new spend_smart.Custom_Tools.CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
@@ -122,12 +122,12 @@
             this.guna2Panel16.SuspendLayout();
             this.guna2Panel18.SuspendLayout();
             this.guna2Panel24.SuspendLayout();
-            this.guna2Panel23.SuspendLayout();
-            this.guna2Panel22.SuspendLayout();
-            this.guna2Panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).BeginInit();
+            this.guna2Panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).BeginInit();
+            this.guna2Panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).BeginInit();
+            this.guna2Panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -511,6 +511,45 @@
             this.guna2Panel15.Size = new System.Drawing.Size(675, 358);
             this.guna2Panel15.TabIndex = 0;
             // 
+            // thisYearExpenses
+            // 
+            this.thisYearExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thisYearExpenses.AutoSize = true;
+            this.thisYearExpenses.BackColor = System.Drawing.Color.Transparent;
+            this.thisYearExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisYearExpenses.ForeColor = System.Drawing.Color.White;
+            this.thisYearExpenses.Location = new System.Drawing.Point(28, 237);
+            this.thisYearExpenses.Name = "thisYearExpenses";
+            this.thisYearExpenses.Size = new System.Drawing.Size(91, 36);
+            this.thisYearExpenses.TabIndex = 0;
+            this.thisYearExpenses.Text = "$0.00";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(28, 193);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(286, 29);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "All Expenses for this Year";
+            // 
+            // thisYearIncome
+            // 
+            this.thisYearIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thisYearIncome.AutoSize = true;
+            this.thisYearIncome.BackColor = System.Drawing.Color.Transparent;
+            this.thisYearIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisYearIncome.ForeColor = System.Drawing.Color.White;
+            this.thisYearIncome.Location = new System.Drawing.Point(28, 76);
+            this.thisYearIncome.Name = "thisYearIncome";
+            this.thisYearIncome.Size = new System.Drawing.Size(91, 36);
+            this.thisYearIncome.TabIndex = 0;
+            this.thisYearIncome.Text = "$0.00";
+            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -551,6 +590,45 @@
             this.guna2Panel14.ShadowDecoration.Parent = this.guna2Panel14;
             this.guna2Panel14.Size = new System.Drawing.Size(617, 358);
             this.guna2Panel14.TabIndex = 0;
+            // 
+            // thisMonthExpenses
+            // 
+            this.thisMonthExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thisMonthExpenses.AutoSize = true;
+            this.thisMonthExpenses.BackColor = System.Drawing.Color.Transparent;
+            this.thisMonthExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisMonthExpenses.ForeColor = System.Drawing.Color.White;
+            this.thisMonthExpenses.Location = new System.Drawing.Point(26, 234);
+            this.thisMonthExpenses.Name = "thisMonthExpenses";
+            this.thisMonthExpenses.Size = new System.Drawing.Size(91, 36);
+            this.thisMonthExpenses.TabIndex = 0;
+            this.thisMonthExpenses.Text = "$0.00";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(27, 193);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(301, 29);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "All Expenses for this Month";
+            // 
+            // thisMonthIncome
+            // 
+            this.thisMonthIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thisMonthIncome.AutoSize = true;
+            this.thisMonthIncome.BackColor = System.Drawing.Color.Transparent;
+            this.thisMonthIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisMonthIncome.ForeColor = System.Drawing.Color.White;
+            this.thisMonthIncome.Location = new System.Drawing.Point(26, 73);
+            this.thisMonthIncome.Name = "thisMonthIncome";
+            this.thisMonthIncome.Size = new System.Drawing.Size(91, 36);
+            this.thisMonthIncome.TabIndex = 0;
+            this.thisMonthIncome.Text = "$0.00";
             // 
             // label3
             // 
@@ -749,6 +827,24 @@
             this.guna2Panel24.Size = new System.Drawing.Size(664, 55);
             this.guna2Panel24.TabIndex = 1;
             // 
+            // circlePictureBox5
+            // 
+            this.circlePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.circlePictureBox5.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox5.BorderColor = System.Drawing.Color.Transparent;
+            this.circlePictureBox5.BorderColor2 = System.Drawing.Color.Transparent;
+            this.circlePictureBox5.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox5.BorderSize = 2;
+            this.circlePictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.circlePictureBox5.GradientAngle = 50F;
+            this.circlePictureBox5.Location = new System.Drawing.Point(15, 5);
+            this.circlePictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.circlePictureBox5.Name = "circlePictureBox5";
+            this.circlePictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.circlePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox5.TabIndex = 0;
+            this.circlePictureBox5.TabStop = false;
+            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -788,6 +884,24 @@
             this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
             this.guna2Panel23.Size = new System.Drawing.Size(664, 57);
             this.guna2Panel23.TabIndex = 1;
+            // 
+            // circlePictureBox2
+            // 
+            this.circlePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
+            this.circlePictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox2.BorderColor = System.Drawing.Color.Transparent;
+            this.circlePictureBox2.BorderColor2 = System.Drawing.Color.Transparent;
+            this.circlePictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox2.BorderSize = 2;
+            this.circlePictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.circlePictureBox2.GradientAngle = 50F;
+            this.circlePictureBox2.Location = new System.Drawing.Point(15, 5);
+            this.circlePictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.circlePictureBox2.Name = "circlePictureBox2";
+            this.circlePictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.circlePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox2.TabIndex = 0;
+            this.circlePictureBox2.TabStop = false;
             // 
             // foodsLbl
             // 
@@ -829,6 +943,24 @@
             this.guna2Panel22.Size = new System.Drawing.Size(664, 55);
             this.guna2Panel22.TabIndex = 1;
             // 
+            // circlePictureBox3
+            // 
+            this.circlePictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(7)))));
+            this.circlePictureBox3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox3.BorderColor = System.Drawing.Color.Transparent;
+            this.circlePictureBox3.BorderColor2 = System.Drawing.Color.Transparent;
+            this.circlePictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox3.BorderSize = 2;
+            this.circlePictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.circlePictureBox3.GradientAngle = 50F;
+            this.circlePictureBox3.Location = new System.Drawing.Point(15, 5);
+            this.circlePictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.circlePictureBox3.Name = "circlePictureBox3";
+            this.circlePictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.circlePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox3.TabIndex = 0;
+            this.circlePictureBox3.TabStop = false;
+            // 
             // entertainmentLbl
             // 
             this.entertainmentLbl.AutoSize = true;
@@ -869,6 +1001,24 @@
             this.guna2Panel21.Size = new System.Drawing.Size(664, 66);
             this.guna2Panel21.TabIndex = 1;
             // 
+            // circlePictureBox4
+            // 
+            this.circlePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(138)))));
+            this.circlePictureBox4.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox4.BorderColor = System.Drawing.Color.Transparent;
+            this.circlePictureBox4.BorderColor2 = System.Drawing.Color.Transparent;
+            this.circlePictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox4.BorderSize = 2;
+            this.circlePictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.circlePictureBox4.GradientAngle = 50F;
+            this.circlePictureBox4.Location = new System.Drawing.Point(15, 5);
+            this.circlePictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.circlePictureBox4.Name = "circlePictureBox4";
+            this.circlePictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.circlePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox4.TabIndex = 0;
+            this.circlePictureBox4.TabStop = false;
+            // 
             // othersLbl
             // 
             this.othersLbl.AutoSize = true;
@@ -906,156 +1056,6 @@
             this.label7.Size = new System.Drawing.Size(210, 29);
             this.label7.TabIndex = 0;
             this.label7.Text = "Expense Category";
-            // 
-            // thisMonthIncome
-            // 
-            this.thisMonthIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.thisMonthIncome.AutoSize = true;
-            this.thisMonthIncome.BackColor = System.Drawing.Color.Transparent;
-            this.thisMonthIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thisMonthIncome.ForeColor = System.Drawing.Color.White;
-            this.thisMonthIncome.Location = new System.Drawing.Point(26, 73);
-            this.thisMonthIncome.Name = "thisMonthIncome";
-            this.thisMonthIncome.Size = new System.Drawing.Size(91, 36);
-            this.thisMonthIncome.TabIndex = 0;
-            this.thisMonthIncome.Text = "$0.00";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(27, 193);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(301, 29);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "All Expenses for this Month";
-            // 
-            // thisMonthExpenses
-            // 
-            this.thisMonthExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.thisMonthExpenses.AutoSize = true;
-            this.thisMonthExpenses.BackColor = System.Drawing.Color.Transparent;
-            this.thisMonthExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thisMonthExpenses.ForeColor = System.Drawing.Color.White;
-            this.thisMonthExpenses.Location = new System.Drawing.Point(26, 234);
-            this.thisMonthExpenses.Name = "thisMonthExpenses";
-            this.thisMonthExpenses.Size = new System.Drawing.Size(91, 36);
-            this.thisMonthExpenses.TabIndex = 0;
-            this.thisMonthExpenses.Text = "$0.00";
-            // 
-            // thisYearIncome
-            // 
-            this.thisYearIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.thisYearIncome.AutoSize = true;
-            this.thisYearIncome.BackColor = System.Drawing.Color.Transparent;
-            this.thisYearIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thisYearIncome.ForeColor = System.Drawing.Color.White;
-            this.thisYearIncome.Location = new System.Drawing.Point(28, 76);
-            this.thisYearIncome.Name = "thisYearIncome";
-            this.thisYearIncome.Size = new System.Drawing.Size(91, 36);
-            this.thisYearIncome.TabIndex = 0;
-            this.thisYearIncome.Text = "$0.00";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(28, 193);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(286, 29);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "All Expenses for this Year";
-            // 
-            // thisYearExpenses
-            // 
-            this.thisYearExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.thisYearExpenses.AutoSize = true;
-            this.thisYearExpenses.BackColor = System.Drawing.Color.Transparent;
-            this.thisYearExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thisYearExpenses.ForeColor = System.Drawing.Color.White;
-            this.thisYearExpenses.Location = new System.Drawing.Point(28, 237);
-            this.thisYearExpenses.Name = "thisYearExpenses";
-            this.thisYearExpenses.Size = new System.Drawing.Size(91, 36);
-            this.thisYearExpenses.TabIndex = 0;
-            this.thisYearExpenses.Text = "$0.00";
-            // 
-            // circlePictureBox5
-            // 
-            this.circlePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.circlePictureBox5.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circlePictureBox5.BorderColor = System.Drawing.Color.Transparent;
-            this.circlePictureBox5.BorderColor2 = System.Drawing.Color.Transparent;
-            this.circlePictureBox5.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circlePictureBox5.BorderSize = 2;
-            this.circlePictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.circlePictureBox5.GradientAngle = 50F;
-            this.circlePictureBox5.Location = new System.Drawing.Point(15, 5);
-            this.circlePictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.circlePictureBox5.Name = "circlePictureBox5";
-            this.circlePictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.circlePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox5.TabIndex = 0;
-            this.circlePictureBox5.TabStop = false;
-            // 
-            // circlePictureBox2
-            // 
-            this.circlePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
-            this.circlePictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circlePictureBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.circlePictureBox2.BorderColor2 = System.Drawing.Color.Transparent;
-            this.circlePictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circlePictureBox2.BorderSize = 2;
-            this.circlePictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.circlePictureBox2.GradientAngle = 50F;
-            this.circlePictureBox2.Location = new System.Drawing.Point(15, 5);
-            this.circlePictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.circlePictureBox2.Name = "circlePictureBox2";
-            this.circlePictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.circlePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox2.TabIndex = 0;
-            this.circlePictureBox2.TabStop = false;
-            // 
-            // circlePictureBox3
-            // 
-            this.circlePictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(7)))));
-            this.circlePictureBox3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circlePictureBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.circlePictureBox3.BorderColor2 = System.Drawing.Color.Transparent;
-            this.circlePictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circlePictureBox3.BorderSize = 2;
-            this.circlePictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.circlePictureBox3.GradientAngle = 50F;
-            this.circlePictureBox3.Location = new System.Drawing.Point(15, 5);
-            this.circlePictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.circlePictureBox3.Name = "circlePictureBox3";
-            this.circlePictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.circlePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox3.TabIndex = 0;
-            this.circlePictureBox3.TabStop = false;
-            // 
-            // circlePictureBox4
-            // 
-            this.circlePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(138)))));
-            this.circlePictureBox4.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circlePictureBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.circlePictureBox4.BorderColor2 = System.Drawing.Color.Transparent;
-            this.circlePictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circlePictureBox4.BorderSize = 2;
-            this.circlePictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.circlePictureBox4.GradientAngle = 50F;
-            this.circlePictureBox4.Location = new System.Drawing.Point(15, 5);
-            this.circlePictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.circlePictureBox4.Name = "circlePictureBox4";
-            this.circlePictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.circlePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox4.TabIndex = 0;
-            this.circlePictureBox4.TabStop = false;
             // 
             // dashboard
             // 
@@ -1107,15 +1107,15 @@
             this.guna2Panel18.PerformLayout();
             this.guna2Panel24.ResumeLayout(false);
             this.guna2Panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
             this.guna2Panel23.ResumeLayout(false);
             this.guna2Panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
             this.guna2Panel22.ResumeLayout(false);
             this.guna2Panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
             this.guna2Panel21.ResumeLayout(false);
             this.guna2Panel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox4)).EndInit();
             this.ResumeLayout(false);
 
