@@ -79,6 +79,11 @@ namespace spend_smart
             FetchFoodsExpenses();
             FetchEntertainmentExpenses();
             FetchOthersExpenses();
+
+            FetchThisMonthIncomes();
+            FetchThisMonthExpenses();
+            FetchThisYearIncomes();
+            FetchThisYearExpenses();
         }
 
         private void InitializeDBConnection()
@@ -385,6 +390,8 @@ namespace spend_smart
             }
         }
 
+
+        // Add an Instant note
         private void addNoteBtn_Click(object sender, EventArgs e)
         {
             if (msgTxtBox.Text == "" || subjectTxtBox.Text == "")
@@ -423,6 +430,158 @@ namespace spend_smart
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error adding note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void FetchThisMonthIncomes()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            DateTime currentDate = DateTime.Now;
+            int currentMonth = currentDate.Month;
+            int currentYear = currentDate.Year;
+
+            string query = "SELECT SUM(amount) AS TotalIncome FROM income WHERE user_id = @currentID AND added_month = @currentMonth AND added_year = @currentYear";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+                command.Parameters.AddWithValue("@currentMonth", currentMonth);
+                command.Parameters.AddWithValue("@currentYear", currentYear);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalIncome = Convert.ToDecimal(result);
+                        thisMonthIncome.Text = totalIncome.ToString("C");
+                    }
+                    else
+                    {
+                        thisMonthIncome.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching income data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchThisMonthExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            DateTime currentDate = DateTime.Now;
+            int currentMonth = currentDate.Month;
+            int currentYear = currentDate.Year;
+
+            string query = "SELECT SUM(amount) AS TotalExpense FROM expense WHERE user_id = @currentID AND added_month = @currentMonth AND added_year = @currentYear";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+                command.Parameters.AddWithValue("@currentMonth", currentMonth);
+                command.Parameters.AddWithValue("@currentYear", currentYear);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalExpense = Convert.ToDecimal(result);
+                        thisMonthExpenses.Text = totalExpense.ToString("C");
+                    }
+                    else
+                    {
+                        thisMonthExpenses.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching expense data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchThisYearIncomes()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            DateTime currentDate = DateTime.Now;
+            int currentYear = currentDate.Year;
+
+            string query = "SELECT SUM(amount) AS TotalIncome FROM income WHERE user_id = @currentID AND added_year = @currentYear";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+                command.Parameters.AddWithValue("@currentYear", currentYear);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalIncome = Convert.ToDecimal(result);
+                        thisYearIncome.Text = totalIncome.ToString("C");
+                    }
+                    else
+                    {
+                        thisYearIncome.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching income data: " + ex.Message);
+                }
+            }
+        }
+
+        private void FetchThisYearExpenses()
+        {
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            DateTime currentDate = DateTime.Now;
+            int currentYear = currentDate.Year;
+
+            string query = "SELECT SUM(amount) AS TotalExpense FROM expense WHERE user_id = @currentID AND added_year = @currentYear";
+            using (OleDbCommand command = new OleDbCommand(query, dbConnection))
+            {
+                command.Parameters.AddWithValue("@currentID", currentID);
+                command.Parameters.AddWithValue("@currentYear", currentYear);
+
+                try
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalExpense = Convert.ToDecimal(result);
+                        thisYearExpenses.Text = totalExpense.ToString("C");
+                    }
+                    else
+                    {
+                        thisYearExpenses.Text = "$0.00";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching expense data: " + ex.Message);
                 }
             }
         }
