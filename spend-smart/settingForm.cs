@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace spend_smart
 {
@@ -243,6 +244,137 @@ namespace spend_smart
             }
 
             return false;
+        }
+
+        private void ExportIncomeData(DataTable incomeTable, string filePath)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    // Write CSV header (column names)
+                    writer.WriteLine(string.Join(",", incomeTable.Columns.Cast<DataColumn>().Select(col => col.ColumnName)));
+
+                    // Write CSV data rows
+                    foreach (DataRow row in incomeTable.Rows)
+                    {
+                        writer.WriteLine(string.Join(",", row.ItemArray.Select(field => field.ToString())));
+                    }
+                }
+
+                MessageBox.Show("Income data exported successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error exporting income data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ExportExpenseData(DataTable expenseTable, string filePath)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    // Write CSV header (column names)
+                    writer.WriteLine(string.Join(",", expenseTable.Columns.Cast<DataColumn>().Select(col => col.ColumnName)));
+
+                    // Write CSV data rows
+                    foreach (DataRow row in expenseTable.Rows)
+                    {
+                        writer.WriteLine(string.Join(",", row.ItemArray.Select(field => field.ToString())));
+                    }
+                }
+
+                MessageBox.Show("Expense data exported successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error exporting expense data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private DataTable GetIncomeData()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT * FROM income"; // Adjust the query based on your database schema
+
+            using (OleDbConnection connection = new OleDbConnection(dbConn.Instance.connString))
+            {
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        adapter.Fill(dataTable);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error retrieving income data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return dataTable;
+        }
+
+        private DataTable GetExpenseData()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT * FROM expense"; // Adjust the query based on your database schema
+
+            using (OleDbConnection connection = new OleDbConnection(dbConn.Instance.connString))
+            {
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        adapter.Fill(dataTable);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error retrieving expense data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return dataTable;
+        }
+
+        private void exportFile_Click(object sender, EventArgs e)
+        {
+            DataTable incomeTable = GetIncomeData();
+            DataTable expenseTable = GetExpenseData();
+
+            if (incomeTable.Rows.Count > 0 && expenseTable.Rows.Count > 0)
+            {
+                SaveFileDialog saveIncomeFileDialog = new SaveFileDialog();
+                saveIncomeFileDialog.Filter = "CSV Files|*.csv|All Files|*.*";
+                saveIncomeFileDialog.Title = "Save Exported Income Data";
+
+                if (saveIncomeFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string incomeFilePath = saveIncomeFileDialog.FileName;
+                    ExportIncomeData(incomeTable, incomeFilePath);
+                }
+
+                SaveFileDialog saveExpenseFileDialog = new SaveFileDialog();
+                saveExpenseFileDialog.Filter = "CSV Files|*.csv|All Files|*.*";
+                saveExpenseFileDialog.Title = "Save Exported Expense Data";
+
+                if (saveExpenseFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string expenseFilePath = saveExpenseFileDialog.FileName;
+                    ExportExpenseData(expenseTable, expenseFilePath);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No data available to export.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
