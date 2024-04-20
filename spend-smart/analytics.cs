@@ -27,6 +27,13 @@ namespace spend_smart
             InitializeChart();
             InitializeDBConnection();
 
+            ThemeManage.AddControlToColor(guna2Panel3);
+            ThemeManage.AddControlToColor(guna2Panel4);
+            ThemeManage.AddControlToColor(label10);
+            ThemeManage.AddControlToColor(label11);
+            ThemeManage.AddControlToColor(label12);
+            ThemeManage.AddControlToColor(label13);
+
             this.Load += analytics_Load;
         }
 
@@ -87,7 +94,7 @@ namespace spend_smart
             cartesianChart1.Series.Clear();
             LineSeries series = new LineSeries()
             {
-                Title = "Flow Line",
+                Title = "Income",
                 Values = new ChartValues<double>()
             };
 
