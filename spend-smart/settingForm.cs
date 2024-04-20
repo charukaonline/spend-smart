@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.IO;
 using Twilio;
+using Twilio.TwiML.Messaging;
 
 namespace spend_smart
 {
@@ -183,6 +184,8 @@ namespace spend_smart
         private void btnDelData_Click(object sender, EventArgs e)
         {
             string enteredPin = hashPassword(txtPin.Text);
+            string userPhoneNum = UserSession.userPhoneNum;  // Fetch the user's phone number from the database
+            string message;  // SMS message to be sent
 
             if (txtPin.Text == "")
             {
@@ -236,6 +239,16 @@ namespace spend_smart
 
                         MessageBox.Show("All your data has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtPin.Text = "";
+
+                        message = "Your Income & Expense data deleted. If you did not request this change, please contact support.";
+                        try
+                        {
+                            SendSms.SendingSms(userPhoneNum, message);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error sending SMS alert: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 catch (OleDbException ex)

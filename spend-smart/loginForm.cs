@@ -88,6 +88,7 @@ namespace spend_smart
             public int UserID { get; set; }
             public string Username { get; set; }
             public string Pin { get; set; }
+            public string phoneNum { get; set; }
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -112,7 +113,7 @@ namespace spend_smart
 
                     string hashedPin = hashPassword(pin);
 
-                    string query = "SELECT user_id, username, pin FROM users WHERE username = @username";
+                    string query = "SELECT user_id, username, pin, phone FROM users WHERE username = @username";
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
@@ -130,6 +131,7 @@ namespace spend_smart
                                     UserID = Convert.ToInt32(reader["user_id"]),
                                     Username = reader["username"].ToString(),
                                     Pin = reader["pin"].ToString(),
+                                    phoneNum = reader["phone"].ToString()
 
                                 };
 
@@ -138,7 +140,7 @@ namespace spend_smart
                                 if (storedHashedPin != null && hashedPin == storedHashedPin)
                                 {
                                     MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    UserSession.StartSession(user.UserID, user.Username); // Start session
+                                    UserSession.StartSession(user.UserID, user.Username, user.phoneNum); // Start session
                                     menuControls dashboard = new menuControls(); // Pass UserSession
                                     dashboard.Show();
                                     this.Hide();
