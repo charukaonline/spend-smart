@@ -149,15 +149,15 @@ namespace spend_smart
                         conn.Close();
                     }
                     //Check if contact number is 11 digits long
-                    else if (contactNumber.Text.Length != 11)
+                    else if (contactNumber.Text.Length != 12)
                     {
                         MessageBox.Show("Contact number must be 11 digits long", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         conn.Close();
                     }
-                    //Check if contact number contains only numbers
-                    else if (!Regex.IsMatch(contactNumber.Text, @"^\d+$"))
+                    // Check if contact number starts with "+" and contains only numbers
+                    else if (!Regex.IsMatch(contactNumber.Text, @"^\+\d+$"))
                     {
-                        MessageBox.Show("Contact number must contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Contact number must start with '+' and contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         conn.Close();
                     }
                     else

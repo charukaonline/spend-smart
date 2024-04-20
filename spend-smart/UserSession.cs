@@ -10,17 +10,20 @@ namespace spend_smart
     {
         public static int CurrentUserID { get; private set; }
         public static string CurrentUsername { get; private set; }
+        public static string userPhoneNum { get; set; }
 
-        public static void StartSession(int userID, string username)
+        public static void StartSession(int userID, string username, string phoneNum)
         {
             CurrentUserID = userID;
             CurrentUsername = username;
+            userPhoneNum = phoneNum;
         }
 
         public static void EndSession()
         {
             CurrentUserID = 0;
             CurrentUsername = null;
+            userPhoneNum = null;
         }
     }
 

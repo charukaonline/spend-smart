@@ -11,6 +11,8 @@ using System.Data.OleDb;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.IO;
+using Twilio;
+using Twilio.TwiML.Messaging;
 
 namespace spend_smart
 {
@@ -64,13 +66,15 @@ namespace spend_smart
             string currentPin = txtCurrentPin.Text;
             string newPin = txtNewPin.Text;
             string confirmNewPin = txtCNewPin.Text;
+            string userPhoneNumber;  // Fetch the user's phone number from the database
+            string message;  // SMS message to be sent
 
             if (string.IsNullOrWhiteSpace(currentPin) || string.IsNullOrWhiteSpace(newPin) || string.IsNullOrWhiteSpace(confirmNewPin))
             {
-                MessageBox.Show("Please fill in all fields","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (newPin.Length<8 || !Regex.IsMatch(newPin, @"^\d+$"))
+            else if (newPin.Length < 8 || !Regex.IsMatch(newPin, @"^\d+$"))
             {
                 MessageBox.Show("New PIN must be at least 8 characters long and should contain only numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -84,43 +88,67 @@ namespace spend_smart
             {
                 DialogResult result = MessageBox.Show("Are you sure, You want to update your PIN?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                if (result==DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
-                    string query = "SELECT pin FROM users WHERE user_id = @currentID";
-                    using (OleDbCommand cmd = new OleDbCommand(query,dbconnection))
+                    string query = "SELECT pin, phone FROM users WHERE user_id = @currentID";
+                    using (OleDbCommand cmd = new OleDbCommand(query, dbconnection))
                     {
-                        cmd.Parameters.AddWithValue("@currentID",currentID);
+                        cmd.Parameters.AddWithValue("@currentID", currentID);
                         try
                         {
-                            string storedPin = cmd.ExecuteScalar()?.ToString();
+                            OleDbDataReader reader = cmd.ExecuteReader();
 
-                            if (storedPin != null && storedPin ==hashPassword(currentPin))
+                            if (reader.Read())
                             {
-                                string updateQuery = "UPDATE users SET pin = @newPin WHERE user_id = @currentID";
-                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery,dbconnection))
+                                string storedPin = reader["pin"].ToString();
+                                userPhoneNumber = reader["phone"].ToString();  // Fetch the phone number
+
+                                if (storedPin == hashPassword(currentPin))
                                 {
-                                    updateCmd.Parameters.AddWithValue("@newPin", hashPassword(newPin));
-                                    updateCmd.Parameters.AddWithValue("@currentID", currentID);
-
-                                    int rowsAffected = updateCmd.ExecuteNonQuery();
-
-                                    if (rowsAffected>0)
+                                    string updateQuery = "UPDATE users SET pin = @newPin WHERE user_id = @currentID";
+                                    using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbconnection))
                                     {
-                                        MessageBox.Show("PIN updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        txtCurrentPin.Text = "";
-                                        txtNewPin.Text = "";
-                                        txtCNewPin.Text = "";
+                                        updateCmd.Parameters.AddWithValue("@newPin", hashPassword(newPin));
+                                        updateCmd.Parameters.AddWithValue("@currentID", currentID);
+
+                                        int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                                        if (rowsAffected > 0)
+                                        {
+                                            MessageBox.Show("PIN updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            txtCurrentPin.Text = "";
+                                            txtNewPin.Text = "";
+                                            txtCNewPin.Text = "";
+
+                                            // Send SMS alert
+                                            message = "Your PIN has been changed. If you did not request this change, please contact support.";
+                                            try
+                                            {
+                                                SendSms.SendingSms(userPhoneNumber, message);
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show("Error sending SMS alert: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
+                                            
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Failed to update PIN", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
                                     }
-                                    else
-                                    {
-                                        MessageBox.Show("Failed to update PIN", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Current PIN is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Current PIN is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
+
+                            reader.Close();
                         }
                         catch (OleDbException ex)
                         {
@@ -136,6 +164,7 @@ namespace spend_smart
                 }
             }
         }
+
 
         private string hashPassword(string password)
         {
@@ -155,6 +184,8 @@ namespace spend_smart
         private void btnDelData_Click(object sender, EventArgs e)
         {
             string enteredPin = hashPassword(txtPin.Text);
+            string userPhoneNum = UserSession.userPhoneNum;  // Fetch the user's phone number from the database
+            string message;  // SMS message to be sent
 
             if (txtPin.Text == "")
             {
@@ -208,6 +239,16 @@ namespace spend_smart
 
                         MessageBox.Show("All your data has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtPin.Text = "";
+
+                        message = "Your Income & Expense data deleted. If you did not request this change, please contact support.";
+                        try
+                        {
+                            SendSms.SendingSms(userPhoneNum, message);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error sending SMS alert: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 catch (OleDbException ex)
