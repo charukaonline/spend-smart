@@ -45,6 +45,9 @@ namespace spend_smart
             FetchNoteRecords();
 
             currentID = UserSession.CurrentUserID;
+
+            notesDataGrid.Columns["Note"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            notesDataGrid.Columns["Note"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
         }
 
         private void InitializeDBConnection()
@@ -94,6 +97,36 @@ namespace spend_smart
                 {
                     MessageBox.Show("Error fetching notes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void notesDataGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (notesDataGrid.Columns[e.ColumnIndex].Name == "Note")
+            {
+                if (e.Value != null)
+                {
+                    e.Value = e.Value.ToString().Replace("\n", Environment.NewLine);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void notesDataGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            var dataGridView = sender as DataGridView;
+            if (dataGridView != null)
+            {
+                Rectangle rectangle = new Rectangle(e.RowBounds.Location.X,
+                    e.RowBounds.Location.Y,
+                    dataGridView.RowHeadersWidth - 4,
+                    e.RowBounds.Height);
+
+                TextRenderer.DrawText(e.Graphics, (e.RowIndex + 1).ToString(),
+                    dataGridView.RowHeadersDefaultCellStyle.Font,
+                    rectangle,
+                    dataGridView.RowHeadersDefaultCellStyle.ForeColor,
+                    TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
             }
         }
     }

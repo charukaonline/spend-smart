@@ -760,6 +760,7 @@
             this.msgTxtBox.HoverState.Parent = this.msgTxtBox;
             this.msgTxtBox.Location = new System.Drawing.Point(0, 40);
             this.msgTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.msgTxtBox.Multiline = true;
             this.msgTxtBox.Name = "msgTxtBox";
             this.msgTxtBox.PasswordChar = '\0';
             this.msgTxtBox.PlaceholderText = "Type here...";
