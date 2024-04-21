@@ -81,7 +81,7 @@ namespace spend_smart
             try
             {
                 dbConnection = new OleDbConnection(dbConn.Instance.connString);
-                dbConnection.Open(); // Open the database connection
+                dbConnection.Open();
             }
             catch (Exception ex)
             {
@@ -106,30 +106,27 @@ namespace spend_smart
                     return;
                 }
 
-                // Modify the query to include the current user's ID
                 string query = $"SELECT added_year, added_month, amount FROM income WHERE user_id = {currentID} ORDER BY added_year, added_month";
                 OleDbCommand command = new OleDbCommand(query, dbConnection);
                 OleDbDataReader reader = command.ExecuteReader();
 
-                List<string> monthLabels = new List<string>(); // List to store month labels
+                List<string> monthLabels = new List<string>();
 
                 while (reader.Read())
                 {
                     double value = Convert.ToDouble(reader["amount"]);
                     series.Values.Add(value);
 
-                    // Get the month and year from the database
                     int month = Convert.ToInt32(reader["added_month"]);
                     int year = Convert.ToInt32(reader["added_year"]);
 
                     // Create a formatted label for the x-axis
                     string label = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month)} {year}";
-                    monthLabels.Add(label); // Add the label to the list
+                    monthLabels.Add(label);
                 }
 
                 cartesianChart1.Series.Add(series);
 
-                // Set the x-axis labels based on the list of month labels
                 cartesianChart1.AxisX[0].Labels = monthLabels.ToArray();
 
                 // Debug output for checking series data
@@ -145,7 +142,7 @@ namespace spend_smart
         private void updateBtn_Click(object sender, EventArgs e)
         {
             PopulateChart();
-            PopulatePieChart(); // Call PopulatePieChart when the update button is clicked
+            PopulatePieChart();
         }
 
         private void PopulatePieChart()
@@ -158,9 +155,8 @@ namespace spend_smart
                     return;
                 }
 
-                pieChart.Series = new SeriesCollection(); // Initialize the series collection
+                pieChart.Series = new SeriesCollection();
 
-                // Modify the query to retrieve expenses grouped by category and sum the amounts, joining with expenseCategory table to get category IDs
                 string query = $"SELECT category_id, SUM(amount) AS total_amount " +
                                $"FROM expense " +
                                $"WHERE user_id = {currentID} " +
@@ -181,7 +177,7 @@ namespace spend_smart
                     {
                         Title = categoryName,
                         Values = new ChartValues<double> { totalAmount },
-                        DataLabels = true // Show data labels on the pie chart
+                        DataLabels = true
                     });
                 }
 

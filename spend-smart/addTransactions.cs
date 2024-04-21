@@ -81,25 +81,22 @@ namespace spend_smart
 
                 else
                 {
-                    // Ensure the database connection is open
                     if (dbConnection.State != ConnectionState.Open)
                     {
                         dbConnection.Open();
                     }
 
-                    // Use parameterized query to prevent SQL injection
                     string query = "INSERT INTO income (user_id, source, amount, added_date, added_year, added_month) VALUES (@currentID, @IncomeSource, @IncomeAmount, @AddedDate, @Year, @MonthNumber)";
                     OleDbCommand cmd = new OleDbCommand(query, dbConnection);
 
                     // Add parameters with appropriate data types
                     cmd.Parameters.AddWithValue("@currentID", currentID);
                     cmd.Parameters.Add("@IncomeSource", OleDbType.VarChar).Value = IncomeSrc;
-                    cmd.Parameters.AddWithValue("@IncomeAmount", decimal.Parse(IncomeAmt)); // Convert string to decimal
-                    cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now; // Add current date
-                    cmd.Parameters.AddWithValue("@Year", currentYear); // Add current year parameter
-                    cmd.Parameters.AddWithValue("@MonthNumber", currentMonth); // Add current month parameter
+                    cmd.Parameters.AddWithValue("@IncomeAmount", decimal.Parse(IncomeAmt));
+                    cmd.Parameters.Add("@AddedDate", OleDbType.Date).Value = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@Year", currentYear);
+                    cmd.Parameters.AddWithValue("@MonthNumber", currentMonth);
 
-                    // Execute the query
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     // Check if the query was successful
