@@ -20,10 +20,11 @@ namespace spend_smart
             InitializeComponent();
             SubscribeToAddNoteEvent();
 
-            //ThemeManage.AddControlToColor(guna2Panel2);
-            //ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(guna2Panel2);
+            ThemeManage.AddControlToColor(label1);
+            ThemeManage.AddControlToColor(label2);
 
-            //this.Load += noteForm_Load;
+            this.Load += noteForm_Load;
         }
 
         private void OnNoteAdded(object sender, EventArgs e)

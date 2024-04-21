@@ -43,21 +43,23 @@
             // 
             this.panel1.BackgroundImage = global::spend_smart.Properties.Resources.loading_2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(694, 426);
+            this.panel1.Size = new System.Drawing.Size(463, 277);
             this.panel1.TabIndex = 0;
             // 
             // progressBar1
             // 
             this.progressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.progressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.progressBar1.Location = new System.Drawing.Point(2, 432);
+            this.progressBar1.Location = new System.Drawing.Point(1, 281);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(126)))), ((int)(((byte)(199)))));
             this.progressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(126)))), ((int)(((byte)(199)))));
             this.progressBar1.ShadowDecoration.Parent = this.progressBar1;
-            this.progressBar1.Size = new System.Drawing.Size(692, 18);
+            this.progressBar1.Size = new System.Drawing.Size(461, 12);
             this.progressBar1.TabIndex = 2;
             this.progressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
@@ -68,19 +70,19 @@
             this.showToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(129, 68);
+            this.contextMenuStrip.Size = new System.Drawing.Size(104, 48);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(128, 32);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 32);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Clic);
             // 
@@ -94,17 +96,18 @@
             // 
             // loadingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(694, 452);
+            this.ClientSize = new System.Drawing.Size(463, 294);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "loadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "loadingForm";
+            this.Text = "Loading - SpendSmart";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loading_FormClosing);
             this.Load += new System.EventHandler(this.loadingForm_Load);
             this.contextMenuStrip.ResumeLayout(false);
