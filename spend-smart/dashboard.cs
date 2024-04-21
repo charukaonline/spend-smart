@@ -406,6 +406,18 @@ namespace spend_smart
                 return;
             }
 
+            if (msgTxtBox.Text.Length > 50)
+            {
+                MessageBox.Show("Note cannot be more than 50 characters.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (subjectTxtBox.Text.Length > 20)
+            {
+                MessageBox.Show("Subject cannot be more than 20 characters.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string insertNoteQuery = "INSERT INTO notes (user_id, user_subject, user_note, created_on) VALUES (?, ?, ?, ?)";
             using (OleDbCommand insertCommand = new OleDbCommand(insertNoteQuery, dbConnection))
             {
@@ -421,6 +433,7 @@ namespace spend_smart
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Note Added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        OnNoteAdded(EventArgs.Empty);
                         msgTxtBox.Text = "";
                         subjectTxtBox.Text = "";
                     }
@@ -590,6 +603,13 @@ namespace spend_smart
                     MessageBox.Show("Error fetching expense data: " + ex.Message);
                 }
             }
+        }
+
+        public event EventHandler NoteAdded;
+
+        protected virtual void OnNoteAdded(EventArgs e)
+        {
+            NoteAdded?.Invoke(this, e);
         }
     }
 }
