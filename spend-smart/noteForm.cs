@@ -132,5 +132,114 @@ namespace spend_smart
                     TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
             }
         }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            int noteId;
+            if (!int.TryParse(noteIdTxt.Text, out noteId))
+            {
+                MessageBox.Show("Please enter a valid Note ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string subject = subjectTxt.Text;
+            string note = noteTxt.Text;
+
+            if (subject == "" || note == "")
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (subject.Length > 20)
+            {
+                MessageBox.Show("Subject is too long. Maximum 20 characters allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (note.Length > 50)
+            {
+                MessageBox.Show("Note is too long. Maximum 50 characters allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            try
+            {
+                using (OleDbCommand command = new OleDbCommand("UPDATE notes SET user_subject = @subject, user_note = @note WHERE note_id = @noteId AND user_id = @currentID", dbConnection))
+                {
+                    command.Parameters.AddWithValue("@subject", subject);
+                    command.Parameters.AddWithValue("@note", note);
+                    command.Parameters.AddWithValue("@noteId", noteId);
+                    command.Parameters.AddWithValue("@currentID", currentID);
+
+                    int result = command.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Note updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FetchNoteRecords();
+                        noteIdTxt.Text = "";
+                        subjectTxt.Text = "";
+                        noteTxt.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update note.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error updating note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            int noteId;
+            if (!int.TryParse(noteIdTxt.Text, out noteId))
+            {
+                MessageBox.Show("Please enter a valid Note ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (dbConnection == null)
+            {
+                MessageBox.Show("Database connection is not set.");
+                return;
+            }
+
+            try
+            {
+                using (OleDbCommand command = new OleDbCommand("DELETE FROM notes WHERE note_id = @noteId AND user_id = @currentID", dbConnection))
+                {
+                    command.Parameters.AddWithValue("@noteId", noteId);
+                    command.Parameters.AddWithValue("@currentID", currentID);
+
+                    int result = command.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Note deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FetchNoteRecords();
+                        noteIdTxt.Text = "";
+                        subjectTxt.Text = "";
+                        noteTxt.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete note.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error deleting note: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
