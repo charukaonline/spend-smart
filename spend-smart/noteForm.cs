@@ -47,7 +47,10 @@ namespace spend_smart
             currentID = UserSession.CurrentUserID;
 
             notesDataGrid.Columns["Note"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            notesDataGrid.Columns["Note"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+            notesDataGrid.Columns["Note"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            notesDataGrid.Columns["Note"].DefaultCellStyle.Font = new Font("Microsoft Sans Serif ", 10);
+            notesDataGrid.Columns["Subject"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            notesDataGrid.Columns["Subject"].DefaultCellStyle.Font = new Font("Microsoft Sans Serif ", 10);
         }
 
         private void InitializeDBConnection()
