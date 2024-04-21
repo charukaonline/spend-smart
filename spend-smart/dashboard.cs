@@ -421,6 +421,7 @@ namespace spend_smart
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Note Added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        OnNoteAdded(EventArgs.Empty);
                         msgTxtBox.Text = "";
                         subjectTxtBox.Text = "";
                     }
@@ -590,6 +591,13 @@ namespace spend_smart
                     MessageBox.Show("Error fetching expense data: " + ex.Message);
                 }
             }
+        }
+
+        public event EventHandler NoteAdded;
+
+        protected virtual void OnNoteAdded(EventArgs e)
+        {
+            NoteAdded?.Invoke(this, e);
         }
     }
 }
