@@ -44,8 +44,11 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dbStatusCircle = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.closingBtn = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbStatusCircle)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -251,7 +254,7 @@
             // 
             this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2CirclePictureBox1.Image = global::spend_smart.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(33, 33);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(20, 9);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
@@ -265,7 +268,7 @@
             this.dbStatusCircle.BackColor = System.Drawing.Color.Transparent;
             this.dbStatusCircle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.dbStatusCircle.Location = new System.Drawing.Point(462, 531);
-            this.dbStatusCircle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dbStatusCircle.Margin = new System.Windows.Forms.Padding(2);
             this.dbStatusCircle.Name = "dbStatusCircle";
             this.dbStatusCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.dbStatusCircle.ShadowDecoration.Parent = this.dbStatusCircle;
@@ -285,6 +288,32 @@
             this.statusLabel.TabIndex = 8;
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.closingBtn);
+            this.guna2Panel1.Location = new System.Drawing.Point(586, 9);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(53, 52);
+            this.guna2Panel1.TabIndex = 9;
+            // 
+            // closingBtn
+            // 
+            this.closingBtn.Animated = true;
+            this.closingBtn.BorderRadius = 8;
+            this.closingBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closingBtn.FillColor = System.Drawing.Color.Firebrick;
+            this.closingBtn.HoverState.Parent = this.closingBtn;
+            this.closingBtn.IconColor = System.Drawing.Color.White;
+            this.closingBtn.Location = new System.Drawing.Point(10, 10);
+            this.closingBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.closingBtn.Name = "closingBtn";
+            this.closingBtn.ShadowDecoration.Parent = this.closingBtn;
+            this.closingBtn.Size = new System.Drawing.Size(33, 32);
+            this.closingBtn.TabIndex = 1;
+            this.closingBtn.Click += new System.EventHandler(this.closingBtn_Click);
+            // 
             // loginForm
             // 
             this.AcceptButton = this.loginBtn;
@@ -292,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(650, 561);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dbStatusCircle);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.labelLockoutTimer);
@@ -310,7 +340,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginForm";
-            this.Padding = new System.Windows.Forms.Padding(30, 30, 30, 30);
+            this.Padding = new System.Windows.Forms.Padding(30);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login - SpendSmart";
             this.Load += new System.EventHandler(this.loginForm_Load);
@@ -318,6 +348,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbStatusCircle)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +371,7 @@
         private System.Windows.Forms.Label labelLockoutTimer;
         private Guna.UI2.WinForms.Guna2CirclePictureBox dbStatusCircle;
         private System.Windows.Forms.Label statusLabel;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox closingBtn;
     }
 }

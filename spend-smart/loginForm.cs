@@ -250,5 +250,10 @@ namespace spend_smart
             registerForm.Show();
             this.Hide();
         }
+
+        private void closingBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

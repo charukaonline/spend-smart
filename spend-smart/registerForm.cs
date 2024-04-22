@@ -207,5 +207,10 @@ namespace spend_smart
                 
             }
         }
+
+        private void closingBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
