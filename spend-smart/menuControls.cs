@@ -232,9 +232,6 @@ namespace spend_smart
             ToolTip toolTip10 = new ToolTip();
             toolTip10.SetToolTip(minimizaBtn, "Minimize");
 
-            ToolTip toolTip11 = new ToolTip();
-            toolTip11.SetToolTip(maximizeBtn, "Maximize");
-
             ToolTip toolTip12 = new ToolTip();
             toolTip12.SetToolTip(closingBtn, "Close");
 

@@ -36,8 +36,6 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.minimizaBtn = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.maximizeBtn = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.closingBtn = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -53,6 +51,7 @@
             this.addExpBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.showIncomes1 = new spend_smart.showIncomes();
             this.showExpenses1 = new spend_smart.showExpenses();
             this.addTransactions1 = new spend_smart.addTransactions();
@@ -60,10 +59,8 @@
             this.dashboard1 = new spend_smart.dashboard();
             this.settingForm1 = new spend_smart.settingForm();
             this.noteForm1 = new spend_smart.noteForm();
-            this.showIconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.menu.SuspendLayout();
@@ -76,7 +73,6 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel6);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
-            this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -106,10 +102,10 @@
             this.guna2Panel6.BorderRadius = 10;
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel6.Location = new System.Drawing.Point(607, 0);
+            this.guna2Panel6.Location = new System.Drawing.Point(640, 0);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(139, 52);
             this.guna2Panel6.TabIndex = 3;
@@ -117,7 +113,7 @@
             // guna2Panel5
             // 
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel5.Location = new System.Drawing.Point(746, 0);
+            this.guna2Panel5.Location = new System.Drawing.Point(779, 0);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Padding = new System.Windows.Forms.Padding(20, 13, 20, 13);
@@ -129,7 +125,7 @@
             // 
             this.guna2Panel4.Controls.Add(this.minimizaBtn);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel4.Location = new System.Drawing.Point(803, 0);
+            this.guna2Panel4.Location = new System.Drawing.Point(836, 0);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(13, 13, 7, 13);
@@ -153,44 +149,16 @@
             this.minimizaBtn.Size = new System.Drawing.Size(27, 26);
             this.minimizaBtn.TabIndex = 3;
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Controls.Add(this.maximizeBtn);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel3.Location = new System.Drawing.Point(847, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(13, 13, 0, 13);
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(34, 52);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // maximizeBtn
-            // 
-            this.maximizeBtn.Animated = true;
-            this.maximizeBtn.BorderRadius = 8;
-            this.maximizeBtn.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.maximizeBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximizeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.maximizeBtn.HoverState.Parent = this.maximizeBtn;
-            this.maximizeBtn.IconColor = System.Drawing.Color.White;
-            this.maximizeBtn.Location = new System.Drawing.Point(7, 13);
-            this.maximizeBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.maximizeBtn.Name = "maximizeBtn";
-            this.maximizeBtn.ShadowDecoration.Parent = this.maximizeBtn;
-            this.maximizeBtn.Size = new System.Drawing.Size(27, 26);
-            this.maximizeBtn.TabIndex = 2;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.closingBtn);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel2.Location = new System.Drawing.Point(881, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(880, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(13);
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(53, 52);
+            this.guna2Panel2.Size = new System.Drawing.Size(54, 52);
             this.guna2Panel2.TabIndex = 1;
             // 
             // closingBtn
@@ -205,7 +173,7 @@
             this.closingBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.closingBtn.Name = "closingBtn";
             this.closingBtn.ShadowDecoration.Parent = this.closingBtn;
-            this.closingBtn.Size = new System.Drawing.Size(27, 26);
+            this.closingBtn.Size = new System.Drawing.Size(28, 26);
             this.closingBtn.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -416,7 +384,7 @@
             this.showIncomes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.showIncomes1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showIncomes1.Location = new System.Drawing.Point(13, 0);
-            this.showIncomes1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.showIncomes1.Margin = new System.Windows.Forms.Padding(1);
             this.showIncomes1.Name = "showIncomes1";
             this.showIncomes1.Size = new System.Drawing.Size(868, 572);
             this.showIncomes1.TabIndex = 9;
@@ -456,7 +424,7 @@
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
             this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboard1.Location = new System.Drawing.Point(13, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(1);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(868, 572);
             this.dashboard1.TabIndex = 0;
@@ -494,7 +462,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "menuControls";
-            this.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.Padding = new System.Windows.Forms.Padding(13);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SpendSmart";
             this.Load += new System.EventHandler(this.menuControls_Load);
@@ -503,7 +471,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.menu.ResumeLayout(false);
@@ -517,11 +484,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel menu;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ControlBox closingBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2ControlBox maximizeBtn;
         private Guna.UI2.WinForms.Guna2ControlBox minimizaBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
